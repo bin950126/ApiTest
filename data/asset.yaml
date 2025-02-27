@@ -1,0 +1,66 @@
+create_asset_category_a :
+  - request_info:
+      url: /asset/categories/${get_extract_value(category_a)}/assets
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建category_a资产
+        json: #请求参数
+          "categoryId": ${get_extract_value(category_a)}
+          "no": ${increment_extract_value(plan_asset2)}
+          "note": "notenotenotenote"
+          "location":
+            "siteId": ${get_extract_value(site_id)}
+          "lifeCycleState": "NEW"
+          "modelType": "cycle-c"
+          "properties":
+            "YPV2": "Test"
+            "YPX9": 100
+          "usageMode": "customer-rental"
+        extract: #提取信息
+          plan_asset1: '$.data.no'
+        validate: #验证信息
+          - equal: [ $.code, [1000,409] ]
+      - json: #请求参数
+          "categoryId": ${get_extract_value(category_a)}
+          "no": ${increment_extract_value(plan_asset1)}
+          "note": "notenotenotenote"
+          "location":
+            "siteId": ${get_extract_value(site_id)}
+          "lifeCycleState": "NEW"
+          "modelType": "cycle-c"
+          "properties":
+            "YPV2": "Test"
+            "YPX9": 100
+          "usageMode": "customer-rental"
+        extract: #提取信息
+          plan_asset2: '$.data.no'
+        validate: #验证信息
+          - equal: [ $.code, [ 1000,409 ] ]
+
+create_asset_category_b :
+  - request_info:
+
+      url: /asset/categories/${get_extract_value(category_b)}/assets
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建category_b资产
+        json: #请求参数
+          "categoryId": ${get_extract_value(category_b)}
+          "no": ${increment_extract_value(free_asset)}
+          "note": "notenotenotenote"
+          "location":
+            "siteId": ${get_extract_value(site_id)}
+          "lifeCycleState": "NEW"
+          "modelType": "cycle-c"
+          "properties":
+          "usageMode": "customer-rental"
+        extract: #提取信息
+          free_asset: '$.data.no'
+        validate: #验证信息
+          - equal: [ $.code, [1000,409] ]

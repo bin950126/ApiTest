@@ -1,0 +1,56 @@
+2024-11-09 23:04:33,540 - conftest.py -log - INFO - 开始执行测试
+2024-11-09 23:04:33,545 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2024-11-09 23:04:33,546 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12024110803",
+    "isMarketingConsented": "true"
+}
+2024-11-09 23:04:33,546 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2024-11-09 23:04:35,361 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczMTE2NDY3NywiZXhwIjoxNzMxMTY2NDc3LCJyYXdJZCI6ODU4fQ.pQiPHMyjt_zc6NdxCfP6Y_fAmdZ02WI6kkecqBcd5yE"
+    }
+}
+2024-11-09 23:04:35,363 - conftest.py -log - INFO - 测试结束
+2024-11-09 23:05:22,877 - conftest.py -log - INFO - 开始执行测试
+2024-11-09 23:05:22,885 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2024-11-09 23:05:22,885 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12024110803",
+    "isMarketingConsented": "true"
+}
+2024-11-09 23:05:22,885 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2024-11-09 23:05:24,977 - response_urils.py -log - INFO - 接口请求失败:
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczMTE2NDcyNywiZXhwIjoxNzMxMTY2NTI3LCJyYXdJZCI6ODU5fQ.GoswqqGLyBBQJRwBW9UvC-iGqJVSKvoEPsZ6CCDq8zw"
+    }
+}
+2024-11-09 23:05:25,019 - conftest.py -log - INFO - 测试结束

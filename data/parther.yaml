@@ -1,0 +1,486 @@
+user_login :
+  #接口的基本信息
+  - request_info:
+      url: /account/auth/login
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+    case_info: #测试信息
+      - case_title: 工作人员登录1
+        json: #请求参数
+          "username": "account-admin-5@rental.moov"
+          "password": "123456"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+        extract: #提取信息
+          user_token: '$.data.accessToken'
+      - case_title: 工作人员登录2
+        json: #请求参数
+          "username": "TEST2.16@1.cn"
+          "password": "123456"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          user_token: '$.data.accessToken'
+
+create_parther :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建Parther
+        json: #请求参数
+          "name": "ApiTest"
+          "email": "binbin.lai@rybit.io"
+          "timezone": null
+          "note": null
+          "attachment":
+              - url: "https://ops-web-rental-stg.moovmobility.co/"
+                name: "rental"
+          "addressCountry": "USA"
+          "addressCity": "Service center"
+          "addressZip": "201616"
+          "addressLine1": "Address Line 11111"
+          "addressLine2": "Address Line 22222"
+          "addressState": "California"
+          "contactName": "binbin"
+          "contactPhoneNo": "+12022222222"
+          "contactEmail": "binbin.lai@rybit.io"
+        validate: #验证信息
+          - equal: [ $.type, "PartnerNameAlreadyExists" ]
+        extract: #提取信息
+          parther_id: '$.data.id'
+
+update_parther :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新Parther信息
+        json: #请求参数
+          "name": "ApiTest"
+          "email": "binbin.lai@rybit.io"
+          "timezone": "+00:00"
+          "note": null
+          "attachment":
+              - url: "https://ops-web-rental-stg.moovmobility.co/"
+                name: "rental"
+          "addressCountry": "USA"
+          "addressCity": "Service center"
+          "addressZip": "201616"
+          "addressLine1": "Address Line 11111"
+          "addressLine2": "Address Line 22222"
+          "addressState": "California"
+          "contactName": "binbin"
+          "contactPhoneNo": "+12022222222"
+          "contactEmail": "binbin.lai@rybit.io"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+collect_returnrules :
+  #接口的基本信息
+  - request_info:
+      url: /renting/program/rulePart
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 配置Collect & Return Rules：还车需要确认/跨站还车/锁状态检查/位置检查
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "assetCategoryId": ${get_extract_value(category_a)}
+          "assetLimit": 10
+          "isConfirmRequired": true
+          "isAllowedCrossSiteReturn": true
+          "isLockCheckRequired": true
+          "isLocationCheckRequired": true
+        validate: #验证信息
+          - equal: [$.code, [1000, 409]]
+      - case_title: 配置Collect & Return Rules：还车不需要确认/不可跨站还车/不检查锁状态/不检查位置
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "assetCategoryId": ${get_extract_value(category_b)}
+          "assetLimit": 10
+          "isConfirmRequired": false
+          "isAllowedCrossSiteReturn": false
+          "isLockCheckRequired": false
+          "isLocationCheckRequired": false
+        validate: #验证信息
+          - equal: [ $.code, [1000, 409] ]
+
+update_collect_returnrules :
+  #接口的基本信息
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/assetCategories/${get_extract_value(category_a)}/program/rulePart
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新Collect & Return Rules
+        json: #请求参数
+          "assetLimit": 10
+          "isConfirmRequired": true
+          "isAllowedCrossSiteReturn": true
+          "isLockCheckRequired": true
+          "isLocationCheckRequired": true
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+partner_operations :
+  #接口的基本信息
+  - request_info:
+      url: /renting/rentalConfig
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 配置Partner Operations
+        json: #请求参数
+          partnerId: ${get_extract_value(parther_id)}
+          currency: USD
+          userMaxPaymentAmount: 100000
+          customOptions:
+            - allow-control-beep
+            - allow-view-geolocation
+            - allow-control-light
+            - allow-control-lock
+            - allow-control-battery-lock
+            - allow-push-geolocation-checkpoint
+          isOpenToJoin: true
+          userSelfJoinNote:
+            en: ""
+            it: ""
+            es: ""
+          contactPhoneNo: "+12022222222"
+          contactEmailNo: "binbin.lai@rybit.io"
+          signUpChannel: "none"
+        validate: #验证信息
+          - equal: [$.code, 409]
+
+updeate_partner_operations :
+  #接口的基本信息
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/rentalConfig
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新Partner Operations
+        json: #请求参数
+          currency: USD
+          userMaxPaymentAmount: 100000
+          customOptions:
+            - allow-control-beep
+            - allow-view-geolocation
+            - allow-control-light
+            - allow-control-lock
+            - allow-control-battery-lock
+            - allow-push-geolocation-checkpoint
+          isOpenToJoin: true
+          userSelfJoinNote:
+            en: ""
+            it: ""
+            es: ""
+          contactPhoneNo: "+12022222222"
+          contactEmailNo: "binbin.lai@rybit.io"
+          signUpChannel: "none"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+add_terms_conditions :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/partnerDocument
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 新增terms_conditions
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "type": "terms-conditions"
+          "content":
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\"></p>"
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>"
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+update_terms_conditions :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/terms-conditions
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新terms_conditions
+        json: #请求参数
+          "content":
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>"
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+delete_terms_conditions :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/terms-conditions
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 删除terms_conditions
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+add_privacy_policy :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/partnerDocument
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 新增privacy_policy
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "type": "privacy-policy"
+          "content":
+            "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n</ol>"
+            "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+            "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+update_privacy_policy :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/privacy-policy
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新privacy_policy
+        json: #请求参数
+          "content":
+            "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n<li><span>update</span></li>\n</ol>"
+            "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n<li><span>update</span><span></span></li>\n</ol>"
+            "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n<li><span>update</span><span></span></li>\n</ol>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+delete_privacy_policy :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/privacy-policy
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 删除privacy_policy
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+add_help_center :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/partnerDocument
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 新增help_center
+        json: #请求参数
+            "partnerId": ${get_extract_value(parther_id)}
+            "type": "help-center"
+            "content":
+              "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>"
+              "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>"
+              "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+add_help_center_images :
+  #接口的基本信息
+  - request_info:
+      url: /account/documents/help-center/$uploadImage
+      method: POST #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 上传help_center_images
+        files: #请求参数
+              "image": island-8465139.png
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          help_center_images_url: '$.data.url'
+
+update_help_center :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/help-center
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 新增help_center
+        json: #请求参数
+          "content":
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>\n<p style=\"text-align: center;\"><img src=${get_extract_value(help_center_images_url)}><span></span></p>"
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>\n<p style=\"text-align: center;\"><span><img src=${get_extract_value(help_center_images_url)}></span></p>"
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update<img src=${get_extract_value(help_center_images_url)}></span></p>"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+delete_help_center :
+  #接口的基本信息
+  - request_info:
+      url: /account/partners/${get_extract_value(parther_id)}/documents/help-center
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 新增help_center
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+get_providers :
+  #接口的基本信息
+  - request_info:
+      url: /payment/partners/${get_extract_value(parther_id)}/availableProviders
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 找到可用的支付提供商
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          user_providerId: '$.data.[0].id'
+          user_provider_Publikey: '$.data.[0].option.stripeKeyPublic'
+
+get_payment_method_setup :
+  #接口的基本信息
+  - request_info:
+      url: /payment/partners/${get_extract_value(parther_id)}/$setup
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 请求我的付款方式设置
+        json:
+          "providerId": ${get_extract_value(user_providerId)}
+          "methodType": "credit-card"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          user_SetupId: '$.data.id'
+          user_stripeSetupId: '$.data.option.stripeSetupId'
+          user_stripeSetupSecret: '$.data.option.stripeSetupSecret'
+
+create_PaymentMethod :
+  #接口的基本信息
+  - request_info:
+      url: https://api.stripe.com/v1/setup_intents/${get_extract_value(stripeSetupId)}/confirm
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/x-www-form-urlencoded
+        Authorization: Bearer ${get_extract_value(provider_Publikey)}
+    case_info: #测试信息
+      - case_title: 建立stripe支付方式
+        data:
+          payment_method_data:
+            billing_details:
+              name: bin
+              email: TEST2.16@1.cn
+              address:
+                city: test
+                country: CN
+                line1: 123
+                postal_code: 201616
+                state: 澳门  # Decoded from %E6%BE%B3%E9%97%A8 (Macau in Chinese)
+              phone: ""  # Empty string as no value provided
+            type: card
+            card:
+              number: "4242 4242 4242 4242"  # Formatted with spaces for readability
+              cvc: 666
+              exp_year: 66
+              exp_month: 06
+            allow_redisplay: unspecified
+            payment_user_agent: "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element"
+            referrer: "https://ops-web-rental-stg.moovmobility.co"
+            time_on_page: 534993
+            client_attribution_metadata:
+              client_session_id: c48c2e03-678e-46ae-823a-49bada965c2a
+              merchant_integration_source: elements
+              merchant_integration_subtype: payment-element
+              merchant_integration_version: 2021
+              payment_intent_creation_flow: standard
+              payment_method_selection_flow: merchant_specified
+            guid: eb8bc975-198a-4e46-849d-2249b5e116ea
+            muid: 557a7812-bdc9-4bb3-ba96-dd7119e56f56
+            sid: 793743ee-f664-4bb6-94b4-14cd0a12768f
+          expected_payment_method_type: card
+          radar_options:
+            hcaptcha_token: 20000000-aaaa-bbbb-cccc-000000000002
+          use_stripe_sdk: true
+          key: pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8
+          client_secret: seti_1Qx0QYGvq4E0WjAYwM9dFdJk_secret_RqhqLRAzZKjzdanVTNsT2JCaJrYt6vN
+        validate: #验证信息
+          - equal: [ $.status, succeeded ]
+
+bind_PaymentMethod :
+  #接口的基本信息
+  - request_info:
+      url: /payment/partners/${get_extract_value(parther_id)}/methods
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 绑定信用卡
+        json:
+          "providerId": ${get_extract_value(user_providerId)}
+          "partnerSetupId": ${get_extract_value(user_SetupId)}
+          "methodType": "credit-card"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          paymentMethodId: '$.data.id'

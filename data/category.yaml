@@ -1,0 +1,49 @@
+create_category :
+  #接口的基本信息
+  - request_info:
+      url: /asset/categories
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建category：ApiTest Category A
+        json: #请求参数
+          detailUrl: "https://ops-web-rental-stg.moovmobility.co/"
+          icon: "DEFAULT"
+          name: "ApiTest Category A"
+          note: "Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Descript"
+        validate: #验证信息
+          - equal: [$.type, "CategoryWithSameNameExists"]
+        extract: #提取信息
+          category_a: '$.data.id'
+      - case_title: 创建category：ApiTest Category B
+        json: #请求参数
+          detailUrl: "https://ops-web-rental-stg.moovmobility.co/"
+          icon: "DEFAULT"
+          name: "ApiTest Category B"
+          note: "Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Descript"
+        validate: #验证信息
+          - equal: [$.type, "CategoryWithSameNameExists"]
+        extract: #提取信息
+          category_b: '$.data.id'
+
+update_category :
+  #接口的基本信息
+  - request_info:
+      url: /asset/categories/${get_extract_value(category_a)}
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建category
+        json: #请求参数
+          detailUrl: "https://ops-web-rental-stg.moovmobility.co/"
+          icon: "DEFAULT"
+          name: "ApiTest Category A"
+          note: "Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Description:Descript"
+          properties: ["YPV2", "YPX9"]
+        validate: #验证信息
+          - equal: [$.code, 1000]

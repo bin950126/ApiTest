@@ -1,0 +1,169 @@
+2024-11-07 21:31:05,765 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:31:05,768 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 21:31:05,768 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 21:31:05,768 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 21:31:05,921 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:31:05,924 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:31:05,933 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 21:31:05,933 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 21:31:05,933 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 21:31:06,012 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:31:30,002 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:31:30,007 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 21:31:30,007 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 21:31:30,007 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 21:31:30,117 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:31:30,121 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:31:30,128 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 21:31:30,129 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 21:31:30,129 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 21:31:30,191 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:32:04,366 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:32:04,369 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 21:32:04,369 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 21:32:04,369 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 21:32:04,500 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:33:18,660 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:33:18,664 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 21:33:18,664 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 21:33:18,664 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 21:33:20,047 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "77BDAAF5640449D19004D48278D18AF3"}}
+2024-11-07 21:33:20,051 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:33:20,062 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:33:20,082 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 21:33:20,082 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 21:33:20,082 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 21:33:21,467 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:40:00,924 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:40:00,928 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 21:40:00,928 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 21:40:00,929 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 21:40:02,351 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "7ECD89AF22A54A80B472D2B9BD5038BA"}}
+2024-11-07 21:40:02,354 - conftest.py -log - INFO - 测试结束
+2024-11-07 21:40:02,359 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 21:40:02,368 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 21:40:02,368 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 21:40:02,368 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 21:40:03,706 - conftest.py -log - INFO - 测试结束
+2024-11-07 22:42:55,039 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 22:42:55,044 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 22:42:55,044 - rest_client.py -log - INFO - 接口请求的json参数:  {'password': 123456}
+2024-11-07 22:42:55,044 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 22:42:57,546 - conftest.py -log - INFO - 测试结束
+2024-11-07 22:42:57,550 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 22:42:57,559 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 22:42:57,559 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 22:42:57,559 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 22:42:59,280 - conftest.py -log - INFO - 测试结束
+2024-11-07 22:43:44,214 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 22:43:44,219 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 22:43:44,219 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 22:43:44,219 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 22:43:45,415 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "0F77FA64705C41A3ADE69159432C5D7A"}}
+2024-11-07 22:43:45,419 - conftest.py -log - INFO - 测试结束
+2024-11-07 22:43:45,425 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 22:43:45,433 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 22:43:45,433 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 22:43:45,433 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 22:43:46,894 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:11:27,117 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:11:27,122 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:11:27,122 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov'}
+2024-11-07 23:11:27,122 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:11:47,551 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:11:47,554 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:11:47,554 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov'}
+2024-11-07 23:11:47,555 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:13:15,641 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:13:15,645 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:13:15,645 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov'}
+2024-11-07 23:13:15,646 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:27:53,747 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:27:53,752 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:27:53,752 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:27:53,752 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:27:55,699 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "46E7C3B06D3240B0AA4E15EB19D6562D"}}
+2024-11-07 23:27:55,700 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:27:55,704 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:27:55,711 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:27:55,711 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:27:55,711 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:28:20,731 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:28:20,735 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:28:20,736 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:28:20,736 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:28:22,836 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "BAD9F3DA233341589DBD90F38909D9EB"}}
+2024-11-07 23:28:22,838 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:28:22,843 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:28:22,852 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:28:22,852 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:28:22,853 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:30:46,686 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:30:46,690 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:30:46,690 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:30:46,691 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:30:48,628 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "A0C4379E17D04991B43919D8B61F0BCA"}}
+2024-11-07 23:30:48,630 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:30:48,635 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:30:48,645 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:30:48,645 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:30:48,645 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:30:50,003 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:52:49,459 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:52:49,463 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:52:49,463 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:52:49,463 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:52:51,016 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "A1E09AE21D6B4C8F86A66C42B51258AB"}}
+2024-11-07 23:52:51,018 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:52:51,024 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:52:51,032 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:52:51,032 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:52:51,032 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:52:52,403 - response_urils.py -log - INFO - 接口请求失败，状态码：405
+2024-11-07 23:52:52,405 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:55:07,615 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:55:07,620 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:55:07,620 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:55:07,620 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:55:09,327 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "2125C83447684F829828B16D774574A8"}}
+2024-11-07 23:55:09,329 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:55:09,333 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:55:09,340 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:55:09,340 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:55:09,340 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:55:11,090 - response_urils.py -log - INFO - 接口请求失败，状态码：{"code": 14050, "type": null, "messageId": "Request method 'PUT' not supported", "message": "https://httpstatusdogs.com/405-method-not-allowed", "details": [], "data": null}
+2024-11-07 23:55:11,092 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:56:54,515 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:56:54,523 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:56:54,523 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:56:54,523 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:56:56,132 - response_urils.py -log - INFO - 接口请求失败:{"code": 14050, "type": null, "messageId": "Request method 'PUT' not supported", "message": "https://httpstatusdogs.com/405-method-not-allowed", "details": [], "data": null}
+2024-11-07 23:56:56,176 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:58:22,680 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:58:22,685 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:58:22,685 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:58:22,685 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:58:24,189 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "8FE18C8E13704023A9E66ADCF8C7FDEC"}}
+2024-11-07 23:58:24,190 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:58:24,197 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:58:24,206 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:58:24,207 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:58:24,207 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:58:25,623 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:59:12,947 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:59:12,956 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:59:12,956 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:59:12,956 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:59:14,637 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:59:30,589 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:59:30,592 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-07 23:59:30,592 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-07 23:59:30,592 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-07 23:59:32,226 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "76AB7597BF134CEB96F6B1B1E790E504"}}
+2024-11-07 23:59:32,231 - conftest.py -log - INFO - 测试结束
+2024-11-07 23:59:32,237 - conftest.py -log - INFO - 开始执行测试
+2024-11-07 23:59:32,245 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-07 23:59:32,246 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-07 23:59:32,246 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-07 23:59:33,922 - response_urils.py -log - INFO - 接口请求失败:{"code": 14050, "type": null, "messageId": "Request method 'PUT' not supported", "message": "https://httpstatusdogs.com/405-method-not-allowed", "details": [], "data": null}
+2024-11-07 23:59:33,924 - conftest.py -log - INFO - 测试结束

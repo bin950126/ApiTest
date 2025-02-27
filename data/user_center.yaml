@@ -1,0 +1,580 @@
+#customer_register :
+#  #接口的基本信息
+#  - request_info:
+#      case_title: 注册账号
+#      url: /customer/registry/verify
+#      method: POST #请求方法
+#      headers:  #请求头
+#        Content-Type: application/json
+#        rental-client-id: com.rental.user.app.rybit.stg
+#        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+#    case_info: #测试信息
+#      - json: #请求参数
+#          verificationCode: ${get_extract_value(verificationCode)}
+#          "registrationToken": ${get_extract_value(registrationToken)}
+#        validate: #验证信息
+#          - equal: [ $.code, 1000 ]
+#        extract: #提取信息
+#          Token: '$.data.newCustomerAccessToken'
+#          newCustomerPassword: '$.data.newCustomerPassword'
+
+delete_customer :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me?dryRun
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 删除用户
+        json: #请求参数
+        validate: #验证信息
+          - equal: [ $.code, [ 1000 ,401] ]
+
+get_Verification_code :
+  #接口的基本信息
+  - request_info:
+      url: /customer/registry/register
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+    case_info: #测试信息
+      - case_title: 获取验证码
+        json: #请求参数
+          "phoneNo":  ${get_extract_value(phoneNo)}
+          "isMarketingConsented": true
+        validate: #验证信息
+          - contains: [$.data.registrationToken, "ey"]
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          registrationToken: '$.data.registrationToken'
+
+customer_register :
+  #接口的基本信息
+  - request_info:
+      url: /customer/registry/verify
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+    case_info: #测试信息
+      - case_title: 注册账号
+        json: #请求参数
+          verificationCode: 123456
+          "registrationToken": ${get_extract_value(registrationToken)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          customer_token: '$.data.newCustomerAccessToken'
+          newCustomerPassword: '$.data.newCustomerPassword'
+
+change_password :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/changePasswordByPassword
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 设置密码
+        json: #请求参数
+          currentPassword: ${get_extract_value(newCustomerPassword)}
+          password: ${get_extract_value(password)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+verify_PhoneNo_Registered :
+  #接口的基本信息
+  - request_info:
+      url: /customer/auth/$verifyPhoneNoRegistered
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+    case_info: #测试信息
+      - case_title: 验证电话号码已注册
+        json: #请求参数
+          "phoneNo": "+12025000009"
+        validate: #验证信息
+          - equal: [ $.type, 'PhoneNumberIsNotInUse' ]
+
+customer_login :
+  #接口的基本信息
+  - request_info:
+      url: /customer/auth/login
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+    case_info: #测试信息
+      - case_title: 登录账号
+        json: #请求参数
+          "username": ${get_extract_value(phoneNo)}
+          "password": ${get_extract_value(password)}
+        extract: #提取信息
+          customer_token: '$.data.token'
+          customer_id: '$.data.profile.id'
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+get_customer_info :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 获取用户信息
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+update_customer_info :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 填写用户基础信息
+        json:
+          "nameFirst": "bin"
+          "nameLast": "bin"
+          "email": "1231233456@1.cn"
+          "whatsapp": "+12022222222"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+identity_verification :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/identity/verification
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 提交身份验证
+        json: #请求参数
+          "documentType": "id-card"
+          "documentNumber": "c"
+          "documentIssueDate": "2025-02-07"
+          "documentExpiryDate": "2025-02-15"
+          "birthDate": "1998-02-10"
+          "tin": "c"
+          "nameFirst": "x"
+          "nameLast": "x"
+          "contactAddressCountryCode": "US"
+          "contactAddressCity": " d"
+          "contactAddressState": " d"
+          "contactAddressZip": "d"
+          "contactAddressLine1": "d"
+          "contactAddressLine2": "d"
+          "overnightAddressCountryCode": "US"
+          "overnightAddressCity": " d"
+          "overnightAddressState": " d"
+          "overnightAddressZip": "d"
+          "overnightAddressLine1": "d"
+          "overnightAddressLine2": "d"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+images_front_side :
+  #接口的基本信息
+  - request_info:
+      url: /account/documents/help-center/$uploadImage
+      method: PUT #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 上传证件正面
+        files: #请求参数
+              "documentImage": sea-8948636_1920.jpg
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+images_back_side :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/identity/verification/images/back-side
+      method: PUT #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 上传证件背面
+        files: #请求参数
+              "documentImage": automobile-5128760_1280.jpg
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+images_selfie :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/identity/verification/images/selfie
+      method: PUT #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 上传证件照提交身份验证
+        files: #请求参数
+              "documentImage": nature-9332892_1280.jpg
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+update_customer_email :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 邮箱重复时返回错误信息
+        json:
+          "email": "bin123@1.com"
+        validate: #验证信息
+          - not_equal: [ $.code, 1000 ]
+
+update_customer_whatsapp_number :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 修改WhatsApp number
+        json:
+          "whatsapp": "+12022222223"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+launch_email_verification :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/$launchEmailVerification
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 发送邮箱验证
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+reset_password_bycode :
+  #接口的基本信息
+  - request_info:
+      url: /customer/auth/resetPasswordByCode
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 用验证码重置密码
+        json:
+          "phoneNo": "+12025000001"
+          "resetCode": "111111"
+          "password": "123456"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+reset_password_ByPassword :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/changePasswordByPassword
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 用原密码重置密码
+        json:
+          "currentPassword": "123456"
+          "password": "123456"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+joinPartner :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/memberships/$all/joinPartner
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 加入Parther
+        json:
+            "partnerId": ${get_extract_value(parther_id)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+grt_joinPartner :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/memberships
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看已加入的Parther
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+leavePartner :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/memberships/$all/leavePartner
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 退出Parther
+        json:
+          "partnerId":  ${get_extract_value(parther_id)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+close_Marketing :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 关闭营销邮件
+        json:
+          "isMarketingConsented": false
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+open_Marketing :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 打开营销邮件
+        json:
+          "isMarketingConsented": true
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+get_help_center :
+  #接口的基本信息
+  - request_info:
+      url: /customer/agreement/documents?types=help-center&preferredLangCode=en
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看帮助信息
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+get_terms_conditions :
+  #接口的基本信息
+  - request_info:
+      url: /customer/agreement/documents?types=terms-conditions&preferredLangCode=en
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看用户协议
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+get_privacy_policy :
+  #接口的基本信息
+  - request_info:
+      url: /customer/agreement/documents?types=privacy-policy&preferredLangCode=en
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看隐私政策
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+get_providers :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/payment/availableProviders
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 找到可用的支付提供商
+        json:
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          providerId: '$.data.[0].id'
+          provider_Publikey: '$.data.[0].option.stripeKeyPublic'
+
+get_payment_method_setup :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/payment/$setup
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 请求我的付款方式设置
+        json:
+          "providerId": ${get_extract_value(providerId)}
+          "methodType": "credit-card"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          customerSetupId: '$.data.id'
+          stripeSetupId: '$.data.option.stripeSetupId'
+          stripeSetupSecret: '$.data.option.stripeSetupSecret'
+
+create_PaymentMethod :
+  #接口的基本信息
+  - request_info:
+      url: https://api.stripe.com/v1/setup_intents/${get_extract_value(stripeSetupId)}/confirm
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/x-www-form-urlencoded
+        Authorization: Bearer ${get_extract_value(provider_Publikey)}
+    case_info: #测试信息
+      - case_title: 建立stripe支付方式
+        data:
+          client_secret: ${get_extract_value(stripeSetupSecret)}
+          payment_method_data[billing_details][address][city]: "J"
+          payment_method_data[billing_details][address][country]: "CN"
+          payment_method_data[billing_details][address][line1]: "J"
+          payment_method_data[billing_details][address][line2]: "J"
+          payment_method_data[billing_details][address][postal_code]: "J"
+          payment_method_data[billing_details][address][state]: "J"
+          payment_method_data[billing_details][email]: ""
+          payment_method_data[billing_details][name]: "J"
+          payment_method_data[billing_details][phone]: "+12025020602"
+          payment_method_data[card][cvc]: "666"
+          payment_method_data[card][exp_month]: "4"
+          payment_method_data[card][exp_year]: "26"
+          payment_method_data[card][number]: "4242424242424242"
+          payment_method_data[payment_user_agent]: "stripe-ios/23.15.0; variant.legacy; STPPaymentCardTextField; PaymentSheet.AddressController"
+          payment_method_data[type]: "card"
+          use_stripe_sdk: true
+        validate: #验证信息
+          - equal: [ $.status, succeeded ]
+
+bind_PaymentMethod :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/payment/methods
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        rental-captcha-token: RENTAL_CAPTCHA_TOKEN
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 绑定信用卡
+        json:
+          "providerId": ${get_extract_value(providerId)}
+          "customerSetupId": ${get_extract_value(customerSetupId)}
+          "methodType": "credit-card"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          paymentMethodId: '$.data.id'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

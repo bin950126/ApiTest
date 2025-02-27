@@ -1,0 +1,546 @@
+2025-02-26 16:29:08,974 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:29:08,988 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 16:29:08,988 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 16:29:08,989 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "terms-conditions",
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\"></p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+    }
+}
+2025-02-26 16:29:08,989 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:29:10,422 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "terms-conditions",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\"></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:29:12.36473Z",
+        "updatedAt": "2025-02-26T08:29:12.36473Z"
+    }
+}
+2025-02-26 16:29:10,424 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:31:31,336 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:31:31,347 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/50BDB2E0D9ED41D5ACE75CEB56D8E125/documents/terms-conditions
+2025-02-26 16:31:31,347 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 16:31:31,347 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+    }
+}
+2025-02-26 16:31:31,348 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:31:32,813 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14050,
+    "type": null,
+    "messageId": "Request method 'POST' not supported",
+    "message": "https://httpstatusdogs.com/405-method-not-allowed",
+    "details": [],
+    "data": null
+}
+2025-02-26 16:31:32,856 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:32:18,330 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:32:18,340 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/50BDB2E0D9ED41D5ACE75CEB56D8E125/documents/terms-conditions
+2025-02-26 16:32:18,340 - rest_client_new.py -log - INFO - 接口请求方式: PUT
+2025-02-26 16:32:18,341 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+    }
+}
+2025-02-26 16:32:18,341 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:32:19,897 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 400,
+    "type": "InvalidHashedId",
+    "messageId": null,
+    "message": "Invalid id '50BDB2E0D9ED41D5ACE75CEB56D8E125'",
+    "details": [],
+    "data": null
+}
+2025-02-26 16:32:19,940 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:33:28,203 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:33:28,216 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/terms-conditions
+2025-02-26 16:33:28,216 - rest_client_new.py -log - INFO - 接口请求方式: PUT
+2025-02-26 16:33:28,216 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+    }
+}
+2025-02-26 16:33:28,217 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:33:29,739 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "terms-conditions",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Terms &amp; Conditions</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:29:12.36473Z",
+        "updatedAt": "2025-02-26T08:33:31.74935045Z"
+    }
+}
+2025-02-26 16:33:29,742 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:35:17,287 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:35:17,308 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/terms-conditions
+2025-02-26 16:35:17,308 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 16:35:17,308 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:35:19,191 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-02-26 16:35:19,194 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:52:36,643 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:52:36,652 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 16:52:36,652 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 16:52:36,652 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "privacy-policy",
+    "content": {
+        "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n</ol>",
+        "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+        "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+    }
+}
+2025-02-26 16:52:36,653 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:52:38,152 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "privacy-policy",
+        "content": {
+            "en": "<ol>\n <li>ApiTest</li>\n <li>Privacy Policy</li>\n <li><span>English</span></li>\n</ol>",
+            "it": "<ol>\n <li>ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+            "es": "<ol>\n <li style=\"text-align: left;\">ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:52:40.134296Z",
+        "updatedAt": "2025-02-26T08:52:40.134296Z"
+    }
+}
+2025-02-26 16:52:38,153 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:52:44,741 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:52:44,750 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/privacy-policy
+2025-02-26 16:52:44,750 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 16:52:44,750 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:52:46,328 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-02-26 16:52:46,331 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:53:41,251 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:53:41,261 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 16:53:41,261 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 16:53:41,261 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "privacy-policy",
+    "content": {
+        "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n</ol>",
+        "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+        "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+    }
+}
+2025-02-26 16:53:41,261 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:53:42,749 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "privacy-policy",
+        "content": {
+            "en": "<ol>\n <li>ApiTest</li>\n <li>Privacy Policy</li>\n <li><span>English</span></li>\n</ol>",
+            "it": "<ol>\n <li>ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+            "es": "<ol>\n <li style=\"text-align: left;\">ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:53:44.79181Z",
+        "updatedAt": "2025-02-26T08:53:44.79181Z"
+    }
+}
+2025-02-26 16:53:42,751 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:54:10,668 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:54:10,676 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/privacy-policy
+2025-02-26 16:54:10,677 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 16:54:10,677 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:54:12,276 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-02-26 16:54:12,278 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:54:57,108 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:54:57,117 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 16:54:57,117 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 16:54:57,117 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "privacy-policy",
+    "content": {
+        "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n</ol>",
+        "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+        "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+    }
+}
+2025-02-26 16:54:57,117 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:54:58,954 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "privacy-policy",
+        "content": {
+            "en": "<ol>\n <li>ApiTest</li>\n <li>Privacy Policy</li>\n <li><span>English</span></li>\n</ol>",
+            "it": "<ol>\n <li>ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>",
+            "es": "<ol>\n <li style=\"text-align: left;\">ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n</ol>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:55:00.9475Z",
+        "updatedAt": "2025-02-26T08:55:00.9475Z"
+    }
+}
+2025-02-26 16:54:58,956 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:55:17,477 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:55:17,486 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/privacy-policy
+2025-02-26 16:55:17,486 - rest_client_new.py -log - INFO - 接口请求方式: PUT
+2025-02-26 16:55:17,486 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "content": {
+        "en": "<ol>\n<li>ApiTest</li>\n<li>Privacy Policy</li>\n<li><span>English</span></li>\n<li><span>update</span></li>\n</ol>",
+        "it": "<ol>\n<li>ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n<li><span>update</span><span></span></li>\n</ol>",
+        "es": "<ol>\n<li style=\"text-align: left;\">ApiTest</li>\n<li style=\"text-align: left;\">Privacy Policy</li>\n<li style=\"text-align: left;\"><span>Spanish</span></li>\n<li><span>update</span><span></span></li>\n</ol>"
+    }
+}
+2025-02-26 16:55:17,486 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:55:18,924 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "privacy-policy",
+        "content": {
+            "en": "<ol>\n <li>ApiTest</li>\n <li>Privacy Policy</li>\n <li><span>English</span></li>\n <li><span>update</span></li>\n</ol>",
+            "it": "<ol>\n <li>ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n <li><span>update</span><span></span></li>\n</ol>",
+            "es": "<ol>\n <li style=\"text-align: left;\">ApiTest</li>\n <li style=\"text-align: left;\">Privacy Policy</li>\n <li style=\"text-align: left;\"><span>Spanish</span></li>\n <li><span>update</span><span></span></li>\n</ol>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T08:55:00.9475Z",
+        "updatedAt": "2025-02-26T08:55:20.959935565Z"
+    }
+}
+2025-02-26 16:55:18,926 - conftest.py -log - INFO - 测试结束
+2025-02-26 16:55:45,366 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 16:55:45,376 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/privacy-policy
+2025-02-26 16:55:45,376 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 16:55:45,377 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 16:55:46,802 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-02-26 16:55:46,805 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:28:18,466 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:28:18,477 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 17:28:18,478 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 17:28:18,478 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "privacy-policy",
+    "content": {
+        "partnerId": "YVQM",
+        "type": "help-center",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        }
+    }
+}
+2025-02-26 17:28:18,478 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:28:19,770 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 116] (through reference chain: com.rental.api.account.dto.partner.document.CreatePartnerDocumentDto[\"content\"]->java.util.LinkedHashMap[\"content\"])",
+    "details": [],
+    "data": null
+}
+2025-02-26 17:28:19,824 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:30:23,454 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:30:23,464 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 17:30:23,464 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 17:30:23,464 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "help-center",
+    "content": {
+        "partnerId": "YVQM",
+        "type": "help-center",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        }
+    }
+}
+2025-02-26 17:30:23,464 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:30:38,172 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:30:43,920 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:30:43,932 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 17:30:43,932 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 17:30:43,932 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "help-center",
+    "content": {
+        "partnerId": "YVQM",
+        "type": "help-center",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        }
+    }
+}
+2025-02-26 17:30:43,933 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:30:45,312 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 113] (through reference chain: com.rental.api.account.dto.partner.document.CreatePartnerDocumentDto[\"content\"]->java.util.LinkedHashMap[\"content\"])",
+    "details": [],
+    "data": null
+}
+2025-02-26 17:30:45,357 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:32:04,130 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:32:04,140 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 17:32:04,140 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-26 17:32:04,140 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "type": "help-center",
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+    }
+}
+2025-02-26 17:32:04,141 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:32:05,585 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "help-center",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T09:32:07.606601Z",
+        "updatedAt": "2025-02-26T09:32:07.606601Z"
+    }
+}
+2025-02-26 17:32:05,588 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:32:20,172 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:32:20,180 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/help-center
+2025-02-26 17:32:20,180 - rest_client_new.py -log - INFO - 接口请求方式: PUT
+2025-02-26 17:32:20,180 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "content": {
+        "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>\n<p style=\"text-align: center;\"><img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469377/stg/account-5/wyw2ejlcz7v2chaigu3l.jpg\"><span></span></p>",
+        "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>\n<p style=\"text-align: center;\"><span><img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469396/stg/account-5/ipsjte720dt4besw9ar7.jpg\"></span></p>",
+        "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update<img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469307/stg/account-5/ilj9gwij7gytmnznb4p7.jpg\"></span></p>"
+    }
+}
+2025-02-26 17:32:20,180 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:32:21,565 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "partnerId": "YVQM",
+        "type": "help-center",
+        "content": {
+            "en": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>English</span></p>\n<p style=\"text-align: center;\">update</p>\n<p style=\"text-align: center;\"><img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469377/stg/account-5/wyw2ejlcz7v2chaigu3l.jpg\"><span></span></p>",
+            "it": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Italian</span></p>\n<p style=\"text-align: center;\"><span>update</span></p>\n<p style=\"text-align: center;\"><span><img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469396/stg/account-5/ipsjte720dt4besw9ar7.jpg\"></span></p>",
+            "es": "<p style=\"text-align: center;\">ApiTest</p>\n<p style=\"text-align: center;\">Help Center</p>\n<p style=\"text-align: center;\"><span>Spanish</span></p>\n<p style=\"text-align: center;\"><span>update<img src=\"http://res.cloudinary.com/dnwoijfjr/image/upload/v1740469307/stg/account-5/ilj9gwij7gytmnznb4p7.jpg\"></span></p>"
+        },
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-02-26T09:32:07.606601Z",
+        "updatedAt": "2025-02-26T09:32:23.659390614Z"
+    }
+}
+2025-02-26 17:32:21,568 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:32:33,703 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:32:33,710 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/partnerDocument
+2025-02-26 17:32:33,710 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 17:32:33,710 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:32:35,044 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14050,
+    "type": null,
+    "messageId": "Request method 'DELETE' not supported",
+    "message": "https://httpstatusdogs.com/405-method-not-allowed",
+    "details": [],
+    "data": null
+}
+2025-02-26 17:32:35,090 - conftest.py -log - INFO - 测试结束
+2025-02-26 17:33:12,768 - conftest.py -log - INFO - 开始执行测试
+2025-02-26 17:33:12,778 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/help-center
+2025-02-26 17:33:12,778 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-02-26 17:33:12,778 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-26 17:33:14,091 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-02-26 17:33:14,094 - conftest.py -log - INFO - 测试结束

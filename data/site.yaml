@@ -1,0 +1,110 @@
+create_site :
+  #接口的基本信息
+  - request_info:
+      url: /inventory/sites
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建站点
+        json: #请求参数
+          partnerId: ${get_extract_value(parther_id)}
+          address: "Address 11111"
+          city: "San Francisco"
+          coordinates:
+            - 121.6910001
+            - 31.26276608
+          country: "USA"
+          email: null
+          fenceRadius: 50
+          name: "ApiTest Site"
+          note: "NoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNo"
+          openingHoursNote: "10:00-17:00"
+          phone: "+12022222222"
+          placeType: "SERVICE_CENTER"
+          region: "California"
+          taxGroupId: "YLOY"
+          website: "https://ops-web-rental-stg.moovmobility.co/"
+          zip: "201616"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+        extract: #提取信息
+          test_site_id: '$.data.id'
+
+update_site :
+  #接口的基本信息
+  - request_info:
+      url: /inventory/sites/${get_extract_value(test_site_id)}
+      method: PATCH #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新站点信息
+        json: #请求参数
+          partnerId: ${get_extract_value(parther_id)}
+          address: "Address 11111"
+          city: "San Francisco"
+          coordinates:
+            - 121.6910001
+            - 31.26276608
+          country: "USA"
+          email: null
+          fenceRadius: 50
+          name: "ApiTest Site A"
+          note: "NoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNo"
+          openingHoursNote: "10:00-17:00"
+          phone: "+12022222222"
+          placeType: "SERVICE_CENTER"
+          region: "California"
+          taxGroupId: "YLOY"
+          website: "https://ops-web-rental-stg.moovmobility.co/"
+          zip: "201616"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+delete_site :
+  #接口的基本信息
+  - request_info:
+      url: /inventory/sites/${get_extract_value(test_site_id)}
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更新站点信息
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+upload_site_image :
+  #接口的基本信息
+  - request_info:
+      url: /inventory/sites/${get_extract_value(test_site_id)}/image
+      method: PUT #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 上传站点图片
+        files: #请求参数
+              "image": sea-8948636_1920.jpg
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+
+delete_site_image :
+  #接口的基本信息
+  - request_info:
+      url: /inventory/sites/${get_extract_value(test_site_id)}/image
+      method: DELETE #请求方法
+      headers:  #请求头
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 上传站点图片
+        files: #请求参数
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]

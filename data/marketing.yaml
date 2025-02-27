@@ -1,0 +1,110 @@
+create_pricin_paid :
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/assetCategories/${get_extract_value(category_a)}/program/pricingPart
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建定价付费
+        json: #请求参数
+          "basePrice":
+            "fee": 1
+            "time": 60
+          "planCodes": ["PT1H","PT2H"]
+          "noticeIntl":
+            "en": "Rental Fee Notice\nEnglish",
+            "it": "Rental Fee Notice\nItalian",
+            "es": "Rental Fee Notice\nSpanish"
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          basePrice_id: '$.data.basePrice.id'
+          paid_planid: '$.data.plans[1].id'
+          paid_plan: '$.data.plans[1].code'
+
+create_pricin_free :
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/assetCategories/${get_extract_value(category_b)}/program/pricingPart
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建定价免费
+        json: #请求参数
+          "basePrice":
+            "fee": 0
+            "time": 60
+          "planCodes": ["PT1H","PT2H"]
+          "noticeIntl":
+            "en": ""
+            "it": ""
+            "es": ""
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          free_planid: '$.data.plans[0].id'
+          free_plan: '$.data.plans[0].code'
+
+create_discount :
+  #接口的基本信息
+  - request_info:
+      url: /renting/discounts
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建折扣价
+        json: #请求参数
+          "name": "Discount"
+          "description": null
+          "price": 1.5
+          "basePriceId": ${get_extract_value(basePrice_id)}
+          "planId": ${get_extract_value(paid_planid)}
+          "startTime": "2025-02-20T05:43:00.000Z"
+          "endTime": null
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+create_deposits_category_a :
+  #接口的基本信息
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/assetCategories/${get_extract_value(category_a)}/program/depositPart
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 配置押金category_a
+        json: #请求参数
+          "depositAmount": 20
+          "depositNoticeIntl":
+            "en": "Deposit Fee Notice\nEnglish",
+            "it": "Deposit Fee Notice\nItalian",
+            "es": "Deposit Fee Notice\nSpanish"
+        validate: #验证信息
+          - equal: [ $.code,[1000,409]]
+
+create_deposits_category_b :
+  #接口的基本信息
+  - request_info:
+      url: /renting/partners/${get_extract_value(parther_id)}/assetCategories/${get_extract_value(category_b)}/program/depositPart
+      method: PUT #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 配置押金category_b
+        json: #请求参数
+          "depositAmount": 10
+          "depositNoticeIntl":
+            "en": ""
+            "it": ""
+            "es": ""
+        validate: #验证信息
+          - equal: [ $.code, [1000,409] ]

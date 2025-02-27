@@ -1,0 +1,436 @@
+2025-01-07 22:36:47,398 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:36:47,403 - Postgresql_utils.py -log - INFO - 执行sql: update customer_customer set is_archived = true WHERE phone_no = '+12000000000'
+2025-01-07 22:36:47,518 - conftest.py -log - INFO - sql执行结果：None
+2025-01-07 22:36:47,518 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-07 22:36:47,519 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12000000000",
+    "isMarketingConsented": "true"
+}
+2025-01-07 22:36:47,519 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:36:48,526 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNjI2MDYxMCwiZXhwIjoxNzM2MjYyNDEwLCJyYXdJZCI6MTA0Mn0.-EYm6KlUrcfq31kbfCUcrMz0OWP7PNhjmCJ_bMahz6w"
+    }
+}
+2025-01-07 22:36:48,529 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:36:48,536 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:36:48,541 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/verify
+2025-01-07 22:36:48,542 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "verificationCode": 111111,
+    "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNjI2MDYxMCwiZXhwIjoxNzM2MjYyNDEwLCJyYXdJZCI6MTA0Mn0.-EYm6KlUrcfq31kbfCUcrMz0OWP7PNhjmCJ_bMahz6w"
+}
+2025-01-07 22:36:48,542 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:36:50,038 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "newCustomerAccessToken": "8E71EF3418874D8189A520E3A5ADA2CF",
+        "newCustomerPassword": "103087"
+    }
+}
+2025-01-07 22:36:50,039 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:36:50,045 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:36:50,046 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/changePasswordByPassword
+2025-01-07 22:36:50,047 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "currentPassword": "103087",
+    "password": "123456"
+}
+2025-01-07 22:36:50,047 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 8E71EF3418874D8189A520E3A5ADA2CF"
+}
+2025-01-07 22:36:50,491 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-01-07 22:36:50,493 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:36:50,499 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:36:50,503 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-07 22:36:50,504 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12022222222",
+    "password": "123456"
+}
+2025-01-07 22:36:50,504 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:36:51,001 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "00FA1E2FAD9340B3A3CD72E9833E2081",
+        "profile": {
+            "id": "GMLO",
+            "username": "+12022222222",
+            "isPasswordSettled": true,
+            "nameFirst": "1",
+            "nameLast": "1",
+            "name": "1 1",
+            "phoneNo": "+12022222222",
+            "isPhoneNoVerified": false,
+            "email": "1@1232131.cn",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "4OR9JL",
+            "agreementAgreedAt": "2024-12-26T04:47:00.852803Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2024-12-24T02:57:30.193666Z",
+            "updatedAt": "2024-12-30T14:59:06.809718Z"
+        }
+    }
+}
+2025-01-07 22:36:51,005 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me
+2025-01-07 22:36:51,005 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "nameFirst": "bin",
+    "nameLast": "bin",
+    "email": "bin950112312111326@163.com",
+    "whatsapp": "+12022222222"
+}
+2025-01-07 22:36:51,005 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 00FA1E2FAD9340B3A3CD72E9833E2081"
+}
+2025-01-07 22:36:51,721 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "GMLO",
+        "username": "+12022222222",
+        "isPasswordSettled": true,
+        "nameFirst": "bin",
+        "nameLast": "bin",
+        "name": "bin bin",
+        "phoneNo": "+12022222222",
+        "isPhoneNoVerified": false,
+        "email": "bin950112312111326@163.com",
+        "isEmailVerified": false,
+        "whatsapp": "+12022222222",
+        "referralCode": "4OR9JL",
+        "agreementAgreedAt": "2024-12-26T04:47:00.852803Z",
+        "identityVerificationStatus": null,
+        "isMarketingConsented": false,
+        "createdAt": "2024-12-24T02:57:30.193666Z",
+        "updatedAt": "2025-01-07T14:36:53.484987426Z"
+    }
+}
+2025-01-07 22:36:51,723 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:36:51,727 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:36:51,731 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/payment/$setup
+2025-01-07 22:36:51,731 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-01-07 22:36:51,731 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 8E71EF3418874D8189A520E3A5ADA2CF"
+}
+2025-01-07 22:36:53,440 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "2BKD",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1QedtrGvq4E0WjAYs1bqMOI2",
+            "stripeSetupSecret": "seti_1QedtrGvq4E0WjAYs1bqMOI2_secret_RXjMDABMLsMa3Jy6XyJuRTPlYNgNEZs"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-01-07T14:36:54.764839Z",
+        "updatedAt": "2025-01-07T14:36:54.764839Z",
+        "customerId": "4B47"
+    }
+}
+2025-01-07 22:36:53,442 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:44:08,465 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:44:08,469 - Postgresql_utils.py -log - INFO - 执行sql: update customer_customer set is_archived = true WHERE phone_no = '+12000000000'
+2025-01-07 22:44:08,612 - conftest.py -log - INFO - sql执行结果：None
+2025-01-07 22:44:08,613 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-07 22:44:08,613 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12000000000",
+    "isMarketingConsented": "true"
+}
+2025-01-07 22:44:08,613 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:44:09,213 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNjI2MTA1MSwiZXhwIjoxNzM2MjYyODUxLCJyYXdJZCI6MTA0M30.jq-GRSDI8djG_05iNddy7uzxsSFmrdFtq15zSLyFIkY"
+    }
+}
+2025-01-07 22:44:09,215 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:44:09,221 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:44:09,226 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/verify
+2025-01-07 22:44:09,226 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "verificationCode": 111111,
+    "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNjI2MTA1MSwiZXhwIjoxNzM2MjYyODUxLCJyYXdJZCI6MTA0M30.jq-GRSDI8djG_05iNddy7uzxsSFmrdFtq15zSLyFIkY"
+}
+2025-01-07 22:44:09,226 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:44:09,800 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "newCustomerAccessToken": "99D3C9A6A70C4F91B7C3FBDB20101272",
+        "newCustomerPassword": "628497"
+    }
+}
+2025-01-07 22:44:09,802 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:44:09,807 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:44:09,808 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/changePasswordByPassword
+2025-01-07 22:44:09,808 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "currentPassword": "628497",
+    "password": "123456"
+}
+2025-01-07 22:44:09,808 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 99D3C9A6A70C4F91B7C3FBDB20101272"
+}
+2025-01-07 22:44:10,533 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-01-07 22:44:10,535 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:44:10,539 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:44:10,545 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-07 22:44:10,545 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12022222222",
+    "password": "123456"
+}
+2025-01-07 22:44:10,545 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-07 22:44:11,011 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "388F81C1487A4590B10DA2138091E847",
+        "profile": {
+            "id": "GMLO",
+            "username": "+12022222222",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "name": "bin bin",
+            "phoneNo": "+12022222222",
+            "isPhoneNoVerified": false,
+            "email": "bin950112312111326@163.com",
+            "isEmailVerified": false,
+            "whatsapp": "+12022222222",
+            "referralCode": "4OR9JL",
+            "agreementAgreedAt": "2024-12-26T04:47:00.852803Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2024-12-24T02:57:30.193666Z",
+            "updatedAt": "2025-01-07T14:36:53.484987Z"
+        }
+    }
+}
+2025-01-07 22:44:11,017 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me
+2025-01-07 22:44:11,017 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "nameFirst": "bin",
+    "nameLast": "bin",
+    "email": "bin950112312111326@163.com",
+    "whatsapp": "+12022222222"
+}
+2025-01-07 22:44:11,017 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 388F81C1487A4590B10DA2138091E847"
+}
+2025-01-07 22:44:12,190 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "GMLO",
+        "username": "+12022222222",
+        "isPasswordSettled": true,
+        "nameFirst": "bin",
+        "nameLast": "bin",
+        "name": "bin bin",
+        "phoneNo": "+12022222222",
+        "isPhoneNoVerified": false,
+        "email": "bin950112312111326@163.com",
+        "isEmailVerified": false,
+        "whatsapp": "+12022222222",
+        "referralCode": "4OR9JL",
+        "agreementAgreedAt": "2024-12-26T04:47:00.852803Z",
+        "identityVerificationStatus": null,
+        "isMarketingConsented": false,
+        "createdAt": "2024-12-24T02:57:30.193666Z",
+        "updatedAt": "2025-01-07T14:44:13.93351617Z"
+    }
+}
+2025-01-07 22:44:12,193 - conftest.py -log - INFO - 测试结束
+2025-01-07 22:44:12,197 - conftest.py -log - INFO - 开始执行测试
+2025-01-07 22:44:12,202 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/payment/$setup
+2025-01-07 22:44:12,202 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-01-07 22:44:12,203 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer 99D3C9A6A70C4F91B7C3FBDB20101272"
+}
+2025-01-07 22:44:13,723 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "9BDJ",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1Qee0xGvq4E0WjAYRQbO8Khl",
+            "stripeSetupSecret": "seti_1Qee0xGvq4E0WjAYRQbO8Khl_secret_RXjT8zJeFYXYo3UOO0A76gQWiKOeihS"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-01-07T14:44:15.13226Z",
+        "updatedAt": "2025-01-07T14:44:15.13226Z",
+        "customerId": "VMBZ"
+    }
+}
+2025-01-07 22:44:13,724 - conftest.py -log - INFO - 测试结束

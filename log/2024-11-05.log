@@ -1,0 +1,22 @@
+2024-11-05 17:33:08,027 - conftest.py -log - INFO - 开始执行测试
+2024-11-05 17:33:08,031 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-05 17:33:08,032 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-05 17:33:08,032 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-05 17:33:10,474 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "086D448218C4404A9885CEC15C34C349"}}
+2024-11-05 17:33:10,477 - conftest.py -log - INFO - 测试结束
+2024-11-05 17:33:10,483 - conftest.py -log - INFO - 开始执行测试
+2024-11-05 17:33:10,492 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-05 17:33:10,492 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-05 17:33:10,492 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-05 17:33:12,319 - conftest.py -log - INFO - 测试结束
+2024-11-05 17:54:05,009 - conftest.py -log - INFO - 开始执行测试
+2024-11-05 17:54:05,013 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/auth/login
+2024-11-05 17:54:05,013 - rest_client.py -log - INFO - 接口请求的json参数:  {'username': 'account-admin-5@rental.moov', 'password': 123456}
+2024-11-05 17:54:05,013 - rest_client.py -log - INFO - 接口请求的请求头:null
+2024-11-05 17:54:06,694 - response_urils.py -log - INFO - 接口返回数据：{"code": 1000, "message": null, "data": {"accessToken": "2BAF4F392D40478EA5929D76F57F9508"}}
+2024-11-05 17:54:06,696 - conftest.py -log - INFO - 测试结束
+2024-11-05 17:54:06,701 - conftest.py -log - INFO - 开始执行测试
+2024-11-05 17:54:06,711 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders
+2024-11-05 17:54:06,711 - rest_client.py -log - INFO - 接口请求的params参数:  {'sort': 'createdAt:desc', 'pageNo': 1, 'pageSize': 10, 'statusIn': 'closed'}
+2024-11-05 17:54:06,711 - rest_client.py -log - INFO - 接口请求的请求头:{"Content-Type": "application/json", "authorization": "Bearer F850626AA7A2417D8979F5CD6C9860D8"}
+2024-11-05 17:54:08,502 - conftest.py -log - INFO - 测试结束

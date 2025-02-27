@@ -1,0 +1,640 @@
+2025-01-24 11:48:12,174 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 11:48:12,247 - conftest.py -log - INFO - 测试结束
+2025-01-24 11:50:45,321 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 11:50:45,325 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/$.{get_extract.value.(assetId)}/$inspect
+2025-01-24 11:50:45,325 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 11:50:45,326 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 11:50:45,326 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 11:50:52,864 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 11:50:52,952 - conftest.py -log - INFO - 测试结束
+2025-01-24 11:51:33,755 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 11:51:33,760 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/$.{get_extract.value.(assetId)}/$inspect
+2025-01-24 11:51:33,760 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 11:51:33,760 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 11:51:33,761 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 11:51:48,345 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 11:51:48,421 - conftest.py -log - INFO - 测试结束
+2025-01-24 11:53:15,021 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 11:53:15,026 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/$.{get_extract.value.(assetId)}/$inspect
+2025-01-24 11:53:15,026 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 11:53:15,026 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 11:53:15,027 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 11:53:16,497 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 11:53:16,580 - conftest.py -log - INFO - 测试结束
+2025-01-24 11:54:17,286 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 11:54:17,295 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/$.{get_extract.value.(assetId)}/$inspect
+2025-01-24 11:54:17,296 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 11:54:17,296 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 11:54:17,296 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 11:54:29,064 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 11:54:29,143 - conftest.py -log - INFO - 测试结束
+2025-01-24 11:56:53,109 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 12:00:28,050 - conftest.py -log - INFO - 测试结束
+2025-01-24 12:00:34,424 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 12:01:55,516 - conftest.py -log - INFO - 测试结束
+2025-01-24 12:02:06,214 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 12:02:25,374 - conftest.py -log - INFO - 测试结束
+2025-01-24 12:02:31,379 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 12:11:09,182 - conftest.py -log - INFO - 测试结束
+2025-01-24 12:11:21,411 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 12:57:23,773 - ExtractUtils.py -log - ERROR - 获取变量[assetId]的值失败：请检查error信息：'YamlUtil' object has no attribute 'extract_yaml'
+2025-01-24 13:01:57,076 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:02:03,399 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:06:35,906 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:06:55,525 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:06:55,569 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:09:52,120 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:16:52,967 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:16:59,133 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:18:10,153 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:18:16,034 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:18:33,236 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/D5/$inspect
+2025-01-24 13:18:33,236 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:18:33,237 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 13:18:33,237 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 13:18:34,822 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 13:18:34,906 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:19:35,309 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:19:35,315 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:19:35,315 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:19:35,315 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:19:37,109 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "B23E68B743F2475791B87E0B84A405EC",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:19:37,113 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/D5/$inspect
+2025-01-24 13:19:37,113 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:19:37,113 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": "None"
+}
+2025-01-24 13:19:37,113 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 13:19:38,923 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "JSON parse error: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.rental.api.customer.dto.rental.InspectCustomerAssetGeolocationDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('None')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 17] (through reference chain: com.rental.api.customer.dto.rental.InspectCustomerAssetDto[\"geolocation\"])",
+    "details": [],
+    "data": null
+}
+2025-01-24 13:19:38,973 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:21:08,077 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:21:08,082 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:21:08,082 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:21:08,082 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:21:19,582 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "AB283BE4B12A47C3A837DECAB4044517",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:21:19,592 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/D5/$inspect
+2025-01-24 13:21:19,592 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:21:19,593 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": null
+}
+2025-01-24 13:21:19,593 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 13:21:21,228 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 14000,
+    "type": "BadRequest",
+    "messageId": null,
+    "message": "Header 'Rental-Customer-Id' is required.",
+    "details": [],
+    "data": null
+}
+2025-01-24 13:21:21,278 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:24:54,682 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:24:54,688 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:24:54,689 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:24:54,689 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:24:56,556 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "D85DDC314C8646B6B62DFC7DCE9981CC",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:24:56,563 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/D5/$inspect
+2025-01-24 13:24:56,564 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:24:56,564 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": null
+}
+2025-01-24 13:24:56,564 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer D85DDC314C8646B6B62DFC7DCE9981CC"
+}
+2025-01-24 13:24:59,892 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "status": "asset-already-rented-out",
+        "accountConfig": {
+            "enabledInvoice": true
+        },
+        "rentalConfig": {
+            "id": "E8VX",
+            "partner": {
+                "id": "YX5P",
+                "name": "Rybit USA"
+            },
+            "currency": "USD",
+            "customOptions": [
+                "allow-control-beep",
+                "allow-view-geolocation",
+                "allow-control-light",
+                "allow-control-lock",
+                "allow-control-battery-lock",
+                "allow-push-geolocation-checkpoint"
+            ],
+            "isOpenToJoin": true,
+            "userSelfJoinNote": {
+                "en": "en-test config for userSelfJoinNote",
+                "it": "it-test config for userSelfJoinNote",
+                "es": "es-test config for userSelfJoinNote"
+            },
+            "unavailableNote": {
+                "en": "The asset is not able to rent. Please collect other available assets.",
+                "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+            },
+            "userMaxPaymentAmount": 100000.0,
+            "contactPhoneNo": null,
+            "contactEmailNo": null,
+            "createdAt": "2022-04-06T02:36:32.912Z",
+            "updatedAt": "2024-12-24T03:17:07.375999Z"
+        },
+        "program": {
+            "id": "YLLG",
+            "partnerId": "YX5P",
+            "assetCategoryId": "YPQM",
+            "depositAmount": 9.99,
+            "assetLimit": 10,
+            "isAllowedCrossSiteReturn": true,
+            "isConfirmRequired": false,
+            "isLocationCheckRequired": false,
+            "isLockCheckRequired": false,
+            "noticeIntl": {
+                "en": "",
+                "it": "",
+                "es": ""
+            },
+            "depositNoticeIntl": {
+                "en": "",
+                "it": "",
+                "es": ""
+            },
+            "basePrice": {
+                "id": "YPDV",
+                "fee": 1.99,
+                "time": 60,
+                "currency": "USD"
+            },
+            "plans": [
+                {
+                    "id": "MXX8",
+                    "code": "PT1H",
+                    "duration": 60,
+                    "discount": null
+                },
+                {
+                    "id": "NPPZ",
+                    "code": "P1D",
+                    "duration": 1440,
+                    "discount": null
+                },
+                {
+                    "id": "3BBX",
+                    "code": "P1W",
+                    "duration": 10080,
+                    "discount": null
+                },
+                {
+                    "id": "KPPG",
+                    "code": "P1M",
+                    "duration": 43200,
+                    "discount": null
+                },
+                {
+                    "id": "5667",
+                    "code": "P2M",
+                    "duration": 86400,
+                    "discount": null
+                }
+            ]
+        },
+        "asset": {
+            "partnerId": "YX5P",
+            "categoryId": "YPQM",
+            "no": "D5",
+            "location": {
+                "siteId": "YVKN",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        121.357177734375,
+                        31.167705535888672
+                    ]
+                }
+            },
+            "modelType": null,
+            "iot": null,
+            "geolocation": null,
+            "lease": null
+        }
+    }
+}
+2025-01-24 13:24:59,898 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:33:02,347 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:33:02,353 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:33:02,353 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:33:02,353 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:33:03,835 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "0459F1597A284763867BBD8EAAAD3A25",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:46:24,026 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:46:30,540 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:46:30,544 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:46:30,545 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:46:30,545 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:46:32,364 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "4BACCFF660BD4851BB44D5964F7C1C1F",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:47:23,188 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:47:29,909 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:47:29,914 - rest_client.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/auth/login
+2025-01-24 13:47:29,915 - rest_client.py -log - INFO - 接口请求的json参数:  
+{
+    "username": "+12025010704",
+    "password": "010704"
+}
+2025-01-24 13:47:29,915 - rest_client.py -log - INFO - 接口请求的请求头:
+{
+    "Host": "api-rental-stg.moovmobility.co",
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Accept": "*/*",
+    "Accept-Language": "en-us",
+    "User-Agent": "RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0",
+    "Accept-Encoding": "gzip",
+    "Connection": "keep-alive"
+}
+2025-01-24 13:47:31,632 - response_urils.py -log - INFO - 接口返回数据：
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "token": "043EEC7973AA4044AF5DF2DCE6971A9A",
+        "profile": {
+            "id": "BXG4",
+            "username": "+12025010704",
+            "isPasswordSettled": true,
+            "nameFirst": "bin",
+            "nameLast": "1",
+            "name": "bin 1",
+            "phoneNo": "+12025010704",
+            "isPhoneNoVerified": false,
+            "email": "binbin.lai@rybit.io",
+            "isEmailVerified": false,
+            "whatsapp": null,
+            "referralCode": "0KSHB6",
+            "agreementAgreedAt": "2025-01-08T03:17:17.982212Z",
+            "identityVerificationStatus": null,
+            "isMarketingConsented": false,
+            "createdAt": "2025-01-07T11:22:46.062532Z",
+            "updatedAt": "2025-01-15T05:52:04.688322Z"
+        }
+    }
+}
+2025-01-24 13:50:56,657 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:50:56,660 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-24 13:50:56,660 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:50:56,660 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-24 13:50:56,661 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 13:50:58,270 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzY5Nzg2MCwiZXhwIjoxNzM3Njk5NjYwLCJyYXdJZCI6MTI0Nn0.eNMG7E3KsgVPS705bdAXlPvBu_OA3jgdsGwWWei8yuM"
+    }
+}
+2025-01-24 13:50:58,281 - conftest.py -log - INFO - 测试结束
+2025-01-24 13:51:53,899 - conftest.py -log - INFO - 开始执行测试
+2025-01-24 13:51:53,902 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-24 13:51:53,902 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-24 13:51:53,903 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-24 13:51:53,903 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-24 13:51:55,466 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzY5NzkxNywiZXhwIjoxNzM3Njk5NzE3LCJyYXdJZCI6MTI0N30.3nQBPJp7CKjNR7-lnsy5wK-YU5EYzhl80XFyCRA7O-o"
+    }
+}
+2025-01-24 13:51:55,477 - conftest.py -log - INFO - 测试结束
+2025-01-26 18:12:06,824 - conftest.py -log - INFO - 测试结束

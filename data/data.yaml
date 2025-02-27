@@ -1,0 +1,64 @@
+login_data:
+     username: account-admin-5@rental.moov
+     password: 123456
+
+
+order_query_data:
+  sort: createdAt:desc
+  pageNo: 1
+  pageSize: 100
+  statusIn: open
+  statusIn: closed
+  partnerIdIn: Y7MQ
+
+update_customer_data:
+  {
+    "nameFirst": "bin",
+    "nameLast": "bin",
+    "email": "bin950126@1.com",
+    "whatsapp": "+12022222222"
+  }
+
+register_data:
+  {
+  "phoneNo": "+12025000001",
+  "isMarketingConsented": 'true'
+}
+
+verificationCode: 111111
+
+
+register_headers:
+  {
+    'Host': 'api-rental-stg.moovmobility.co',
+    'Content-Type': 'application/json',
+    'rental-client-id': 'com.rental.user.app.rybit.stg',
+    'rental-captcha-token': 'RENTAL_CAPTCHA_TOKEN',
+    'Accept': '*/*',
+    'Accept-Language': 'en-us',
+    'User-Agent': 'RNJetsbikeB2C/1911 CFNetwork/1568.100.1 Darwin/24.0.0',
+    'Accept-Encoding': 'gzip',
+    'Connection': 'keep-alive'
+  }
+
+payment_setup_data:
+  {
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+  }
+
+asset_no: "A6E11SH002"
+
+
+report_data :
+  story : 查询订单
+  title : 填入车辆号，点击查询
+
+create_order_data:
+  {
+    "customerId": "NZ66",
+    "assetNo": "A6E11SH002",
+    "planCode": "P1D",
+    "customerPaymentMethodId": "DJP5",
+    "expectedAmount": 0
+  }

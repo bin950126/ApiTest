@@ -1,0 +1,4 @@
+2025-01-15 23:55:00,836 - conftest.py -log - INFO - 开始执行测试
+2025-01-15 23:57:08,361 - conftest.py -log - INFO - 测试结束
+2025-01-15 23:57:33,598 - conftest.py -log - INFO - 开始执行测试
+2025-01-15 23:58:33,409 - conftest.py -log - INFO - 测试结束

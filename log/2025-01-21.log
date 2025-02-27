@@ -1,0 +1,270 @@
+2025-01-21 20:21:21,192 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 20:21:21,196 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 20:21:21,196 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 20:21:21,196 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 20:21:21,196 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 20:21:28,366 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2MjA5MCwiZXhwIjoxNzM3NDYzODkwLCJyYXdJZCI6MTE2N30.9qMHR5mLv1rD2uGo0o0zIEufs9ah4uZTcBAv_XnG-9Y"
+    }
+}
+2025-01-21 20:21:28,420 - conftest.py -log - INFO - 测试结束
+2025-01-21 20:22:11,564 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 20:22:11,567 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 20:22:11,567 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 20:22:11,568 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 20:22:11,568 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 20:22:13,575 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2MjEzNSwiZXhwIjoxNzM3NDYzOTM1LCJyYXdJZCI6MTE2OH0.5j9_hIV3MqZ74UkWMsp8jPOWXOHEN4aetJpWXX0OW5Y"
+    }
+}
+2025-01-21 20:22:13,625 - conftest.py -log - INFO - 测试结束
+2025-01-21 20:22:13,628 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 20:22:13,629 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/agreement/partners/YX5P/documents?preferredLangCode=en
+2025-01-21 20:22:13,630 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-01-21 20:22:13,630 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer F401FE97CE5E4392B82D95867499AFFC"
+}
+2025-01-21 20:22:15,716 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "partner": {
+                "id": "YX5P",
+                "name": "Rybit USA"
+            },
+            "type": "help-center",
+            "langCode": "en",
+            "content": "<p><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1685339345/rental_documents/account_5/HELP_CENTER/file_nhjvhx.jpg\">Help Center <span>English</span></p>",
+            "createdAt": "2023-05-29T05:49:11.272199Z",
+            "updatedAt": "2023-05-29T05:49:11.272199Z"
+        },
+        {
+            "partner": {
+                "id": "YX5P",
+                "name": "Rybit USA"
+            },
+            "type": "privacy-policy",
+            "langCode": "en",
+            "content": "<p>Privacy Policy <span>English123121</span></p>",
+            "createdAt": "2023-05-29T05:45:51.378816Z",
+            "updatedAt": "2023-06-01T07:29:25.827614Z"
+        }
+    ]
+}
+2025-01-21 20:22:15,726 - conftest.py -log - INFO - 测试结束
+2025-01-21 20:27:48,611 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 20:27:48,617 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 20:27:48,617 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 20:27:48,618 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 20:27:48,618 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 20:28:08,020 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2MjQ5MCwiZXhwIjoxNzM3NDY0MjkwLCJyYXdJZCI6MTE2OX0.47ZSi1zzy36aNb84kRAPrDa1uYQg8uF8q7vGpKj9whc"
+    }
+}
+2025-01-21 20:28:08,070 - conftest.py -log - INFO - 测试结束
+2025-01-21 21:01:17,674 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 21:01:17,678 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 21:01:17,678 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 21:01:17,678 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 21:01:17,678 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 21:01:19,392 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2NDQ4MSwiZXhwIjoxNzM3NDY2MjgxLCJyYXdJZCI6MTE3MH0.5W0Yh8S6FJGHoek4L8ZNBjNWBnjJXUJLVC3W1KRDwc0"
+    }
+}
+2025-01-21 21:01:19,394 - conftest.py -log - INFO - 测试结束
+2025-01-21 21:22:43,003 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 21:22:43,009 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 21:22:43,009 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 21:22:43,010 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 21:22:43,010 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 21:22:45,863 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2NTc2NywiZXhwIjoxNzM3NDY3NTY3LCJyYXdJZCI6MTE3MX0.lHh9x3U6IGlbut3v4prcSzerSQ2SuTOE-6tSD8PIMr8"
+    }
+}
+2025-01-21 21:28:07,703 - conftest.py -log - INFO - 测试结束
+2025-01-21 21:47:27,221 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 21:47:27,225 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 21:47:27,226 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 21:47:27,226 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 21:47:27,226 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 21:47:39,107 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2NzI2MSwiZXhwIjoxNzM3NDY5MDYxLCJyYXdJZCI6MTE3Mn0.ReZ8SAb4nz7U2AAJKl5oflnmdxCMmdP99IDtSozyyj0"
+    }
+}
+2025-01-21 21:47:39,160 - conftest.py -log - INFO - 测试结束
+2025-01-21 21:49:23,453 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 21:49:23,457 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 21:49:23,457 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 21:49:23,458 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 21:49:23,458 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 21:49:25,307 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2NzM2NywiZXhwIjoxNzM3NDY5MTY3LCJyYXdJZCI6MTE3M30.Wv2VthIc5QfO2SQ510YGty2uSoA0c8LssXJElKZB0Lc"
+    }
+}
+2025-01-21 21:49:25,310 - conftest.py -log - INFO - 测试结束
+2025-01-21 21:52:12,211 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 21:52:12,215 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 21:52:12,216 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 21:52:12,216 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 21:52:12,217 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 21:52:14,283 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2NzUzNiwiZXhwIjoxNzM3NDY5MzM2LCJyYXdJZCI6MTE3NH0.-_536nnT_uEdfMyQ7EwZLUf9HF6ANrUyZgBH8Z19CGY"
+    }
+}
+2025-01-21 21:52:14,330 - conftest.py -log - INFO - 测试结束
+2025-01-21 22:10:03,530 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 22:10:03,534 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 22:10:03,534 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 22:10:03,534 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 22:10:03,534 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 22:10:05,203 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ2ODYwNywiZXhwIjoxNzM3NDcwNDA3LCJyYXdJZCI6MTE3NX0.7_D51WAO1tpOt7cHx4wDZLcVBmv4ogRJTIDJUFIuFRk"
+    }
+}
+2025-01-21 22:10:05,208 - conftest.py -log - INFO - 测试结束
+2025-01-21 22:43:15,147 - conftest.py -log - INFO - 开始执行测试
+2025-01-21 22:43:15,157 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/register
+2025-01-21 22:43:15,175 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-01-21 22:43:15,176 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "phoneNo": "+12025000002",
+    "isMarketingConsented": true
+}
+2025-01-21 22:43:15,176 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+2025-01-21 22:43:16,878 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTczNzQ3MDU5OCwiZXhwIjoxNzM3NDcyMzk4LCJyYXdJZCI6MTE3Nn0.YWgcQVU0DbTEKGVuEQr8d8f8gtVeM-c17ROnaCfzo1c"
+    }
+}
+2025-01-21 22:43:16,883 - conftest.py -log - INFO - 测试结束

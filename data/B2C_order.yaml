@@ -1,0 +1,372 @@
+asset_rentalinfo :
+  #接口的基本信息
+  - request_info:
+
+      url: /customer/me/rental/assets/${get_extract_value(plan_asset1)}/$inspect
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 获取车辆租赁信息
+        json: #请求参数
+            "geolocation":
+        validate: #验证信息
+          - equal: [$.code, 1000]
+        extract: #提取信息
+          plancode: '$.data.program.plans.[1].code'
+          discount_price: '$.data.program.plans.[1].discount.price'
+
+pay_deposit :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/deposits
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 支付押金category_a第一笔
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "customerId": ${get_extract_value(customer_id)}
+          "assetCategoryId": ${get_extract_value(category_a)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+        validate: #验证信息
+          - equal: [$.code, 1000]
+      - case_title: 支付押金category_a第二笔
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "customerId": ${get_extract_value(customer_id)}
+          "assetCategoryId": ${get_extract_value(category_a)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+      - case_title: 支付押金category_b
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "customerId": ${get_extract_value(customer_id)}
+          "assetCategoryId": ${get_extract_value(category_b)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+
+rental_asset :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/orders
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 租赁第一笔资产
+        json: #请求参数
+          "customerId": ${get_extract_value(customer_id)}
+          "assetNo": ${get_extract_value(plan_asset1)}
+          "planCode": ${get_extract_value(paid_plan)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+          "expectedAmount": ${get_extract_value(discount_price)}
+        validate: #验证信息
+          - equal: [$.code, 1000]
+        extract: #提取信息
+          paid_orderid1: '$.data.id'
+      - case_title: 租赁第二笔资产
+        json: #请求参数
+          "customerId": ${get_extract_value(customer_id)}
+          "assetNo": ${get_extract_value(plan_asset2)}
+          "planCode": ${get_extract_value(paid_plan)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+          "expectedAmount": ${get_extract_value(discount_price)}
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          paid_orderid2: '$.data.id'
+      - case_title: 租赁免费资产
+        json: #请求参数
+          "customerId": ${get_extract_value(customer_id)}
+          "assetNo": ${get_extract_value(free_asset)}
+          "planCode": ${get_extract_value(free_plan)}
+          "customerPaymentMethodId": ${get_extract_value(paymentMethodId)}
+          "expectedAmount": 0
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          free_orderid: '$.data.id'
+
+submit_return_confirm1 :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/ongoingOrders/${get_extract_value(paid_orderid1)}/assets/${get_extract_value(plan_asset1)}/$submitReturn
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 第一笔订单提交还车申请
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+submit_return_confirm2 :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/ongoingOrders/${get_extract_value(paid_orderid2)}/assets/${get_extract_value(plan_asset2)}/$submitReturn
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 第二笔订单提交还车申请
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+cancel_return :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/ongoingOrders/${get_extract_value(paid_orderid2)}/assets/${get_extract_value(plan_asset2)}/$cancelReturn
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 第二笔订单取消还车申请
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+submit_return :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/ongoingOrders/${get_extract_value(free_orderid)}/assets/${get_extract_value(free_asset)}/$submitReturn
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 还车关闭订单
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+confirm_return :
+  #接口的基本信息
+  - request_info:
+      url: /renting/ongoingOrders/${get_extract_value(paid_orderid1)}/assets/${get_extract_value(plan_asset1)}/$confirmReturn
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 确认还车
+        json: #请求参数
+            "siteId": ${get_extract_value(site_id)}
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+force_close_order :
+  #接口的基本信息
+  - request_info:
+      url: /renting/orders/${get_extract_value(paid_orderid2)}/$forceClose
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 强制结束订单
+        json: #请求参数
+            "reason": "接口自动化测试强制结束订单"
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+replace_asset :
+  #接口的基本信息
+  - request_info:
+      url: /renting/orders/${get_extract_value(paid_orderid2)}/assets/${get_extract_value(plan_asset2)}/lease/$replaceAsset
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 更换订单中的车辆
+        json: #请求参数
+              "assetNo": ${get_extract_value(plan_asset1)}
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+usage_records :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/orders/${get_extract_value(paid_orderid2)}/assets/${get_extract_value(plan_asset1)}/lease/usageRecords
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看订单车辆更换记录
+        json: #请求参数
+        validate: #验证信息
+          - equal: [$.code, 1000]
+
+ongoing_orders :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/ongoingOrders
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看进行中的订单
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+             length: [$.data, 3]
+
+get_closed_orders :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/orders?pageNo=1&pageSize=12&sort=endTime:desc,hasAmountUnpaid:desc&statusIn=closed
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看已关闭的订单
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+transactions_orders :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/orders/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看租金 交易记录
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+transactions_deposits :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/deposits/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 查看押金交易记录
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+refund_rent :
+  #接口的基本信息
+  - request_info:
+      url: /renting/orders/${get_extract_value(paid_orderid1)}/$exemptOrRefund
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 退回租金
+        json: #请求参数
+          "amount": 1.5
+          "reason": "1"
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+refund_deposit :
+  #接口的基本信息
+  - request_info:
+      url: /renting/customers/${get_extract_value(customer_id)}/deposits/$refundByPartnerAssetCategory
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 退回押金category_a
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "assetCategoryId": ${get_extract_value(category_a)}
+          "reason": "1"
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+apply_deposit_refund :
+  #接口的基本信息
+  - request_info:
+      url: /customer/me/rental/deposits/$submitRefundRequest
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(customer_token)}
+    case_info: #测试信息
+      - case_title: 申请退还押金
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "customerId": ${get_extract_value(customer_id)}
+          "assetCategoryId": ${get_extract_value(category_b)}
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+deposit_application_id :
+  #接口的基本信息
+  - request_info:
+      url: /renting/deposits/$all/refundRequests?sort=createdAt%3Adesc&customerIdIn=${get_extract_value(customer_id)}&statusIn=waiting&pageSize=10&pageNo=1
+      method: GET #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 获取退回押金申请id
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+        extract: #提取信息
+          deposit_application_id: '$.data.[0].id'
+
+approve_deposit_refund :
+  #接口的基本信息
+  - request_info:
+      url: /renting/deposits/$all/refundRequests/${get_extract_value(deposit_application_id)}/$approve
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 通过退还押金申请
+        json: #请求参数
+        validate: #验证信息
+          -  equal: [$.code, 1000]
+
+
+
+
+
