@@ -1,0 +1,22 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 0,
+    "data": []
+}
+INFO     log:conftest.py:15 测试结束

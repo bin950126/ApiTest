@@ -1,0 +1,25 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits/$submitRefundRequest
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "customerId": "VL52",
+    "assetCategoryId": "Y63Q"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 400,
+    "type": "CustomerNotJoinedPartner",
+    "messageId": null,
+    "message": "Customer has not joined the partner.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

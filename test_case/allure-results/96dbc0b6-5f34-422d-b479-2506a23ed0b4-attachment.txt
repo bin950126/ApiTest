@@ -1,0 +1,49 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/customers/VL52/deposits/$refundByPartnerAssetCategory
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "assetCategoryId": "Y2XM",
+    "reason": "1"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "62R4",
+            "partnerId": "YVQM",
+            "customerId": "VL52",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-03-14T06:42:34.838041Z",
+            "updatedAt": "2025-03-14T06:44:38.842114328Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "2RQD",
+            "partnerId": "YVQM",
+            "customerId": "VL52",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-03-14T06:42:58.743257Z",
+            "updatedAt": "2025-03-14T06:44:40.081403359Z",
+            "leaseUsage": null
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

@@ -1,0 +1,39 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me
+INFO     log:rest_client_new.py:38 接口请求方式: PATCH
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "whatsapp": "+12022222223"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 8BE043D122BF440BB56535EA984039F6"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "8KVZ",
+        "username": "+12025000001",
+        "isPasswordSettled": true,
+        "nameFirst": "bin",
+        "nameLast": "bin",
+        "name": "bin bin",
+        "phoneNo": "+12025000001",
+        "isPhoneNoVerified": true,
+        "email": "1231233456@1.cn",
+        "isEmailVerified": false,
+        "whatsapp": "+12022222223",
+        "referralCode": "WHX6Y0",
+        "agreementAgreedAt": "2025-03-05T13:00:16.254575Z",
+        "identityVerificationStatus": "pending",
+        "isMarketingConsented": true,
+        "createdAt": "2025-03-05T13:00:16.254575Z",
+        "updatedAt": "2025-03-05T13:00:56.374410032Z"
+    }
+}
+INFO     log:conftest.py:15 测试结束

@@ -1,0 +1,24 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/registry/verify
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "verificationCode": 123456,
+    "registrationToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYWJpdC1jdXN0b21lciIsImlhdCI6MTc0MTE3OTYxMywiZXhwIjoxNzQxMTgxNDEzLCJyYXdJZCI6MTMyN30._38rPEEXE1HrELXp8R87xr0f5WjNtGb-iSso40jOuYY"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "newCustomerAccessToken": "8789A398DF864A35B6CBA6CD2826D7D6",
+        "newCustomerPassword": "605474"
+    }
+}
+INFO     log:conftest.py:15 测试结束

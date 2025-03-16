@@ -1,0 +1,35 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "customerId": "PONJ",
+    "assetCategoryId": "Y2XM",
+    "customerPaymentMethodId": "JVQJ"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "4JNJ",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "assetCategoryId": "Y2XM",
+        "status": "usable",
+        "tradeStatus": "captured",
+        "currency": "USD",
+        "amount": 20.0,
+        "createdAt": "2025-02-27T08:56:02.747007Z",
+        "updatedAt": "2025-02-27T08:56:02.747007476Z",
+        "leaseUsage": null
+    }
+}
+INFO     log:conftest.py:15 测试结束

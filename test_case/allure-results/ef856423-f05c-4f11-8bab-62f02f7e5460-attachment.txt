@@ -1,0 +1,26 @@
+INFO     log:conftest.py:13 开始执行测试
+ERROR    log:ExtractUtils.py:35 获取变量[customer_token]的值失败：请检查error信息：'NoneType' object is not subscriptable
+ERROR    log:ExtractUtils.py:35 获取变量[parther_id]的值失败：请检查error信息：'NoneType' object is not subscriptable
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/memberships/$all/leavePartner
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "partnerId": "None"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer None"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 401,
+    "type": "InvalidToken",
+    "messageId": null,
+    "message": "Invalid token.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

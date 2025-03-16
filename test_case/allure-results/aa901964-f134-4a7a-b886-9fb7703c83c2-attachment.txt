@@ -1,0 +1,75 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders/LDN6/assets/APITEST48/$submitReturn
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "LDN6",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-27T08:51:56.398102Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-27T08:52:11.144546327Z",
+        "leases": [
+            {
+                "id": "P84V",
+                "orderId": "LDN6",
+                "status": "returning",
+                "assetNo": "APITEST48",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-27T08:51:56.398102Z",
+                "endTime": "2025-02-27T10:51:56.398102Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-02-27T08:52:11.176962729Z",
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+INFO     log:conftest.py:15 测试结束

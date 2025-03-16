@@ -1,0 +1,179 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 24,
+    "data": [
+        {
+            "id": "55Q5",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "X5ZQ",
+            "tradeId": "NPZZ",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:05:52.616794Z"
+        },
+        {
+            "id": "KJDP",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "M8OJ",
+            "tradeId": "MX28",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-27T09:05:51.485796Z"
+        },
+        {
+            "id": "38G2",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "O8NG",
+            "tradeId": "OJZJ",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:05:50.337527Z"
+        },
+        {
+            "id": "N487",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "M8OJ",
+            "tradeId": "M8OJ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-27T09:05:06.376821Z"
+        },
+        {
+            "id": "M8QQ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "O8NG",
+            "tradeId": "O8NG",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:05:02.914341Z"
+        },
+        {
+            "id": "O8W3",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "X5ZQ",
+            "tradeId": "X5ZQ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:04:43.644189Z"
+        },
+        {
+            "id": "X5NX",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "VDGM",
+            "tradeId": "XD3P",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-27T08:56:50.213696Z"
+        },
+        {
+            "id": "N48X",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "4JNJ",
+            "tradeId": "V5DP",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T08:56:48.99646Z"
+        },
+        {
+            "id": "M8Q6",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "LWX6",
+            "tradeId": "4KJP",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T08:56:47.923929Z"
+        },
+        {
+            "id": "O8WR",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "VDGM",
+            "tradeId": "VDGM",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-27T08:56:06.173387Z"
+        },
+        {
+            "id": "X5NM",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "4JNJ",
+            "tradeId": "4JNJ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T08:56:02.747007Z"
+        },
+        {
+            "id": "VDOB",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "LWX6",
+            "tradeId": "LWX6",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T08:55:59.325712Z"
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

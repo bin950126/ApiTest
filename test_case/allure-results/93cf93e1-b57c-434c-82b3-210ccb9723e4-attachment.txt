@@ -1,0 +1,90 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/identity/verification
+INFO     log:rest_client_new.py:38 接口请求方式: PUT
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "documentType": "id-card",
+    "documentNumber": "c",
+    "documentIssueDate": "2025-02-07",
+    "documentExpiryDate": "2025-02-15",
+    "birthDate": "1998-02-10",
+    "tin": "c",
+    "nameFirst": "x",
+    "nameLast": "x",
+    "contactAddressCountryCode": "US",
+    "contactAddressCity": " d",
+    "contactAddressState": " d",
+    "contactAddressZip": "d",
+    "contactAddressLine1": "d",
+    "contactAddressLine2": "d",
+    "overnightAddressCountryCode": "US",
+    "overnightAddressCity": " d",
+    "overnightAddressState": " d",
+    "overnightAddressZip": "d",
+    "overnightAddressLine1": "d",
+    "overnightAddressLine2": "d"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/identity/verification/images/front-side
+INFO     log:rest_client_new.py:38 接口请求方式: PUT
+INFO     log:rest_client_new.py:49 接口请求的files参数:  
+{
+    "documentImage": "文件: ('sea-8948636_1920.jpg', <_io.BufferedReader name='/Users/bin/PycharmProjects/ApiTest/file/sea-8948636_1920.jpg'>, 'image/jpeg')"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/identity/verification/images/back-side
+INFO     log:rest_client_new.py:38 接口请求方式: PUT
+INFO     log:rest_client_new.py:49 接口请求的files参数:  
+{
+    "documentImage": "文件: ('automobile-5128760_1280.jpg', <_io.BufferedReader name='/Users/bin/PycharmProjects/ApiTest/file/automobile-5128760_1280.jpg'>, 'image/jpeg')"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/identity/verification/images/selfie
+INFO     log:rest_client_new.py:38 接口请求方式: PUT
+INFO     log:rest_client_new.py:49 接口请求的files参数:  
+{
+    "documentImage": "文件: ('nature-9332892_1280.jpg', <_io.BufferedReader name='/Users/bin/PycharmProjects/ApiTest/file/nature-9332892_1280.jpg'>, 'image/jpeg')"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

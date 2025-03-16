@@ -1,0 +1,182 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 8216F5A121D042448DF22DC40BAAE07C"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "454J",
+            "partnerId": "YVQM",
+            "customerId": "8KVZ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-03-14T03:08:46.009424Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-03-14T03:08:46.009424Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "D78P",
+                        "orderId": "454J",
+                        "status": "in-use",
+                        "assetNo": "APIFREE4",
+                        "assetCategoryId": "Y63Q",
+                        "currency": "USD",
+                        "basePriceFee": 0.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT1H",
+                        "planDuration": 60,
+                        "planDiscount": null,
+                        "isAllowedCrossSiteReturn": false,
+                        "isConfirmRequired": false,
+                        "isLocationCheckRequired": false,
+                        "isLockCheckRequired": false,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-03-14T03:08:46.009424Z",
+                        "endTime": "2025-03-14T04:08:46.009424Z",
+                        "totalTime": "PT1H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-03-14T04:08:46.009424Z",
+                        "basePriceFee": 0.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT1H",
+                        "planDuration": 60,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "LDK6",
+            "partnerId": "YVQM",
+            "customerId": "8KVZ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-03-14T03:08:30.22389Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-03-14T03:08:30.22389Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "PJPV",
+                        "orderId": "LDK6",
+                        "status": "in-use",
+                        "assetNo": "APITEST50",
+                        "assetCategoryId": "Y2XM",
+                        "currency": "USD",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": 1.5,
+                        "isAllowedCrossSiteReturn": true,
+                        "isConfirmRequired": true,
+                        "isLocationCheckRequired": true,
+                        "isLockCheckRequired": true,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-03-14T03:08:30.22389Z",
+                        "endTime": "2025-03-14T05:08:30.22389Z",
+                        "totalTime": "PT2H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-03-14T05:08:30.22389Z",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "B5GJ",
+            "partnerId": "YVQM",
+            "customerId": "8KVZ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-03-14T03:08:14.234453Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-03-14T03:08:14.234453Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "GQJK",
+                        "orderId": "B5GJ",
+                        "status": "in-use",
+                        "assetNo": "APITEST49",
+                        "assetCategoryId": "Y2XM",
+                        "currency": "USD",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": 1.5,
+                        "isAllowedCrossSiteReturn": true,
+                        "isConfirmRequired": true,
+                        "isLocationCheckRequired": true,
+                        "isLockCheckRequired": true,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-03-14T03:08:14.234453Z",
+                        "endTime": "2025-03-14T05:08:14.234453Z",
+                        "totalTime": "PT2H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-03-14T05:08:14.234453Z",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

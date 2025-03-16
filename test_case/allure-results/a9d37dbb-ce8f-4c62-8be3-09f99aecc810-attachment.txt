@@ -1,0 +1,77 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/asset/categories/Y2XM/assets
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "categoryId": "Y2XM",
+    "no": "APITEST49",
+    "note": "notenotenotenote",
+    "location": {
+        "siteId": "OJXJ"
+    },
+    "lifeCycleState": "NEW",
+    "modelType": "cycle-c",
+    "properties": {
+        "YPV2": "Test",
+        "YPX9": 100
+    },
+    "usageMode": "customer-rental"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "no": "APITEST49",
+        "partnerId": "YVQM",
+        "categoryId": "Y2XM",
+        "location": {
+            "siteId": "OJXJ",
+            "legacySiteId": 673,
+            "state": "IN_STOCK",
+            "turnoverState": "IN_SITE",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.5110001,
+                    31.26276608
+                ]
+            }
+        },
+        "lifeCycleState": "NEW",
+        "usageMode": "customer-rental",
+        "note": "notenotenotenote",
+        "properties": {
+            "YPV2": "Test",
+            "YPX9": 100
+        },
+        "modelType": "cycle-c",
+        "model": null,
+        "iot": null,
+        "geolocation": null,
+        "lastTrip": null,
+        "customTag": {},
+        "support": null,
+        "renting": {
+            "enabled": true,
+            "orderId": null
+        },
+        "subscription": {
+            "enabled": false,
+            "orderId": null
+        },
+        "createdAt": "2025-03-05T13:29:00.064327211Z",
+        "updatedAt": "2025-03-05T13:29:00.064327211Z",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        }
+    }
+}
+INFO     log:conftest.py:15 测试结束

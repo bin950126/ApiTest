@@ -1,0 +1,1427 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/memberships
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "partner": {
+                "id": "YX9Q",
+                "legacyId": 124,
+                "name": "StarbucksCentral",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E8KW",
+                "legacyId": 115,
+                "name": "Rental Taipei",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EQMP",
+                "legacyId": 114,
+                "name": "New partner",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "ANJD",
+                "legacyId": 127,
+                "name": "test 0329",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "AG4R",
+                "legacyId": 134,
+                "name": "p1",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "A9GM",
+                "legacyId": 133,
+                "name": "TEST2.8",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": "+112234455",
+                    "contactEmailNo": "contact@omailcom"
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YWNO",
+                "legacyId": 40,
+                "name": "Changhua County",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E48J",
+                "legacyId": 122,
+                "name": "Rybit RD321",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EK52",
+                "legacyId": 105,
+                "name": "testByRD98",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E5MV",
+                "legacyId": 106,
+                "name": "rental RD23",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "good",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y2PX",
+                "legacyId": 132,
+                "name": "NewBike Store",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y3XW",
+                "legacyId": 104,
+                "name": "rental RD",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y7ZQ",
+                "legacyId": 118,
+                "name": "testByRD556",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "ERWN",
+                "legacyId": 191,
+                "name": "TEST2.16 B",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "CNY",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EKJG",
+                "legacyId": 53,
+                "name": "moovo",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "CNY",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YV9M",
+                "legacyId": 123,
+                "name": "test1235",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y6P8",
+                "legacyId": 131,
+                "name": "PartnerTestByJoseph",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "Welcome !",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": "+886987654321",
+                    "contactEmailNo": "test@gmail.com"
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YXQQ",
+                "legacyId": 100,
+                "name": "Test by Beatrice",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y38X",
+                "legacyId": 52,
+                "name": "Partner test",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y62O",
+                "legacyId": 55,
+                "name": "Partner bin",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y3RW",
+                "legacyId": 128,
+                "name": "renting_test_0516",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YV3M",
+                "legacyId": 147,
+                "name": "Secret Link Partner",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "EUR",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "AGQR",
+                "legacyId": 182,
+                "name": "TEST2.15",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": "123456",
+                    "contactEmailNo": "123@123.com"
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "ANWZ",
+                "legacyId": 99,
+                "name": "SHANGHAI",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "CNY",
+                    "customOptions": [
+                        "allow-view-geolocation",
+                        "allow-control-lock"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YP89",
+                "legacyId": 159,
+                "name": "TEST2.10",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E47J",
+                "legacyId": 146,
+                "name": "CHC",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "TWD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E5RV",
+                "legacyId": 130,
+                "name": "partner setting",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "User self-join note (optional)\nEnglish version is required.",
+                        "it": "User self-join note (optional)\nEnglish version is required.",
+                        "es": "User self-join note (optional)\nEnglish version is required."
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 10000.0,
+                    "contactPhoneNo": "+12022222222",
+                    "contactEmailNo": "contact@mail.com"
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YMP8",
+                "legacyId": 98,
+                "name": "Kai-Test",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YWQR",
+                "legacyId": 116,
+                "name": "updateAntd",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "AMD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E557",
+                "legacyId": 54,
+                "name": "movi",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EKG2",
+                "legacyId": 129,
+                "name": "Domino’s Pizza Polska",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YX5P",
+                "legacyId": 48,
+                "name": "Rybit USA",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "en-test config for userSelfJoinNote",
+                        "it": "it-test config for userSelfJoinNote",
+                        "es": "es-test config for userSelfJoinNote"
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YLV6",
+                "legacyId": 193,
+                "name": "TEST2.16 D",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "TOP",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YXLQ",
+                "legacyId": 196,
+                "name": "ApiTest1",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YVQM",
+                "legacyId": 195,
+                "name": "ApiTest",
+                "isJoined": true,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": "+12022222222",
+                    "contactEmailNo": "binbin.lai@rybit.io"
+                }
+            },
+            "isActive": true
+        },
+        {
+            "partner": {
+                "id": "EOXG",
+                "legacyId": 101,
+                "name": "Rental RD",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "TWD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y7VQ",
+                "legacyId": 166,
+                "name": "rybit 12-20",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E57V",
+                "legacyId": 154,
+                "name": "1Testing1Testing1Testing1Testing1Testing1Testing1T",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EO4G",
+                "legacyId": 149,
+                "name": "partner 1",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "AN9D",
+                "legacyId": 151,
+                "name": "1",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y3LW",
+                "legacyId": 152,
+                "name": "1 (1)",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EKR2",
+                "legacyId": 153,
+                "name": "1 (2)",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y26X",
+                "legacyId": 156,
+                "name": "TEST2.11_joseph01",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EB5J",
+                "legacyId": 168,
+                "name": "Eric - testt",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YWKR",
+                "legacyId": 164,
+                "name": "TEST2.11_joseph04",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "A97M",
+                "legacyId": 157,
+                "name": "TEST2.11_joseph02",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "AGWR",
+                "legacyId": 158,
+                "name": "TEST2.11",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y678",
+                "legacyId": 155,
+                "name": "TEST2.11_joseph",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EZP8",
+                "legacyId": 165,
+                "name": "TEST2.11_joseph05",
+                "isJoined": false,
+                "rentalConfig": null
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "ANDD",
+                "legacyId": 175,
+                "name": "TEST2.13_joseph",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "EUR",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E87W",
+                "legacyId": 163,
+                "name": "TEST2.11_joseph03",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-view-geolocation",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EZ78",
+                "legacyId": 189,
+                "name": "wilson - test",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "YLD6",
+                "legacyId": 169,
+                "name": "TEST2.12",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "GBP",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "User self-join note (optional)\nEnglish version is required.",
+                        "it": "User self-join note (optional)\nEnglish version is required.",
+                        "es": "User self-join note (optional)\nEnglish version is required."
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "E49J",
+                "legacyId": 194,
+                "name": "TEST2.17_joseph",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EB8J",
+                "legacyId": 192,
+                "name": "TEST2.16 C",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": null,
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EODG",
+                "legacyId": 173,
+                "name": "TESE2.13",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "EQQP",
+                "legacyId": 186,
+                "name": "Rybit Service",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": false,
+                    "userSelfJoinNote": null,
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        },
+        {
+            "partner": {
+                "id": "Y7MQ",
+                "legacyId": 190,
+                "name": "TEST2.16 A",
+                "isJoined": false,
+                "rentalConfig": {
+                    "currency": "USD",
+                    "customOptions": [
+                        "allow-control-beep",
+                        "allow-view-geolocation",
+                        "allow-control-light",
+                        "allow-control-lock",
+                        "allow-control-battery-lock",
+                        "allow-push-geolocation-checkpoint"
+                    ],
+                    "isOpenToJoin": true,
+                    "userSelfJoinNote": {
+                        "en": "",
+                        "it": "",
+                        "es": ""
+                    },
+                    "unavailableNote": {
+                        "en": "The asset is not able to rent. Please collect other available assets.",
+                        "it": "Il bene non è in grado di affittare. Si prega di raccogliere altre risorse disponibili.",
+                        "es": "El activo no se puede alquilar. Recopile otros activos disponibles."
+                    },
+                    "userMaxPaymentAmount": 100000.0,
+                    "contactPhoneNo": null,
+                    "contactEmailNo": null
+                }
+            },
+            "isActive": false
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

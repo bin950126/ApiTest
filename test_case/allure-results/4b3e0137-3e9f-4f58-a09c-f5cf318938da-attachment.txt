@@ -1,0 +1,42 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me
+INFO     log:rest_client_new.py:38 接口请求方式: PATCH
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "nameFirst": "bin",
+    "nameLast": "bin",
+    "email": "1231233456@1.cn",
+    "whatsapp": "+12022222222"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 438E80FD870A44519F3E6B10DEB8832D"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "PONJ",
+        "username": "+12025000001",
+        "isPasswordSettled": true,
+        "nameFirst": "bin",
+        "nameLast": "bin",
+        "name": "bin bin",
+        "phoneNo": "+12025000001",
+        "isPhoneNoVerified": true,
+        "email": "1231233456@1.cn",
+        "isEmailVerified": false,
+        "whatsapp": "+12022222222",
+        "referralCode": "OEMVT3",
+        "agreementAgreedAt": "2025-03-05T09:02:58.089349Z",
+        "identityVerificationStatus": "pending",
+        "isMarketingConsented": true,
+        "createdAt": "2025-02-27T02:06:39.96785Z",
+        "updatedAt": "2025-03-05T12:59:06.457975Z"
+    }
+}
+INFO     log:conftest.py:15 测试结束

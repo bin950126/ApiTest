@@ -1,0 +1,34 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "RVZP",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KBYGvq4E0WjAYib6AUtlY",
+            "stripeSetupSecret": "seti_1R1KBYGvq4E0WjAYib6AUtlY_secret_RvAWdjJzNtn0JdDYRFY87ACboCYqwKy"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:12:55.741495Z",
+        "updatedAt": "2025-03-11T04:12:55.741495Z",
+        "partnerId": "YVQM"
+    }
+}
+INFO     log:conftest.py:15 测试结束

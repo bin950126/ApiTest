@@ -1,0 +1,20 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me?dryRun
+INFO     log:rest_client_new.py:38 接口请求方式: DELETE
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer CB5271348E0E4EABB8777C760E94F6A9"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 400,
+    "type": "CustomerInMembership",
+    "messageId": null,
+    "message": "You need to remove the customer from all partners.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

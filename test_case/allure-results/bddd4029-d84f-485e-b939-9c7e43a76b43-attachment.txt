@@ -1,0 +1,42 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/identity/verification
+INFO     log:rest_client_new.py:38 接口请求方式: PUT
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "documentType": "id-card",
+    "documentNumber": "c",
+    "documentIssueDate": "2025-02-07",
+    "documentExpiryDate": "2025-02-15",
+    "birthDate": "1998-02-10",
+    "tin": "c",
+    "nameFirst": "x",
+    "nameLast": "x",
+    "contactAddressCountryCode": "US",
+    "contactAddressCity": " d",
+    "contactAddressState": " d",
+    "contactAddressZip": "d",
+    "contactAddressLine1": "d",
+    "contactAddressLine2": "d",
+    "overnightAddressCountryCode": "US",
+    "overnightAddressCity": " d",
+    "overnightAddressState": " d",
+    "overnightAddressZip": "d",
+    "overnightAddressLine1": "d",
+    "overnightAddressLine2": "d"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 8216F5A121D042448DF22DC40BAAE07C"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 409,
+    "type": "CustomerIdentityVerificationStatusConflict",
+    "messageId": null,
+    "message": "Customer Identity Verification could not be changed to specific status.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

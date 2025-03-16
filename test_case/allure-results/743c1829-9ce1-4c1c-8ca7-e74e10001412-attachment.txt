@@ -1,0 +1,136 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/APITEST49/$inspect
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "geolocation": null
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 8216F5A121D042448DF22DC40BAAE07C"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "status": "deposit-not-enough",
+        "accountConfig": {
+            "enabledInvoice": true
+        },
+        "rentalConfig": {
+            "id": "Y23X",
+            "partner": {
+                "id": "YVQM",
+                "name": "ApiTest"
+            },
+            "currency": "USD",
+            "customOptions": [
+                "allow-control-beep",
+                "allow-view-geolocation",
+                "allow-control-light",
+                "allow-control-lock",
+                "allow-control-battery-lock",
+                "allow-push-geolocation-checkpoint"
+            ],
+            "isOpenToJoin": true,
+            "userSelfJoinNote": {
+                "en": "",
+                "it": "",
+                "es": ""
+            },
+            "unavailableNote": null,
+            "userMaxPaymentAmount": 100000.0,
+            "contactPhoneNo": "+12022222222",
+            "contactEmailNo": "binbin.lai@rybit.io",
+            "createdAt": "2025-02-13T09:35:45.426798Z",
+            "updatedAt": "2025-02-13T13:34:27.183683Z"
+        },
+        "program": {
+            "id": "YMLL",
+            "partnerId": "YVQM",
+            "assetCategoryId": "Y2XM",
+            "depositAmount": 20.0,
+            "assetLimit": 100,
+            "isAllowedCrossSiteReturn": true,
+            "isConfirmRequired": true,
+            "isLocationCheckRequired": true,
+            "isLockCheckRequired": true,
+            "noticeIntl": {
+                "en": "Rental Fee Notice\nEnglish",
+                "it": "Rental Fee Notice\nItalian",
+                "es": "Rental Fee Notice\nSpanish"
+            },
+            "depositNoticeIntl": {
+                "en": "Deposit Fee Notice\nEnglish",
+                "it": "Deposit Fee Notice\nItalian",
+                "es": "Deposit Fee Notice\nSpanish"
+            },
+            "basePrice": {
+                "id": "YM96",
+                "fee": 1.0,
+                "time": 60,
+                "currency": "USD"
+            },
+            "plans": [
+                {
+                    "id": "V55P",
+                    "code": "PT1H",
+                    "duration": 60,
+                    "discount": null
+                },
+                {
+                    "id": "XD5P",
+                    "code": "PT2H",
+                    "duration": 120,
+                    "discount": {
+                        "price": 1.5,
+                        "startTime": "2025-02-20T05:43:00Z",
+                        "endTime": null,
+                        "name": "Discount",
+                        "description": null
+                    }
+                }
+            ]
+        },
+        "asset": {
+            "partnerId": "YVQM",
+            "categoryId": "Y2XM",
+            "no": "APITEST49",
+            "location": {
+                "siteId": "OJXJ",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        121.5110001,
+                        31.26276608
+                    ]
+                }
+            },
+            "modelType": "cycle-c",
+            "iot": null,
+            "geolocation": {
+                "current": {
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            121.5110001,
+                            31.26276608
+                        ]
+                    },
+                    "accuracy": null,
+                    "timestamp": "2025-03-05T13:30:20.103Z",
+                    "receivedAt": null,
+                    "source": "manual",
+                    "businessType": "user-confirm-renting-return",
+                    "isRawData": false
+                },
+                "updatedAt": "2025-03-05T13:30:20.103Z"
+            },
+            "lease": null
+        }
+    }
+}
+INFO     log:conftest.py:15 测试结束

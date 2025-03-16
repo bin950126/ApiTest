@@ -1,0 +1,195 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 18,
+    "data": [
+        {
+            "id": "3B52G8N",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "93DM",
+            "tradeId": "GP9KW",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-03-03T05:20:05.088005Z"
+        },
+        {
+            "id": "MX3ZW86",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "GQRR",
+            "tradeId": "9V4PON",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-03-03T05:19:42.94228Z"
+        },
+        {
+            "id": "OJ5MB8R",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "93DM",
+            "tradeId": "2L2J4M",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-03-03T05:19:33.93443Z"
+        },
+        {
+            "id": "XDOPJXL",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "5X2V",
+            "tradeId": "9X68G",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-28T06:40:25.766535Z"
+        },
+        {
+            "id": "4K6ZR37",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "6O98",
+            "tradeId": "G623QR",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-28T06:39:45.102319Z"
+        },
+        {
+            "id": "L6N4O2G",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "5X2V",
+            "tradeId": "9VW43M",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-28T06:39:36.041964Z"
+        },
+        {
+            "id": "562LBV7",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "MD3J",
+            "tradeId": "28XRN",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-27T09:05:47.458503Z"
+        },
+        {
+            "id": "3B527QX",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "NDKD",
+            "tradeId": "QZ775W",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T09:05:24.13052Z"
+        },
+        {
+            "id": "NPKONLZ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "MD3J",
+            "tradeId": "JKPPBZ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T09:05:13.511767Z"
+        },
+        {
+            "id": "MX3ZML8",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "VZJM",
+            "tradeId": "6Z32V",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-27T08:56:44.958481Z"
+        },
+        {
+            "id": "XDOPJ4P",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "X7OQ",
+            "tradeId": "PNZZKV",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:56:22.31138Z"
+        },
+        {
+            "id": "V5J6VGP",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "VZJM",
+            "tradeId": "G622ZK",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:56:13.582382Z"
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

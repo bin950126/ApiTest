@@ -1,0 +1,2815 @@
+2025-03-11 12:07:58,026 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:07:58,037 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 12:07:58,037 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 12:07:58,037 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:07:59,954 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 12:07:59,974 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:08:24,749 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:08:24,763 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:08:24,763 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:08:24,763 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:08:24,763 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:08:27,275 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "7ZBG",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1K7FGvq4E0WjAYbbcMCQvQ",
+            "stripeSetupSecret": "seti_1R1K7FGvq4E0WjAYbbcMCQvQ_secret_RvASKNyu4zkfJBws3xzp5okf8Vd3WVu"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:08:28.554424Z",
+        "updatedAt": "2025-03-11T04:08:28.554424Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 12:08:27,301 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:08:44,400 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:08:44,413 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1QzHYsGvq4E0WjAYMj7mBCGg/confirm
+2025-03-11 12:08:44,413 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:08:44,413 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1Qx0QYGvq4E0WjAYwM9dFdJk_secret_RqhqLRAzZKjzdanVTNsT2JCaJrYt6vN"
+}
+2025-03-11 12:08:44,413 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 12:08:50,901 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "The client_secret provided does not match the client_secret associated with the SetupIntent.",
+        "param": "client_secret",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_xGjATkGHhS8w56?t=1741666132",
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 12:08:50,956 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:12:15,049 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:12:15,061 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 12:12:15,061 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 12:12:15,061 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:12:16,793 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 12:12:16,817 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:12:51,990 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:12:52,005 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:12:52,005 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:12:52,005 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:12:52,005 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:12:54,412 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "RVZP",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KBYGvq4E0WjAYib6AUtlY",
+            "stripeSetupSecret": "seti_1R1KBYGvq4E0WjAYib6AUtlY_secret_RvAWdjJzNtn0JdDYRFY87ACboCYqwKy"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:12:55.741495Z",
+        "updatedAt": "2025-03-11T04:12:55.741495Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 12:12:54,439 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:14:50,099 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:14:50,117 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:14:50,118 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:14:50,118 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:14:50,118 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:14:52,454 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "B4JL",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KDSGvq4E0WjAYvyWh8Ehd",
+            "stripeSetupSecret": "seti_1R1KDSGvq4E0WjAYvyWh8Ehd_secret_RvAYtHwYT1TXgdKo1u1vsgZMFBNYkZR"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:14:53.845254Z",
+        "updatedAt": "2025-03-11T04:14:53.845254Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 12:14:52,480 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:14:59,997 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:15:00,071 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:33:03,772 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:33:03,781 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/payment/availableProviders
+2025-03-11 12:33:03,781 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 12:33:03,781 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 8BE043D122BF440BB56535EA984039F6"
+}
+2025-03-11 12:33:05,634 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 12:33:05,658 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/payment/$setup
+2025-03-11 12:33:05,658 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:33:05,658 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:33:05,658 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 8BE043D122BF440BB56535EA984039F6"
+}
+2025-03-11 12:33:09,319 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "LR48",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KV9Gvq4E0WjAYEDRtrV5V",
+            "stripeSetupSecret": "seti_1R1KV9Gvq4E0WjAYEDRtrV5V_secret_RvAqh7AlN2vBSDwdpiyXJjS1XZeUieO"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:33:10.609168Z",
+        "updatedAt": "2025-03-11T04:33:10.609168Z",
+        "customerId": "8KVZ"
+    }
+}
+2025-03-11 12:33:09,352 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1KV9Gvq4E0WjAYEDRtrV5V/confirm
+2025-03-11 12:33:09,353 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:33:09,353 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "client_secret": "seti_1R1KV9Gvq4E0WjAYEDRtrV5V_secret_RvAqh7AlN2vBSDwdpiyXJjS1XZeUieO",
+    "payment_method_data[billing_details][address][city]": "J",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "J",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "J",
+    "payment_method_data[billing_details][address][state]": "J",
+    "payment_method_data[billing_details][email]": "",
+    "payment_method_data[billing_details][name]": "J",
+    "payment_method_data[billing_details][phone]": "+12025020602",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "4",
+    "payment_method_data[card][exp_year]": "26",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[payment_user_agent]": "stripe-ios/23.15.0; variant.legacy; STPPaymentCardTextField; PaymentSheet.AddressController",
+    "payment_method_data[type]": "card",
+    "use_stripe_sdk": true
+}
+2025-03-11 12:33:09,353 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 12:33:16,299 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1KV9Gvq4E0WjAYEDRtrV5V",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1KV9Gvq4E0WjAYEDRtrV5V_secret_RvAqh7AlN2vBSDwdpiyXJjS1XZeUieO",
+    "created": 1741667591,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1KVFGvq4E0WjAYyN5NsjQD",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 12:33:16,314 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/payment/methods
+2025-03-11 12:33:16,314 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:33:16,314 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "customerSetupId": "LR48",
+    "methodType": "credit-card"
+}
+2025-03-11 12:33:16,314 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 8BE043D122BF440BB56535EA984039F6"
+}
+2025-03-11 12:33:21,403 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "M8OJ",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "customerId": "8KVZ",
+        "customerSetupId": "LR48",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "type": "credit-card",
+        "updatedBy": null,
+        "createdAt": "2025-03-11T04:33:21.034363Z",
+        "updatedAt": "2025-03-11T04:33:21.034363Z",
+        "isArchived": false
+    }
+}
+2025-03-11 12:33:21,416 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:35:33,436 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:35:33,450 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:35:33,450 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:35:33,451 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:35:33,451 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:35:35,740 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "4OZX",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KXVGvq4E0WjAYSuIpBEK1",
+            "stripeSetupSecret": "seti_1R1KXVGvq4E0WjAYSuIpBEK1_secret_RvAt2NdNZwLuYcwmnK0iFvWGtUQWIKS"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:35:37.043976Z",
+        "updatedAt": "2025-03-11T04:35:37.043976Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 12:35:35,768 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:35:51,161 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:35:51,233 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:36:38,405 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:36:38,476 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:37:16,429 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:37:16,497 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:38:26,117 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:38:26,198 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:44:32,182 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:44:32,193 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1KXVGvq4E0WjAYSuIpBEK1/confirm
+2025-03-11 12:44:32,193 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:44:32,193 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1KXVGvq4E0WjAYSuIpBEK1_secret_RvAt2NdNZwLuYcwmnK0iFvWGtUQWIKS"
+}
+2025-03-11 12:44:32,194 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 12:44:34,329 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_LeEIjOgpiOhqaj?t=1741668276",
+        "setup_intent": {
+            "id": "seti_1R1KXVGvq4E0WjAYSuIpBEK1",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1KXVGvq4E0WjAYSuIpBEK1_secret_RvAt2NdNZwLuYcwmnK0iFvWGtUQWIKS",
+            "created": 1741667737,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 12:44:34,384 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:45:16,636 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:45:16,650 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/account/partners/YVQM/documents/help-center
+2025-03-11 12:45:16,650 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-03-11 12:45:16,650 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:45:18,469 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 404,
+    "type": "NotFound",
+    "messageId": null,
+    "message": "Resource not found.",
+    "details": [],
+    "data": null
+}
+2025-03-11 12:45:18,522 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:45:32,382 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:45:32,391 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 12:45:32,391 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 12:45:32,392 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:45:34,225 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 12:45:34,246 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:45:46,031 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:45:46,042 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:45:46,043 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:45:46,043 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:45:46,043 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 12:45:48,442 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "VL62",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1KhOGvq4E0WjAYhzWTfS9G",
+            "stripeSetupSecret": "seti_1R1KhOGvq4E0WjAYhzWTfS9G_secret_RvB3Lq4hQULIM7nauxnxqAw9ktK0CMT"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T04:45:49.778862Z",
+        "updatedAt": "2025-03-11T04:45:49.778862Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 12:45:48,468 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:46:16,733 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:46:16,743 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1KhOGvq4E0WjAYhzWTfS9G/confirm
+2025-03-11 12:46:16,744 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:46:16,744 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1KhOGvq4E0WjAYhzWTfS9G_secret_RvB3Lq4hQULIM7nauxnxqAw9ktK0CMT"
+}
+2025-03-11 12:46:16,744 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 12:46:17,894 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_J6E1Fce8lhUdz7?t=1741668379",
+        "setup_intent": {
+            "id": "seti_1R1KhOGvq4E0WjAYhzWTfS9G",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1KhOGvq4E0WjAYhzWTfS9G_secret_RvB3Lq4hQULIM7nauxnxqAw9ktK0CMT",
+            "created": 1741668350,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 12:46:17,942 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:49:25,752 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:49:25,765 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1KhOGvq4E0WjAYhzWTfS9G/confirm
+2025-03-11 12:49:25,765 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:49:25,765 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1KhOGvq4E0WjAYhzWTfS9G_secret_RvB3Lq4hQULIM7nauxnxqAw9ktK0CMT"
+}
+2025-03-11 12:49:25,765 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 12:49:33,554 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_zxjT7MdSPd2FYE?t=1741668575",
+        "setup_intent": {
+            "id": "seti_1R1KhOGvq4E0WjAYhzWTfS9G",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1KhOGvq4E0WjAYhzWTfS9G_secret_RvB3Lq4hQULIM7nauxnxqAw9ktK0CMT",
+            "created": 1741668350,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 12:49:33,614 - conftest.py -log - INFO - 测试结束
+2025-03-11 12:59:58,275 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 12:59:58,292 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 12:59:58,292 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 12:59:58,292 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 12:59:58,292 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:00:00,888 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "OXM3",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD",
+            "stripeSetupSecret": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD_secret_RvBHO5nFyIhYi0TSCVDXH9hCdInYZrs"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:00:02.255451Z",
+        "updatedAt": "2025-03-11T05:00:02.255451Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:00:00,913 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:00:22,780 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:00:22,794 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1Kv8Gvq4E0WjAYkIun8AFD/confirm
+2025-03-11 13:00:22,794 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:00:22,794 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 2066,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD_secret_RvBHO5nFyIhYi0TSCVDXH9hCdInYZrs"
+}
+2025-03-11 13:00:22,795 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:00:24,103 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ncmd82rIZImETQ?t=1741669226",
+        "setup_intent": {
+            "id": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD_secret_RvBHO5nFyIhYi0TSCVDXH9hCdInYZrs",
+            "created": 1741669202,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 13:00:24,165 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:20:34,520 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:20:34,536 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 13:20:34,536 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:20:34,537 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 13:20:34,537 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:20:37,048 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "3XB2",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1LF4Gvq4E0WjAYQSZqYLLs",
+            "stripeSetupSecret": "seti_1R1LF4Gvq4E0WjAYQSZqYLLs_secret_RvBc639RG6r2n0pvmwGoZRIoi5hwZ4n"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:20:38.437783Z",
+        "updatedAt": "2025-03-11T05:20:38.437783Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:20:37,074 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:20:48,278 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:20:48,290 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LF4Gvq4E0WjAYQSZqYLLs/confirm
+2025-03-11 13:20:48,291 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:20:48,291 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "client_secret": "seti_1R1LF4Gvq4E0WjAYQSZqYLLs_secret_RvBc639RG6r2n0pvmwGoZRIoi5hwZ4n",
+    "payment_method_data[billing_details][address][city]": "J",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "J",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "J",
+    "payment_method_data[billing_details][address][state]": "J",
+    "payment_method_data[billing_details][email]": "",
+    "payment_method_data[billing_details][name]": "J",
+    "payment_method_data[billing_details][phone]": "+12025020602",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "4",
+    "payment_method_data[card][exp_year]": "26",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[payment_user_agent]": "stripe-ios/23.15.0; variant.legacy; STPPaymentCardTextField; PaymentSheet.AddressController",
+    "payment_method_data[type]": "card",
+    "use_stripe_sdk": true
+}
+2025-03-11 13:20:48,291 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:20:51,485 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1LF4Gvq4E0WjAYQSZqYLLs",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1LF4Gvq4E0WjAYQSZqYLLs_secret_RvBc639RG6r2n0pvmwGoZRIoi5hwZ4n",
+    "created": 1741670438,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1LFIGvq4E0WjAYEerBAHZo",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 13:20:51,487 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:21:19,207 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:21:19,224 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 13:21:19,224 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:21:19,224 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "3XB2",
+    "methodType": "credit-card"
+}
+2025-03-11 13:21:19,224 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:21:23,435 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "553V",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "3XB2",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T05:21:23.20212Z",
+        "updatedAt": "2025-03-11T05:21:23.20212Z",
+        "isArchived": false
+    }
+}
+2025-03-11 13:21:23,448 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:22:16,247 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:22:16,262 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 13:22:16,262 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:22:16,262 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 13:22:16,262 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:22:18,583 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "5M65",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1LGiGvq4E0WjAYaGMQGS02",
+            "stripeSetupSecret": "seti_1R1LGiGvq4E0WjAYaGMQGS02_secret_RvBeeLL341adJVBwWQPSEkfvBHwZ8AG"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:22:20.024076Z",
+        "updatedAt": "2025-03-11T05:22:20.024076Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:22:18,608 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:22:27,904 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:22:27,918 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LGiGvq4E0WjAYaGMQGS02/confirm
+2025-03-11 13:22:27,918 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:22:27,918 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "client_secret": "seti_1R1LGiGvq4E0WjAYaGMQGS02_secret_RvBeeLL341adJVBwWQPSEkfvBHwZ8AG",
+    "payment_method_data[billing_details][address][city]": "J",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "J",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "J",
+    "payment_method_data[billing_details][address][state]": "J",
+    "payment_method_data[billing_details][email]": "",
+    "payment_method_data[billing_details][name]": "J",
+    "payment_method_data[billing_details][phone]": "+12025020602",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "4",
+    "payment_method_data[card][exp_year]": "26",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[payment_user_agent]": "stripe-ios/23.15.0; variant.legacy; STPPaymentCardTextField; PaymentSheet.AddressController",
+    "payment_method_data[type]": "card",
+    "use_stripe_sdk": true
+}
+2025-03-11 13:22:27,918 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:22:29,757 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1LGiGvq4E0WjAYaGMQGS02",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1LGiGvq4E0WjAYaGMQGS02_secret_RvBeeLL341adJVBwWQPSEkfvBHwZ8AG",
+    "created": 1741670540,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1LGtGvq4E0WjAYRHAJMo2Z",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 13:22:29,762 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:22:37,786 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:22:37,805 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 13:22:37,805 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:22:37,805 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "5M65",
+    "methodType": "credit-card"
+}
+2025-03-11 13:22:37,805 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:22:42,380 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "62K8",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "5M65",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2026,
+            "cardExpireMonth": 4
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T05:22:41.658046Z",
+        "updatedAt": "2025-03-11T05:22:41.658046Z",
+        "isArchived": false
+    }
+}
+2025-03-11 13:22:42,393 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:24:09,325 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:24:09,339 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 13:24:09,339 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:24:09,339 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 13:24:09,339 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:24:11,999 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6NBV",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1LIXGvq4E0WjAYro8TltFE",
+            "stripeSetupSecret": "seti_1R1LIXGvq4E0WjAYro8TltFE_secret_RvBfcY4uX196HAX0JOJWs2kis6ilBUZ"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:24:13.106128Z",
+        "updatedAt": "2025-03-11T05:24:13.106128Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:24:12,024 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:24:31,983 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:24:31,994 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LIXGvq4E0WjAYro8TltFE/confirm
+2025-03-11 13:24:31,994 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:24:31,995 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        }
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1LIXGvq4E0WjAYro8TltFE_secret_RvBfcY4uX196HAX0JOJWs2kis6ilBUZ"
+}
+2025-03-11 13:24:31,995 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:24:33,124 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_n9SapR7UGNMG8n?t=1741670675",
+        "setup_intent": {
+            "id": "seti_1R1LIXGvq4E0WjAYro8TltFE",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1LIXGvq4E0WjAYro8TltFE_secret_RvBfcY4uX196HAX0JOJWs2kis6ilBUZ",
+            "created": 1741670653,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 13:24:33,178 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:25:38,334 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:25:38,346 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LIXGvq4E0WjAYro8TltFE/confirm
+2025-03-11 13:25:38,346 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:25:38,346 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": false,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1Kv8Gvq4E0WjAYkIun8AFD_secret_RvBHO5nFyIhYi0TSCVDXH9hCdInYZrs"
+}
+2025-03-11 13:25:38,347 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:25:39,471 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "The client_secret provided does not match the client_secret associated with the SetupIntent.",
+        "param": "client_secret",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_UgLXzjXmnOw9cR?t=1741670741",
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 13:25:39,527 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:26:11,747 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:26:11,761 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 13:26:11,761 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:26:11,762 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 13:26:11,762 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:26:14,444 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "2NLN",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1LKWGvq4E0WjAYUSnoxLep",
+            "stripeSetupSecret": "seti_1R1LKWGvq4E0WjAYUSnoxLep_secret_RvBhGApmb00YKXMNNdKw3OPVWTxtCit"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:26:15.552516Z",
+        "updatedAt": "2025-03-11T05:26:15.552516Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:26:14,475 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:26:28,475 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:26:28,485 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LKWGvq4E0WjAYUSnoxLep/confirm
+2025-03-11 13:26:28,486 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:26:28,486 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": false,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1LKWGvq4E0WjAYUSnoxLep_secret_RvBhGApmb00YKXMNNdKw3OPVWTxtCit"
+}
+2025-03-11 13:26:28,486 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:26:29,760 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_F4xnyu4RtLD6PV?t=1741670791",
+        "setup_intent": {
+            "id": "seti_1R1LKWGvq4E0WjAYUSnoxLep",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1LKWGvq4E0WjAYUSnoxLep_secret_RvBhGApmb00YKXMNNdKw3OPVWTxtCit",
+            "created": 1741670776,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 13:26:29,812 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:39:27,229 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:39:27,245 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 13:39:27,245 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:39:27,245 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 13:39:27,245 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 13:39:29,639 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "95VG",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1LXLGvq4E0WjAY2NmokMf8",
+            "stripeSetupSecret": "seti_1R1LXLGvq4E0WjAY2NmokMf8_secret_RvBvQjGruWB1JVkmMMmrcMMHskazwX7"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T05:39:31.010958Z",
+        "updatedAt": "2025-03-11T05:39:31.010958Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 13:39:29,669 - conftest.py -log - INFO - 测试结束
+2025-03-11 13:40:49,591 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 13:40:49,603 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1LXLGvq4E0WjAY2NmokMf8/confirm
+2025-03-11 13:40:49,603 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 13:40:49,604 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": false,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1LXLGvq4E0WjAY2NmokMf8_secret_RvBvQjGruWB1JVkmMMmrcMMHskazwX7"
+}
+2025-03-11 13:40:49,604 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 13:40:50,798 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_B8oJYHfhgOab5v?t=1741671652",
+        "setup_intent": {
+            "id": "seti_1R1LXLGvq4E0WjAY2NmokMf8",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1LXLGvq4E0WjAY2NmokMf8_secret_RvBvQjGruWB1JVkmMMmrcMMHskazwX7",
+            "created": 1741671571,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 13:40:50,853 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:52:25,131 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:52:25,146 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 15:52:25,146 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:52:25,146 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 15:52:25,146 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 15:52:28,037 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "G86W",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI",
+            "stripeSetupSecret": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI_secret_RvE4UM7aeTDW3gpy0wr73qES1fVO7LM"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T07:52:29.390218Z",
+        "updatedAt": "2025-03-11T07:52:29.390218Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 15:52:28,063 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:52:46,823 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:52:46,837 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1Nc1Gvq4E0WjAYwFP3qkDI/confirm
+2025-03-11 15:52:46,837 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:52:46,837 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI_secret_RvE4UM7aeTDW3gpy0wr73qES1fVO7LM"
+}
+2025-03-11 15:52:46,837 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 15:52:48,939 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI_secret_RvE4UM7aeTDW3gpy0wr73qES1fVO7LM",
+    "created": 1741679549,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NcMGvq4E0WjAYbcd01fuj",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 15:52:48,943 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:52:57,393 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:52:57,406 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1Nc1Gvq4E0WjAYwFP3qkDI/confirm
+2025-03-11 15:52:57,406 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:52:57,406 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI_secret_RvE4UM7aeTDW3gpy0wr73qES1fVO7LM"
+}
+2025-03-11 15:52:57,406 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 15:52:58,691 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "error": {
+        "code": "setup_intent_unexpected_state",
+        "doc_url": "https://stripe.com/docs/error-codes/setup-intent-unexpected-state",
+        "message": "You cannot confirm this SetupIntent because it has already succeeded.",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_HgMTh8V2ZQ82qr?t=1741679580",
+        "setup_intent": {
+            "id": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1Nc1Gvq4E0WjAYwFP3qkDI_secret_RvE4UM7aeTDW3gpy0wr73qES1fVO7LM",
+            "created": 1741679549,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": "pm_1R1NcMGvq4E0WjAYbcd01fuj",
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "succeeded",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+2025-03-11 15:52:58,746 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:54:02,594 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:54:02,608 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 15:54:02,608 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:54:02,608 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 15:54:02,608 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 15:54:05,046 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "PONJ",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1NdaGvq4E0WjAYuYOFZu0y",
+            "stripeSetupSecret": "seti_1R1NdaGvq4E0WjAYuYOFZu0y_secret_RvE5eKNlXcM0gtvel3BZjMIPZUlI64o"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T07:54:06.436867Z",
+        "updatedAt": "2025-03-11T07:54:06.436867Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 15:54:05,073 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:54:13,042 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:54:13,056 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1NdaGvq4E0WjAYuYOFZu0y/confirm
+2025-03-11 15:54:13,056 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:54:13,056 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1NdaGvq4E0WjAYuYOFZu0y_secret_RvE5eKNlXcM0gtvel3BZjMIPZUlI64o"
+}
+2025-03-11 15:54:13,057 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 15:54:14,874 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1NdaGvq4E0WjAYuYOFZu0y",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1NdaGvq4E0WjAYuYOFZu0y_secret_RvE5eKNlXcM0gtvel3BZjMIPZUlI64o",
+    "created": 1741679646,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NdkGvq4E0WjAY0TU90lnL",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 15:54:14,878 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:54:59,042 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:54:59,059 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 15:54:59,060 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:54:59,060 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "PONJ",
+    "methodType": "credit-card"
+}
+2025-03-11 15:54:59,060 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 15:55:04,780 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "2ROX",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "PONJ",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T07:55:04.587644Z",
+        "updatedAt": "2025-03-11T07:55:04.587644Z",
+        "isArchived": false
+    }
+}
+2025-03-11 15:55:04,795 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:56:05,848 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:56:05,864 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 15:56:05,864 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:56:05,864 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 15:56:05,864 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 15:56:08,435 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "DP4G",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1NfaGvq4E0WjAYx8ymhQmm",
+            "stripeSetupSecret": "seti_1R1NfaGvq4E0WjAYx8ymhQmm_secret_RvE7G8JS0zxRzta96cHIbdNTzkkbd8W"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T07:56:09.746081Z",
+        "updatedAt": "2025-03-11T07:56:09.746081Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 15:56:08,463 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:56:16,545 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:56:16,558 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1NfaGvq4E0WjAYx8ymhQmm/confirm
+2025-03-11 15:56:16,558 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:56:16,558 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1NfaGvq4E0WjAYx8ymhQmm_secret_RvE7G8JS0zxRzta96cHIbdNTzkkbd8W"
+}
+2025-03-11 15:56:16,558 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+2025-03-11 15:56:23,347 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1NfaGvq4E0WjAYx8ymhQmm",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1NfaGvq4E0WjAYx8ymhQmm_secret_RvE7G8JS0zxRzta96cHIbdNTzkkbd8W",
+    "created": 1741679770,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NfoGvq4E0WjAYxHlgWJQE",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 15:56:23,351 - conftest.py -log - INFO - 测试结束
+2025-03-11 15:56:55,749 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 15:56:55,767 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 15:56:55,767 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 15:56:55,767 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "DP4G",
+    "methodType": "credit-card"
+}
+2025-03-11 15:56:55,767 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 15:56:59,780 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "982M",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "DP4G",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T07:56:59.619454Z",
+        "updatedAt": "2025-03-11T07:56:59.619454Z",
+        "isArchived": false
+    }
+}
+2025-03-11 15:56:59,795 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:04:36,971 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:04:36,984 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 16:04:36,985 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:04:36,985 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 16:04:36,985 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:04:39,369 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "JRK6",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1NnpGvq4E0WjAYm4e20JhJ",
+            "stripeSetupSecret": "seti_1R1NnpGvq4E0WjAYm4e20JhJ_secret_RvEG7kCDK8zArZcc8TqQ5YCwbFIAaad"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T08:04:40.776115Z",
+        "updatedAt": "2025-03-11T08:04:40.776115Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 16:04:39,394 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:04:47,295 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:04:47,313 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1NnpGvq4E0WjAYm4e20JhJ/confirm
+2025-03-11 16:04:47,313 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:04:47,313 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1NnpGvq4E0WjAYm4e20JhJ_secret_RvEG7kCDK8zArZcc8TqQ5YCwbFIAaad"
+}
+2025-03-11 16:04:47,313 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+2025-03-11 16:04:49,028 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1NnpGvq4E0WjAYm4e20JhJ",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1NnpGvq4E0WjAYm4e20JhJ_secret_RvEG7kCDK8zArZcc8TqQ5YCwbFIAaad",
+    "created": 1741680281,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NnyGvq4E0WjAYMGap3W6O",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 16:04:49,032 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:05:03,775 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:05:03,792 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 16:05:03,792 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:05:03,792 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "JRK6",
+    "methodType": "credit-card"
+}
+2025-03-11 16:05:03,792 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:05:07,807 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "GKVR",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "JRK6",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T08:05:07.618801Z",
+        "updatedAt": "2025-03-11T08:05:07.618801Z",
+        "isArchived": false
+    }
+}
+2025-03-11 16:05:07,820 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:07:00,703 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:07:00,718 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 16:07:00,718 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:07:00,718 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 16:07:00,718 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:07:03,050 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "QMZL",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1Nq8Gvq4E0WjAYFinXAZBT",
+            "stripeSetupSecret": "seti_1R1Nq8Gvq4E0WjAYFinXAZBT_secret_RvEIku1L77xuNVXzpHo93Nr4lp28m41"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T08:07:04.461705Z",
+        "updatedAt": "2025-03-11T08:07:04.461705Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 16:07:03,072 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:07:11,791 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:07:11,805 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1Nq8Gvq4E0WjAYFinXAZBT/confirm
+2025-03-11 16:07:11,805 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:07:11,805 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1Nq8Gvq4E0WjAYFinXAZBT_secret_RvEIku1L77xuNVXzpHo93Nr4lp28m41"
+}
+2025-03-11 16:07:11,805 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+2025-03-11 16:07:13,800 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1Nq8Gvq4E0WjAYFinXAZBT",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1Nq8Gvq4E0WjAYFinXAZBT_secret_RvEIku1L77xuNVXzpHo93Nr4lp28m41",
+    "created": 1741680424,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NqJGvq4E0WjAYVB8IP7wt",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 16:07:13,804 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:07:21,654 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:07:21,673 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 16:07:21,673 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:07:21,673 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "QMZL",
+    "methodType": "credit-card"
+}
+2025-03-11 16:07:21,673 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:07:25,863 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "PW39",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "QMZL",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T08:07:25.670348Z",
+        "updatedAt": "2025-03-11T08:07:25.670348Z",
+        "isArchived": false
+    }
+}
+2025-03-11 16:07:25,875 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:09:15,883 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:09:15,895 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 16:09:15,895 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 16:09:15,895 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:09:18,437 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 16:09:18,463 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 16:09:18,463 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:09:18,463 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 16:09:18,463 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:09:21,097 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "8KVZ",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1NsNGvq4E0WjAYQzaDJu4D",
+            "stripeSetupSecret": "seti_1R1NsNGvq4E0WjAYQzaDJu4D_secret_RvELNnomUJNA9zw6MyMexGN82g5deQv"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T08:09:22.494805Z",
+        "updatedAt": "2025-03-11T08:09:22.494805Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 16:09:21,127 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1NsNGvq4E0WjAYQzaDJu4D/confirm
+2025-03-11 16:09:21,127 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:09:21,127 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1NsNGvq4E0WjAYQzaDJu4D_secret_RvELNnomUJNA9zw6MyMexGN82g5deQv"
+}
+2025-03-11 16:09:21,127 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+2025-03-11 16:09:23,043 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1NsNGvq4E0WjAYQzaDJu4D",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1NsNGvq4E0WjAYQzaDJu4D_secret_RvELNnomUJNA9zw6MyMexGN82g5deQv",
+    "created": 1741680563,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NsOGvq4E0WjAYFg2Tg4fe",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 16:09:23,062 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 16:09:23,062 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:09:23,062 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "8KVZ",
+    "methodType": "credit-card"
+}
+2025-03-11 16:09:23,062 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:09:27,138 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "DJOV",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "8KVZ",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T08:09:26.912992Z",
+        "updatedAt": "2025-03-11T08:09:26.912992Z",
+        "isArchived": false
+    }
+}
+2025-03-11 16:09:27,146 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:14:30,532 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:14:30,544 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods/DJOV
+2025-03-11 16:14:30,544 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-03-11 16:14:30,544 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:14:32,379 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 404,
+    "type": "NotFound",
+    "messageId": null,
+    "message": "Resource not found.",
+    "details": [],
+    "data": null
+}
+2025-03-11 16:14:32,434 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:14:41,891 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:14:41,902 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 16:14:41,902 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 16:14:41,902 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:14:43,546 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 16:14:43,574 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 16:14:43,574 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:14:43,575 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 16:14:43,575 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:14:45,999 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "WQN8",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1NxbGvq4E0WjAYClLNxhNw",
+            "stripeSetupSecret": "seti_1R1NxbGvq4E0WjAYClLNxhNw_secret_RvEQYDv2AzqLOXlHmMprvHpKMXIPGsC"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T08:14:47.419621Z",
+        "updatedAt": "2025-03-11T08:14:47.419621Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 16:14:46,030 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1NxbGvq4E0WjAYClLNxhNw/confirm
+2025-03-11 16:14:46,031 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:14:46,031 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1NxbGvq4E0WjAYClLNxhNw_secret_RvEQYDv2AzqLOXlHmMprvHpKMXIPGsC"
+}
+2025-03-11 16:14:46,031 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+2025-03-11 16:14:48,247 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1NxbGvq4E0WjAYClLNxhNw",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1NxbGvq4E0WjAYClLNxhNw_secret_RvEQYDv2AzqLOXlHmMprvHpKMXIPGsC",
+    "created": 1741680887,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1NxdGvq4E0WjAYnoVmTbzg",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 16:14:48,261 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 16:14:48,261 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:14:48,261 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "WQN8",
+    "methodType": "credit-card"
+}
+2025-03-11 16:14:48,261 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:14:52,205 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "JV6J",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "WQN8",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T08:14:52.082872Z",
+        "updatedAt": "2025-03-11T08:14:52.082872Z",
+        "isArchived": false
+    }
+}
+2025-03-11 16:14:52,213 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:15:03,704 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:15:03,715 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods/JV6J
+2025-03-11 16:15:03,715 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-03-11 16:15:03,715 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:15:05,465 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-03-11 16:15:05,470 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:27:19,834 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:27:19,845 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/availableProviders
+2025-03-11 16:27:19,845 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-03-11 16:27:19,845 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:27:21,706 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "E8XY",
+            "option": {
+                "stripeKeyPublic": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+            },
+            "type": "stripe",
+            "createdAt": "2023-03-28T02:57:10.969698Z",
+            "updatedAt": "2023-03-28T02:57:10.969698Z",
+            "isArchived": false
+        }
+    ]
+}
+2025-03-11 16:27:21,731 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/$setup
+2025-03-11 16:27:21,732 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:27:21,732 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "methodType": "credit-card"
+}
+2025-03-11 16:27:21,732 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:27:24,156 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "ZQ59",
+        "providerId": "E8XY",
+        "methodType": "credit-card",
+        "status": "init",
+        "option": {
+            "stripeSetupId": "seti_1R1O9pGvq4E0WjAYGQ0FmCtd",
+            "stripeSetupSecret": "seti_1R1O9pGvq4E0WjAYGQ0FmCtd_secret_RvEdgrMqd4FVItxd44dWgHxhjsvJEGw"
+        },
+        "providerType": "stripe",
+        "createdAt": "2025-03-11T08:27:25.493167Z",
+        "updatedAt": "2025-03-11T08:27:25.493167Z",
+        "partnerId": "YVQM"
+    }
+}
+2025-03-11 16:27:24,184 - rest_client_new.py -log - INFO - 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1O9pGvq4E0WjAYGQ0FmCtd/confirm
+2025-03-11 16:27:24,184 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:27:24,184 - rest_client_new.py -log - INFO - 接口请求的data参数:  
+{
+    "payment_method_data[billing_details][name]": "bin",
+    "payment_method_data[billing_details][email]": "binbin.lai@rybit.io",
+    "payment_method_data[billing_details][address][city]": "dfghdf",
+    "payment_method_data[billing_details][address][country]": "CN",
+    "payment_method_data[billing_details][address][line1]": "lgl",
+    "payment_method_data[billing_details][address][line2]": "J",
+    "payment_method_data[billing_details][address][postal_code]": "201616",
+    "payment_method_data[billing_details][address][state]": "澳门",
+    "payment_method_data[billing_details][phone]": "",
+    "payment_method_data[type]": "card",
+    "payment_method_data[card][number]": "4242424242424242",
+    "payment_method_data[card][cvc]": "666",
+    "payment_method_data[card][exp_month]": "06",
+    "payment_method_data[card][exp_year]": "66",
+    "payment_method_data[allow_redisplay]": "unspecified",
+    "payment_method_data[payment_user_agent]": "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element",
+    "payment_method_data[referrer]": "https://ops-web-rental-stg.moovmobility.co",
+    "payment_method_data[time_on_page]": "23344",
+    "payment_method_data[client_attribution_metadata][client_session_id]": "8d0d2f37-cffd-469f-9a57-4cff44fc9eef",
+    "payment_method_data[client_attribution_metadata][merchant_integration_source]": "elements",
+    "payment_method_data[client_attribution_metadata][merchant_integration_subtype]": "payment-element",
+    "payment_method_data[client_attribution_metadata][merchant_integration_version]": "2021",
+    "payment_method_data[client_attribution_metadata][payment_intent_creation_flow]": "standard",
+    "payment_method_data[client_attribution_metadata][payment_method_selection_flow]": "merchant_specified",
+    "payment_method_data[guid]": "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273",
+    "payment_method_data[muid]": "e688dd96-d981-4c99-aada-95a37fd798c4",
+    "payment_method_data[sid]": "c49e31b1-3551-4962-968a-0b37ce7cf8f0",
+    "expected_payment_method_type": "card",
+    "radar_options[hcaptcha_token]": "20000000-aaaa-bbbb-cccc-000000000002",
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1O9pGvq4E0WjAYGQ0FmCtd_secret_RvEdgrMqd4FVItxd44dWgHxhjsvJEGw"
+}
+2025-03-11 16:27:24,184 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+2025-03-11 16:27:26,229 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "id": "seti_1R1O9pGvq4E0WjAYGQ0FmCtd",
+    "object": "setup_intent",
+    "automatic_payment_methods": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1R1O9pGvq4E0WjAYGQ0FmCtd_secret_RvEdgrMqd4FVItxd44dWgHxhjsvJEGw",
+    "created": 1741681645,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1R1O9rGvq4E0WjAYZYCjCZzp",
+    "payment_method_configuration_details": null,
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+2025-03-11 16:27:26,247 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods
+2025-03-11 16:27:26,248 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-03-11 16:27:26,248 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "providerId": "E8XY",
+    "partnerSetupId": "ZQ59",
+    "methodType": "credit-card"
+}
+2025-03-11 16:27:26,248 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:27:30,402 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "Q8KP",
+        "providerType": "stripe",
+        "providerId": "E8XY",
+        "partnerId": "YVQM",
+        "partnerSetupId": "ZQ59",
+        "creditCard": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "detail": {
+            "cardLastFour": 4242,
+            "cardExpireYear": 2066,
+            "cardExpireMonth": 6
+        },
+        "type": "credit-card",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-11T08:27:30.130786Z",
+        "updatedAt": "2025-03-11T08:27:30.130786Z",
+        "isArchived": false
+    }
+}
+2025-03-11 16:27:30,417 - conftest.py -log - INFO - 测试结束
+2025-03-11 16:32:03,719 - conftest.py -log - INFO - 开始执行测试
+2025-03-11 16:32:03,733 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/payment/partners/YVQM/methods/Q8KP
+2025-03-11 16:32:03,734 - rest_client_new.py -log - INFO - 接口请求方式: DELETE
+2025-03-11 16:32:03,734 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-03-11 16:32:05,474 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": null
+}
+2025-03-11 16:32:05,479 - conftest.py -log - INFO - 测试结束

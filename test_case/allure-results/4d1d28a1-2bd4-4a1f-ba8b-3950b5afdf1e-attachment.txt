@@ -1,0 +1,24 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me
+INFO     log:rest_client_new.py:38 接口请求方式: PATCH
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "email": "bin123@1.com"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer E7DBCAE87A214BBEB16AE0BEE5AC2DB8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 400,
+    "type": "EmailInUse",
+    "messageId": null,
+    "message": "Email 'bin123@1.com' is in use.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

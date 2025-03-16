@@ -1,0 +1,34 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/deposits/$all/refundRequests/EBV4/$approve
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "EBV4",
+        "partnerId": "YVQM",
+        "customerId": "8KVZ",
+        "assetCategoryId": "Y63Q",
+        "status": "approved",
+        "refundStatus": "succeeded",
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "createdAt": "2025-03-14T04:28:18.372738Z",
+        "updatedAt": "2025-03-14T04:33:26.367182958Z",
+        "limit": 100,
+        "total": 4,
+        "totalAmount": 40.0,
+        "currency": "USD"
+    }
+}
+INFO     log:conftest.py:15 测试结束

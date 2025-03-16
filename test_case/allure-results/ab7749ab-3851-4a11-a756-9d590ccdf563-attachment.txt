@@ -1,0 +1,75 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/support/customerTickets
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "siteId": "OJXJ",
+    "assetNo": "APITEST49",
+    "assetPartnerId": "YVQM",
+    "assetCategoryId": "Y2XM",
+    "contactNameFirst": "bin",
+    "contactNameLast": "bin",
+    "contactEmail": "1231233456@1.cn",
+    "contactPhoneNo": "+12025000001"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 39D525772A3D4F738E05482C95D65637"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "WNPO",
+        "partnerId": "YVQM",
+        "siteId": "OJXJ",
+        "assetNo": "APITEST49",
+        "assetPartnerId": "YVQM",
+        "assetCategoryId": "Y2XM",
+        "relatedContactInfo": {
+            "customerId": "VL52",
+            "isAutoCreatedCustomer": false,
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "phoneNo": "+12025000001",
+            "email": "1231233456@1.cn",
+            "updatedAt": "2025-03-14T08:08:23.055302Z",
+            "createdAt": "2025-03-14T08:08:23.055302Z"
+        },
+        "orderId": null,
+        "status": "new",
+        "checkInNote": null,
+        "mechanic": null,
+        "feeSummary": null,
+        "pausedRecordList": [],
+        "checkedInAt": null,
+        "assignedAt": null,
+        "startedAt": null,
+        "finishedAt": null,
+        "failedAt": null,
+        "completedAt": null,
+        "endedAt": null,
+        "duration": null,
+        "pauseDurationTotal": null,
+        "completeReason": null,
+        "checklistRecordSummary": {
+            "excludedPricingIdList": [],
+            "includedPricingIdList": []
+        },
+        "referenceId": null,
+        "referenceUrl": null,
+        "comment": null,
+        "unsuccessfulReason": null,
+        "updatedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "updatedAt": "2025-03-14T08:08:23.055302Z",
+        "createdAt": "2025-03-14T08:08:23.055302Z"
+    }
+}
+INFO     log:conftest.py:15 测试结束

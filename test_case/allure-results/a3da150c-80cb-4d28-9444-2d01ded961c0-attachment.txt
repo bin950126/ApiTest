@@ -1,0 +1,25 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/agreement/documents?types=help-center&preferredLangCode=en
+INFO     log:rest_client_new.py:38 接口请求方式: GET
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "rental-captcha-token": "RENTAL_CAPTCHA_TOKEN",
+    "Authorization": "Bearer 8BE043D122BF440BB56535EA984039F6"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "type": "help-center",
+            "langCode": "en",
+            "content": "<h3 style=\"text-align: left;\"><strong><em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(35, 111, 161); text-decoration: underline;\"><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1679913769/rental_documents/account_5/HELP_CENTER/file_bja0wj.jpg\">123</span></span></em></strong></h3>\n<h3 style=\"text-align: left;\"><strong><em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(35, 111, 161); text-decoration: underline;\"><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1680630880/rental_documents/account_%245/%24HELP_CENTER/file_io9h7e.jpg\">sdfsdfsdfsdffadsf</span></span></em></strong></h3>\n<h3 style=\"text-align: left;\"><strong><em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(35, 111, 161); text-decoration: underline;\">adsfadsfasdf123</span></span></em></strong></h3>\n<h3 style=\"text-align: left;\"><strong><em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(35, 111, 161); text-decoration: underline;\">adfsd</span></span></em><em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(35, 111, 161);\">afsdfasdf</span></span></em></strong></h3>\n<p><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1679805899/rental_documents/account_5/HELP_CENTER/file_pdrooe.jpg\">asdfadfa<em><span style=\"text-decoration: underline;\"><span style=\"color: rgb(0, 0, 0); text-decoration: underline;\"><strong>s</strong></span></span></em>d<strong>fasdfasd</strong></p>\n<p><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1679803932/rental_documents/account_5/HELP_CENTER/file_cxb20d.png\"></p>\n<p><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1679804436/rental_documents/account_5/HELP_CENTER/file_mi9q5n.png\"><img src=\"http://res.cloudinary.com/dfzcdfl3m/image/upload/v1681129069/rental_documents/account_%245/%24HELP_CENTER/file_sy0pzg.jpg\">123</p>",
+            "createdAt": "2023-03-26T04:11:27.917285Z",
+            "updatedAt": "2023-07-05T09:31:43.130837Z"
+        }
+    ]
+}
+INFO     log:conftest.py:15 测试结束

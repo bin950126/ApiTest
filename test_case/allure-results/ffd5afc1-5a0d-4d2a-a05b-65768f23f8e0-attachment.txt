@@ -1,0 +1,19 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/deposits/$all/refundRequests/EBV4/$approve
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 400,
+    "type": "DepositRefundRequestApproveNotAllow",
+    "messageId": null,
+    "message": "Deposit refund request not allow, because status not match.",
+    "details": [],
+    "data": null
+}
+INFO     log:conftest.py:15 测试结束

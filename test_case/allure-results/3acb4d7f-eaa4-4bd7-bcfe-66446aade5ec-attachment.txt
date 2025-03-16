@@ -1,0 +1,79 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/ongoingOrders/D7RV/assets/APITEST47/$confirmReturn
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:40 接口请求的json参数:  
+{
+    "siteId": "OJXJ"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "D7RV",
+        "partnerId": "YVQM",
+        "customerId": "8KVZ",
+        "status": "closed",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-03-05T13:24:26.872323Z",
+        "endTime": "2025-03-05T13:24:43.727111964Z",
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": "PT16.854788964S",
+        "revaluationAt": "2025-03-05T13:24:43.635191214Z",
+        "leases": [
+            {
+                "id": "MJW6",
+                "orderId": "D7RV",
+                "status": "returned",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": "OJXJ",
+                "startTime": "2025-03-05T13:24:26.872323Z",
+                "endTime": "2025-03-05T15:24:26.872323Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-03-05T13:24:41.83076Z",
+                "returnedAt": "2025-03-05T13:24:43.727111964Z"
+            }
+        ],
+        "customer": {
+            "id": "8KVZ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+INFO     log:conftest.py:15 测试结束

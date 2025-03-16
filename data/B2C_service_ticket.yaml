@@ -1,0 +1,24 @@
+create_service_ticket :
+  #接口的基本信息
+  - request_info:
+      url: /support/customerTickets
+      method: POST #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 创建service ticket
+        json: #请求参数
+          "partnerId": ${get_extract_value(parther_id)}
+          "siteId": ${get_extract_value(site_id)}
+          "assetNo": ${get_extract_value(plan_asset1)}
+          "assetPartnerId": ${get_extract_value(parther_id)}
+          "assetCategoryId": ${get_extract_value(category_a)}
+          "contactNameFirst": "bin"
+          "contactNameLast": "bin"
+          "contactEmail": ${get_extract_value(customer_email)}
+          "contactPhoneNo": ${get_extract_value(phoneNo)}
+        extract: #提取信息
+          service_ticket_id: '$.data.id'
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]

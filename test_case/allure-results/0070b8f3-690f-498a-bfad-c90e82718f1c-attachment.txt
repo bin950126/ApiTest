@@ -1,0 +1,83 @@
+INFO     log:conftest.py:13 开始执行测试
+INFO     log:rest_client_new.py:37 接口请求的地址: https://api.stripe.com/v1/setup_intents/seti_1R1KXVGvq4E0WjAYSuIpBEK1/confirm
+INFO     log:rest_client_new.py:38 接口请求方式: POST
+INFO     log:rest_client_new.py:44 接口请求的data参数:  
+{
+    "payment_method_data": {
+        "billing_details": {
+            "name": "bin",
+            "email": "TEST2.16@1.cn",
+            "address": {
+                "city": "test",
+                "country": "CN",
+                "line1": 123,
+                "postal_code": 201616,
+                "state": "澳门"
+            },
+            "phone": ""
+        },
+        "type": "card",
+        "card": {
+            "number": "4242 4242 4242 4242",
+            "cvc": 666,
+            "exp_year": 66,
+            "exp_month": 6
+        },
+        "allow_redisplay": "unspecified",
+        "payment_user_agent": "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element",
+        "referrer": "https://ops-web-rental-stg.moovmobility.co",
+        "time_on_page": 534993,
+        "client_attribution_metadata": {
+            "client_session_id": "c48c2e03-678e-46ae-823a-49bada965c2a",
+            "merchant_integration_source": "elements",
+            "merchant_integration_subtype": "payment-element",
+            "merchant_integration_version": 2021,
+            "payment_intent_creation_flow": "standard",
+            "payment_method_selection_flow": "merchant_specified"
+        },
+        "guid": "eb8bc975-198a-4e46-849d-2249b5e116ea",
+        "muid": "557a7812-bdc9-4bb3-ba96-dd7119e56f56",
+        "sid": "793743ee-f664-4bb6-94b4-14cd0a12768f"
+    },
+    "expected_payment_method_type": "card",
+    "radar_options": {
+        "hcaptcha_token": "20000000-aaaa-bbbb-cccc-000000000002"
+    },
+    "use_stripe_sdk": true,
+    "key": "pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8",
+    "client_secret": "seti_1R1KXVGvq4E0WjAYSuIpBEK1_secret_RvAt2NdNZwLuYcwmnK0iFvWGtUQWIKS"
+}
+INFO     log:rest_client_new.py:50 接口请求的请求头:
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8"
+}
+INFO     log:rest_client_new.py:15 接口的返回内容:>>>
+{
+    "error": {
+        "message": "Invalid object",
+        "param": "payment_method_data",
+        "request_log_url": "https://dashboard.stripe.com/test/logs/req_LeEIjOgpiOhqaj?t=1741668276",
+        "setup_intent": {
+            "id": "seti_1R1KXVGvq4E0WjAYSuIpBEK1",
+            "object": "setup_intent",
+            "automatic_payment_methods": null,
+            "cancellation_reason": null,
+            "client_secret": "seti_1R1KXVGvq4E0WjAYSuIpBEK1_secret_RvAt2NdNZwLuYcwmnK0iFvWGtUQWIKS",
+            "created": 1741667737,
+            "description": null,
+            "last_setup_error": null,
+            "livemode": false,
+            "next_action": null,
+            "payment_method": null,
+            "payment_method_configuration_details": null,
+            "payment_method_types": [
+                "card"
+            ],
+            "status": "requires_payment_method",
+            "usage": "off_session"
+        },
+        "type": "invalid_request_error"
+    }
+}
+INFO     log:conftest.py:15 测试结束

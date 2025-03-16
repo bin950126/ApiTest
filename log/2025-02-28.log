@@ -1,0 +1,2540 @@
+2025-02-28 14:39:16,632 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:16,644 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/assets/APITEST47/$inspect
+2025-02-28 14:39:16,645 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:16,645 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "geolocation": null
+}
+2025-02-28 14:39:16,645 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:18,328 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "status": "ok",
+        "accountConfig": {
+            "enabledInvoice": true
+        },
+        "rentalConfig": {
+            "id": "Y23X",
+            "partner": {
+                "id": "YVQM",
+                "name": "ApiTest"
+            },
+            "currency": "USD",
+            "customOptions": [
+                "allow-control-beep",
+                "allow-view-geolocation",
+                "allow-control-light",
+                "allow-control-lock",
+                "allow-control-battery-lock",
+                "allow-push-geolocation-checkpoint"
+            ],
+            "isOpenToJoin": true,
+            "userSelfJoinNote": {
+                "en": "",
+                "it": "",
+                "es": ""
+            },
+            "unavailableNote": null,
+            "userMaxPaymentAmount": 100000.0,
+            "contactPhoneNo": "+12022222222",
+            "contactEmailNo": "binbin.lai@rybit.io",
+            "createdAt": "2025-02-13T09:35:45.426798Z",
+            "updatedAt": "2025-02-13T13:34:27.183683Z"
+        },
+        "program": {
+            "id": "YMLL",
+            "partnerId": "YVQM",
+            "assetCategoryId": "Y2XM",
+            "depositAmount": 20.0,
+            "assetLimit": 100,
+            "isAllowedCrossSiteReturn": true,
+            "isConfirmRequired": true,
+            "isLocationCheckRequired": true,
+            "isLockCheckRequired": true,
+            "noticeIntl": {
+                "en": "Rental Fee Notice\nEnglish",
+                "it": "Rental Fee Notice\nItalian",
+                "es": "Rental Fee Notice\nSpanish"
+            },
+            "depositNoticeIntl": {
+                "en": "Deposit Fee Notice\nEnglish",
+                "it": "Deposit Fee Notice\nItalian",
+                "es": "Deposit Fee Notice\nSpanish"
+            },
+            "basePrice": {
+                "id": "YM96",
+                "fee": 1.0,
+                "time": 60,
+                "currency": "USD"
+            },
+            "plans": [
+                {
+                    "id": "V55P",
+                    "code": "PT1H",
+                    "duration": 60,
+                    "discount": null
+                },
+                {
+                    "id": "XD5P",
+                    "code": "PT2H",
+                    "duration": 120,
+                    "discount": {
+                        "price": 1.5,
+                        "startTime": "2025-02-20T05:43:00Z",
+                        "endTime": null,
+                        "name": "Discount",
+                        "description": null
+                    }
+                }
+            ]
+        },
+        "asset": {
+            "partnerId": "YVQM",
+            "categoryId": "Y2XM",
+            "no": "APITEST47",
+            "location": {
+                "siteId": "OJXJ",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        121.5110001,
+                        31.26276608
+                    ]
+                }
+            },
+            "modelType": "cycle-c",
+            "iot": null,
+            "geolocation": {
+                "current": {
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            121.5110001,
+                            31.26276608
+                        ]
+                    },
+                    "accuracy": null,
+                    "timestamp": "2025-02-27T09:05:34.512Z",
+                    "receivedAt": null,
+                    "source": "manual",
+                    "businessType": "user-confirm-renting-return",
+                    "isRawData": false
+                },
+                "updatedAt": "2025-02-27T09:05:34.512Z"
+            },
+            "lease": null
+        }
+    }
+}
+2025-02-28 14:39:18,348 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:18,353 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:18,372 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits
+2025-02-28 14:39:18,372 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:18,372 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "customerId": "PONJ",
+    "assetCategoryId": "Y2XM",
+    "customerPaymentMethodId": "JVQJ"
+}
+2025-02-28 14:39:18,373 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:22,100 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "WLGR",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "assetCategoryId": "Y2XM",
+        "status": "usable",
+        "tradeStatus": "captured",
+        "currency": "USD",
+        "amount": 20.0,
+        "createdAt": "2025-02-28T06:39:22.036667Z",
+        "updatedAt": "2025-02-28T06:39:22.036667145Z",
+        "leaseUsage": null
+    }
+}
+2025-02-28 14:39:22,102 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:22,105 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:22,130 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits
+2025-02-28 14:39:22,130 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:22,130 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "customerId": "PONJ",
+    "assetCategoryId": "Y2XM",
+    "customerPaymentMethodId": "JVQJ"
+}
+2025-02-28 14:39:22,131 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:25,665 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "ZZG8",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "assetCategoryId": "Y2XM",
+        "status": "usable",
+        "tradeStatus": "captured",
+        "currency": "USD",
+        "amount": 20.0,
+        "createdAt": "2025-02-28T06:39:25.833245Z",
+        "updatedAt": "2025-02-28T06:39:25.833244997Z",
+        "leaseUsage": null
+    }
+}
+2025-02-28 14:39:25,669 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:25,675 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:25,696 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits
+2025-02-28 14:39:25,696 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:25,696 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "customerId": "PONJ",
+    "assetCategoryId": "Y63Q",
+    "customerPaymentMethodId": "JVQJ"
+}
+2025-02-28 14:39:25,696 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:28,962 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "725Q",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "assetCategoryId": "Y63Q",
+        "status": "usable",
+        "tradeStatus": "captured",
+        "currency": "USD",
+        "amount": 10.0,
+        "createdAt": "2025-02-28T06:39:29.2134Z",
+        "updatedAt": "2025-02-28T06:39:29.2133997Z",
+        "leaseUsage": null
+    }
+}
+2025-02-28 14:39:28,964 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:28,969 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:28,992 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders
+2025-02-28 14:39:28,993 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:28,993 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "customerId": "PONJ",
+    "assetNo": "APITEST47",
+    "planCode": "PT2H",
+    "customerPaymentMethodId": "JVQJ",
+    "expectedAmount": "1.5"
+}
+2025-02-28 14:39:28,993 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:37,886 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "5X2V",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:32.745063Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:39:32.745063Z",
+        "leases": [
+            {
+                "id": "BMZ3",
+                "orderId": "5X2V",
+                "status": "in-use",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:32.745063Z",
+                "endTime": "2025-02-28T08:39:32.745063Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": null,
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:39:37,898 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:37,901 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:37,923 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders
+2025-02-28 14:39:37,923 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:37,923 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "customerId": "PONJ",
+    "assetNo": "APITEST48",
+    "planCode": "PT2H",
+    "customerPaymentMethodId": "JVQJ",
+    "expectedAmount": "1.5"
+}
+2025-02-28 14:39:37,923 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:46,571 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6O98",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:41.428403Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:39:41.428403Z",
+        "leases": [
+            {
+                "id": "L9QB",
+                "orderId": "6O98",
+                "status": "in-use",
+                "assetNo": "APITEST48",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:41.428403Z",
+                "endTime": "2025-02-28T08:39:41.428403Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": null,
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:39:46,583 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:46,586 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:46,607 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders
+2025-02-28 14:39:46,607 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:46,607 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "customerId": "PONJ",
+    "assetNo": "APIFREE3",
+    "planCode": "PT1H",
+    "customerPaymentMethodId": "JVQJ",
+    "expectedAmount": 0
+}
+2025-02-28 14:39:46,607 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:48,067 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "23KX",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 0.0,
+        "amountTax": 0.0,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 0.0,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:50.10697Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:39:50.10697Z",
+        "leases": [
+            {
+                "id": "47D6",
+                "orderId": "23KX",
+                "status": "in-use",
+                "assetNo": "APIFREE3",
+                "assetCategoryId": "Y63Q",
+                "currency": "USD",
+                "basePriceFee": 0.0,
+                "basePriceTime": 60,
+                "planCode": "PT1H",
+                "planDuration": 60,
+                "planDiscount": null,
+                "isAllowedCrossSiteReturn": false,
+                "isConfirmRequired": false,
+                "isLocationCheckRequired": false,
+                "isLockCheckRequired": false,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:50.10697Z",
+                "endTime": "2025-02-28T07:39:50.10697Z",
+                "totalTime": "PT1H",
+                "returnSubmittedAt": null,
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:39:48,077 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:48,080 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:48,086 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders
+2025-02-28 14:39:48,086 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-02-28 14:39:48,086 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:39:49,603 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "23KX",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-02-28T06:39:50.10697Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-02-28T06:39:50.10697Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "47D6",
+                        "orderId": "23KX",
+                        "status": "in-use",
+                        "assetNo": "APIFREE3",
+                        "assetCategoryId": "Y63Q",
+                        "currency": "USD",
+                        "basePriceFee": 0.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT1H",
+                        "planDuration": 60,
+                        "planDiscount": null,
+                        "isAllowedCrossSiteReturn": false,
+                        "isConfirmRequired": false,
+                        "isLocationCheckRequired": false,
+                        "isLockCheckRequired": false,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-02-28T06:39:50.10697Z",
+                        "endTime": "2025-02-28T07:39:50.10697Z",
+                        "totalTime": "PT1H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-02-28T07:39:50.10697Z",
+                        "basePriceFee": 0.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT1H",
+                        "planDuration": 60,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6O98",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-02-28T06:39:41.428403Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-02-28T06:39:41.428403Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "L9QB",
+                        "orderId": "6O98",
+                        "status": "in-use",
+                        "assetNo": "APITEST48",
+                        "assetCategoryId": "Y2XM",
+                        "currency": "USD",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": 1.5,
+                        "isAllowedCrossSiteReturn": true,
+                        "isConfirmRequired": true,
+                        "isLocationCheckRequired": true,
+                        "isLockCheckRequired": true,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-02-28T06:39:41.428403Z",
+                        "endTime": "2025-02-28T08:39:41.428403Z",
+                        "totalTime": "PT2H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-02-28T08:39:41.428403Z",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5X2V",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "open",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enableInvoice": false,
+            "startTime": "2025-02-28T06:39:32.745063Z",
+            "endTime": null,
+            "totalTime": null,
+            "revaluationAt": "2025-02-28T06:39:32.745063Z",
+            "leases": [
+                {
+                    "lease": {
+                        "id": "BMZ3",
+                        "orderId": "5X2V",
+                        "status": "in-use",
+                        "assetNo": "APITEST47",
+                        "assetCategoryId": "Y2XM",
+                        "currency": "USD",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": 1.5,
+                        "isAllowedCrossSiteReturn": true,
+                        "isConfirmRequired": true,
+                        "isLocationCheckRequired": true,
+                        "isLockCheckRequired": true,
+                        "startSiteId": "OJXJ",
+                        "returnSiteId": null,
+                        "startTime": "2025-02-28T06:39:32.745063Z",
+                        "endTime": "2025-02-28T08:39:32.745063Z",
+                        "totalTime": "PT2H",
+                        "returnSubmittedAt": null,
+                        "returnedAt": null
+                    },
+                    "upcomingCharge": {
+                        "chargeAt": "2025-02-28T08:39:32.745063Z",
+                        "basePriceFee": 1.0,
+                        "basePriceTime": 60,
+                        "planCode": "PT2H",
+                        "planDuration": 120,
+                        "planDiscount": null
+                    }
+                }
+            ]
+        }
+    ]
+}
+2025-02-28 14:39:49,606 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:39:49,610 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:39:49,626 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders/5X2V/assets/APITEST47/$submitReturn
+2025-02-28 14:39:49,626 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:39:49,627 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:07,332 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "5X2V",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:32.745063Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:40:09.419626579Z",
+        "leases": [
+            {
+                "id": "BMZ3",
+                "orderId": "5X2V",
+                "status": "returning",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:32.745063Z",
+                "endTime": "2025-02-28T08:39:32.745063Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-02-28T06:40:09.453737798Z",
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:07,346 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:07,352 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:07,368 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/ongoingOrders/5X2V/assets/APITEST47/$confirmReturn
+2025-02-28 14:40:07,368 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:07,368 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "siteId": "OJXJ"
+}
+2025-02-28 14:40:07,369 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-28 14:40:09,743 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "5X2V",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "closed",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:32.745063Z",
+        "endTime": "2025-02-28T06:40:11.285093389Z",
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": "PT38.540030389S",
+        "revaluationAt": "2025-02-28T06:40:11.203240846Z",
+        "leases": [
+            {
+                "id": "BMZ3",
+                "orderId": "5X2V",
+                "status": "returned",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": "OJXJ",
+                "startTime": "2025-02-28T06:39:32.745063Z",
+                "endTime": "2025-02-28T08:39:32.745063Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-02-28T06:40:09.453738Z",
+                "returnedAt": "2025-02-28T06:40:11.285093389Z"
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:09,746 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:09,751 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:09,765 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders/6O98/assets/APITEST48/$submitReturn
+2025-02-28 14:40:09,765 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:09,765 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:11,092 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6O98",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:41.428403Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:40:13.192199985Z",
+        "leases": [
+            {
+                "id": "L9QB",
+                "orderId": "6O98",
+                "status": "returning",
+                "assetNo": "APITEST48",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:41.428403Z",
+                "endTime": "2025-02-28T08:39:41.428403Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-02-28T06:40:13.231895329Z",
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:11,095 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:11,101 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:11,115 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders/6O98/assets/APITEST48/$cancelReturn
+2025-02-28 14:40:11,115 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:11,115 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:12,603 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6O98",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:41.428403Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:40:13.1922Z",
+        "leases": [
+            {
+                "id": "L9QB",
+                "orderId": "6O98",
+                "status": "in-use",
+                "assetNo": "APITEST48",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:41.428403Z",
+                "endTime": "2025-02-28T08:39:41.428403Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": null,
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:12,606 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:12,611 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:12,624 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/ongoingOrders/23KX/assets/APIFREE3/$submitReturn
+2025-02-28 14:40:12,624 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:12,624 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:14,018 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "23KX",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "closed",
+        "currency": "USD",
+        "amountTotal": 0.0,
+        "amountTax": 0.0,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 0.0,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:50.10697Z",
+        "endTime": "2025-02-28T06:40:16.11957652Z",
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": "PT26.01260652S",
+        "revaluationAt": "2025-02-28T06:40:16.088482721Z",
+        "leases": [
+            {
+                "id": "47D6",
+                "orderId": "23KX",
+                "status": "returned",
+                "assetNo": "APIFREE3",
+                "assetCategoryId": "Y63Q",
+                "currency": "USD",
+                "basePriceFee": 0.0,
+                "basePriceTime": 60,
+                "planCode": "PT1H",
+                "planDuration": 60,
+                "planDiscount": null,
+                "isAllowedCrossSiteReturn": false,
+                "isConfirmRequired": false,
+                "isLocationCheckRequired": false,
+                "isLockCheckRequired": false,
+                "startSiteId": "OJXJ",
+                "returnSiteId": "OJXJ",
+                "startTime": "2025-02-28T06:39:50.10697Z",
+                "endTime": "2025-02-28T07:39:50.10697Z",
+                "totalTime": "PT1H",
+                "returnSubmittedAt": "2025-02-28T06:40:16.11957652Z",
+                "returnedAt": "2025-02-28T06:40:16.11957652Z"
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:14,022 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:14,027 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:14,044 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders/6O98/assets/APITEST48/lease/$replaceAsset
+2025-02-28 14:40:14,044 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:14,044 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "assetNo": "APITEST47"
+}
+2025-02-28 14:40:14,044 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-28 14:40:15,931 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6O98",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "open",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:41.428403Z",
+        "endTime": null,
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": null,
+        "revaluationAt": "2025-02-28T06:40:13.1922Z",
+        "leases": [
+            {
+                "id": "L9QB",
+                "orderId": "6O98",
+                "status": "in-use",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": null,
+                "startTime": "2025-02-28T06:39:41.428403Z",
+                "endTime": "2025-02-28T08:39:41.428403Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": null,
+                "returnedAt": null
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:15,935 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:15,939 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:15,952 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders/6O98/assets/APITEST47/lease/usageRecords
+2025-02-28 14:40:15,953 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-02-28 14:40:15,953 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:17,363 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "originalAssetNo": null,
+            "assetNo": "APITEST48",
+            "updatedBy": null,
+            "createdAt": "2025-02-28T06:39:41.428403Z"
+        },
+        {
+            "originalAssetNo": "APITEST48",
+            "assetNo": "APITEST47",
+            "updatedBy": null,
+            "createdAt": "2025-02-28T06:40:17.949536Z"
+        }
+    ]
+}
+2025-02-28 14:40:17,366 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:17,371 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:17,381 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders/6O98/$forceClose
+2025-02-28 14:40:17,381 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:17,382 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "reason": "接口自动化测试强制结束订单"
+}
+2025-02-28 14:40:17,382 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-28 14:40:20,394 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "6O98",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "closed",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 1.5,
+        "amountRefunded": 0.0,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:41.428403Z",
+        "endTime": "2025-02-28T06:40:21.016620147Z",
+        "forceClosedBy": {
+            "id": "EQB7",
+            "name": "TEST2.16 bin",
+            "username": "TEST2.16@1.cn"
+        },
+        "forceClosedReason": "接口自动化测试强制结束订单",
+        "totalTime": "PT39.588217147S",
+        "revaluationAt": "2025-02-28T06:40:20.979014589Z",
+        "leases": [
+            {
+                "id": "L9QB",
+                "orderId": "6O98",
+                "status": "returned",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": "OJXJ",
+                "startTime": "2025-02-28T06:39:41.428403Z",
+                "endTime": "2025-02-28T08:39:41.428403Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": null,
+                "returnedAt": "2025-02-28T06:40:21.016620147Z"
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:20,396 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:20,400 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:20,404 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders?pageNo=1&pageSize=12&sort=endTime:desc,hasAmountUnpaid:desc&statusIn=closed
+2025-02-28 14:40:20,405 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-02-28 14:40:20,405 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:22,069 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 15,
+    "data": [
+        {
+            "id": "6O98",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-28T06:39:41.428403Z",
+            "endTime": "2025-02-28T06:40:21.01662Z",
+            "forceClosedBy": null,
+            "forceClosedReason": "接口自动化测试强制结束订单",
+            "totalTime": "PT39.588217S",
+            "revaluationAt": "2025-02-28T06:40:20.979015Z",
+            "leases": [
+                {
+                    "id": "L9QB",
+                    "orderId": "6O98",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-28T06:39:41.428403Z",
+                    "endTime": "2025-02-28T08:39:41.428403Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": null,
+                    "returnedAt": "2025-02-28T06:40:21.01662Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "23KX",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountTax": 0.0,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-28T06:39:50.10697Z",
+            "endTime": "2025-02-28T06:40:16.119577Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT26.012607S",
+            "revaluationAt": "2025-02-28T06:40:16.088483Z",
+            "leases": [
+                {
+                    "id": "47D6",
+                    "orderId": "23KX",
+                    "status": "returned",
+                    "assetNo": "APIFREE3",
+                    "assetCategoryId": "Y63Q",
+                    "currency": "USD",
+                    "basePriceFee": 0.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT1H",
+                    "planDuration": 60,
+                    "planDiscount": null,
+                    "isAllowedCrossSiteReturn": false,
+                    "isConfirmRequired": false,
+                    "isLocationCheckRequired": false,
+                    "isLockCheckRequired": false,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-28T06:39:50.10697Z",
+                    "endTime": "2025-02-28T07:39:50.10697Z",
+                    "totalTime": "PT1H",
+                    "returnSubmittedAt": "2025-02-28T06:40:16.119577Z",
+                    "returnedAt": "2025-02-28T06:40:16.119577Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "5X2V",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-28T06:39:32.745063Z",
+            "endTime": "2025-02-28T06:40:11.285093Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT38.54003S",
+            "revaluationAt": "2025-02-28T06:40:11.203241Z",
+            "leases": [
+                {
+                    "id": "BMZ3",
+                    "orderId": "5X2V",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-28T06:39:32.745063Z",
+                    "endTime": "2025-02-28T08:39:32.745063Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": "2025-02-28T06:40:09.453738Z",
+                    "returnedAt": "2025-02-28T06:40:11.285093Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "NDKD",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T09:05:19.899379Z",
+            "endTime": "2025-02-27T09:05:43.829664Z",
+            "forceClosedBy": null,
+            "forceClosedReason": "接口自动化测试强制结束订单",
+            "totalTime": "PT23.930285S",
+            "revaluationAt": "2025-02-27T09:05:43.797299Z",
+            "leases": [
+                {
+                    "id": "ZPRG",
+                    "orderId": "NDKD",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T09:05:19.899379Z",
+                    "endTime": "2025-02-27T11:05:19.899379Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": null,
+                    "returnedAt": "2025-02-27T09:05:43.829664Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "3K5W",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountTax": 0.0,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T09:05:29.321756Z",
+            "endTime": "2025-02-27T09:05:38.746852Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT9.425096S",
+            "revaluationAt": "2025-02-27T09:05:38.714172Z",
+            "leases": [
+                {
+                    "id": "7V7J",
+                    "orderId": "3K5W",
+                    "status": "returned",
+                    "assetNo": "APIFREE3",
+                    "assetCategoryId": "Y63Q",
+                    "currency": "USD",
+                    "basePriceFee": 0.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT1H",
+                    "planDuration": 60,
+                    "planDiscount": null,
+                    "isAllowedCrossSiteReturn": false,
+                    "isConfirmRequired": false,
+                    "isLocationCheckRequired": false,
+                    "isLockCheckRequired": false,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T09:05:29.321756Z",
+                    "endTime": "2025-02-27T10:05:29.321756Z",
+                    "totalTime": "PT1H",
+                    "returnSubmittedAt": "2025-02-27T09:05:38.746852Z",
+                    "returnedAt": "2025-02-27T09:05:38.746852Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "MD3J",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 1.5,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T09:05:09.939388Z",
+            "endTime": "2025-02-27T09:05:34.512059Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT24.572671S",
+            "revaluationAt": "2025-02-27T09:05:34.474297Z",
+            "leases": [
+                {
+                    "id": "WKJV",
+                    "orderId": "MD3J",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T09:05:09.939388Z",
+                    "endTime": "2025-02-27T11:05:09.939388Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": "2025-02-27T09:05:32.861493Z",
+                    "returnedAt": "2025-02-27T09:05:34.512059Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "X7OQ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:56:18.784013Z",
+            "endTime": "2025-02-27T08:56:41.515508Z",
+            "forceClosedBy": null,
+            "forceClosedReason": "接口自动化测试强制结束订单",
+            "totalTime": "PT22.731495S",
+            "revaluationAt": "2025-02-27T08:56:41.48565Z",
+            "leases": [
+                {
+                    "id": "QWOW",
+                    "orderId": "X7OQ",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:56:18.784013Z",
+                    "endTime": "2025-02-27T10:56:18.784013Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": null,
+                    "returnedAt": "2025-02-27T08:56:41.515508Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "OD5G",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountTax": 0.0,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:56:27.693205Z",
+            "endTime": "2025-02-27T08:56:36.91509Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT9.221885S",
+            "revaluationAt": "2025-02-27T08:56:36.884293Z",
+            "leases": [
+                {
+                    "id": "87BN",
+                    "orderId": "OD5G",
+                    "status": "returned",
+                    "assetNo": "APIFREE3",
+                    "assetCategoryId": "Y63Q",
+                    "currency": "USD",
+                    "basePriceFee": 0.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT1H",
+                    "planDuration": 60,
+                    "planDiscount": null,
+                    "isAllowedCrossSiteReturn": false,
+                    "isConfirmRequired": false,
+                    "isLocationCheckRequired": false,
+                    "isLockCheckRequired": false,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:56:27.693205Z",
+                    "endTime": "2025-02-27T09:56:27.693205Z",
+                    "totalTime": "PT1H",
+                    "returnSubmittedAt": "2025-02-27T08:56:36.91509Z",
+                    "returnedAt": "2025-02-27T08:56:36.91509Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "VZJM",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 1.5,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:56:09.832558Z",
+            "endTime": "2025-02-27T08:56:32.418722Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT22.586164S",
+            "revaluationAt": "2025-02-27T08:56:32.379474Z",
+            "leases": [
+                {
+                    "id": "JWGZ",
+                    "orderId": "VZJM",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:56:09.832558Z",
+                    "endTime": "2025-02-27T10:56:09.832558Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": "2025-02-27T08:56:30.893786Z",
+                    "returnedAt": "2025-02-27T08:56:32.418722Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "LDN6",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 1.5,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:51:56.398102Z",
+            "endTime": "2025-02-27T08:52:23.263968Z",
+            "forceClosedBy": null,
+            "forceClosedReason": "接口自动化测试强制结束订单",
+            "totalTime": "PT26.865866S",
+            "revaluationAt": "2025-02-27T08:52:23.22622Z",
+            "leases": [
+                {
+                    "id": "P84V",
+                    "orderId": "LDN6",
+                    "status": "returned",
+                    "assetNo": "APITEST48",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:51:56.398102Z",
+                    "endTime": "2025-02-27T10:51:56.398102Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": null,
+                    "returnedAt": "2025-02-27T08:52:23.263968Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "456J",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 0.0,
+            "amountTax": 0.0,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 0.0,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:52:04.872651Z",
+            "endTime": "2025-02-27T08:52:14.455437Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT9.582786S",
+            "revaluationAt": "2025-02-27T08:52:14.41142Z",
+            "leases": [
+                {
+                    "id": "D3LP",
+                    "orderId": "456J",
+                    "status": "returned",
+                    "assetNo": "APIFREE3",
+                    "assetCategoryId": "Y63Q",
+                    "currency": "USD",
+                    "basePriceFee": 0.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT1H",
+                    "planDuration": 60,
+                    "planDiscount": null,
+                    "isAllowedCrossSiteReturn": false,
+                    "isConfirmRequired": false,
+                    "isLocationCheckRequired": false,
+                    "isLockCheckRequired": false,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:52:04.872651Z",
+                    "endTime": "2025-02-27T09:52:04.872651Z",
+                    "totalTime": "PT1H",
+                    "returnSubmittedAt": "2025-02-27T08:52:14.455437Z",
+                    "returnedAt": "2025-02-27T08:52:14.455437Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        },
+        {
+            "id": "B5RJ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "status": "closed",
+            "currency": "USD",
+            "amountTotal": 1.5,
+            "amountTax": 0.12,
+            "amountDeducted": 0.0,
+            "amountPending": 0.0,
+            "amountReceiveProcessing": 0.0,
+            "amountReceived": 0.0,
+            "amountRefunded": 1.5,
+            "amountUnpaid": 0.0,
+            "amountExempted": 0.0,
+            "enabledInvoice": true,
+            "note": null,
+            "startTime": "2025-02-27T08:51:47.750606Z",
+            "endTime": "2025-02-27T08:52:09.627638Z",
+            "forceClosedBy": null,
+            "forceClosedReason": null,
+            "totalTime": "PT21.877032S",
+            "revaluationAt": "2025-02-27T08:52:09.582031Z",
+            "leases": [
+                {
+                    "id": "GW3K",
+                    "orderId": "B5RJ",
+                    "status": "returned",
+                    "assetNo": "APITEST47",
+                    "assetCategoryId": "Y2XM",
+                    "currency": "USD",
+                    "basePriceFee": 1.0,
+                    "basePriceTime": 60,
+                    "planCode": "PT2H",
+                    "planDuration": 120,
+                    "planDiscount": 1.5,
+                    "isAllowedCrossSiteReturn": true,
+                    "isConfirmRequired": true,
+                    "isLocationCheckRequired": true,
+                    "isLockCheckRequired": true,
+                    "startSiteId": "OJXJ",
+                    "returnSiteId": "OJXJ",
+                    "startTime": "2025-02-27T08:51:47.750606Z",
+                    "endTime": "2025-02-27T10:51:47.750606Z",
+                    "totalTime": "PT2H",
+                    "returnSubmittedAt": "2025-02-27T08:52:08.017158Z",
+                    "returnedAt": "2025-02-27T08:52:09.627638Z"
+                }
+            ],
+            "customer": {
+                "id": "PONJ",
+                "username": "+12025000001",
+                "name": "bin bin",
+                "nameFirst": "bin",
+                "nameLast": "bin",
+                "email": "1231233456@1.cn",
+                "phoneNo": "+12025000001",
+                "note": null
+            }
+        }
+    ]
+}
+2025-02-28 14:40:22,072 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:22,075 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:22,085 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/orders/5X2V/$exemptOrRefund
+2025-02-28 14:40:22,086 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:22,086 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "amount": 1.5,
+    "reason": "1"
+}
+2025-02-28 14:40:22,086 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-28 14:40:24,971 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": {
+        "id": "5X2V",
+        "partnerId": "YVQM",
+        "customerId": "PONJ",
+        "status": "closed",
+        "currency": "USD",
+        "amountTotal": 1.5,
+        "amountTax": 0.12,
+        "amountDeducted": 0.0,
+        "amountPending": 0.0,
+        "amountReceiveProcessing": 0.0,
+        "amountReceived": 0.0,
+        "amountRefunded": 1.5,
+        "amountUnpaid": 0.0,
+        "amountExempted": 0.0,
+        "enabledInvoice": true,
+        "note": null,
+        "startTime": "2025-02-28T06:39:32.745063Z",
+        "endTime": "2025-02-28T06:40:11.285093Z",
+        "forceClosedBy": null,
+        "forceClosedReason": null,
+        "totalTime": "PT38.54003S",
+        "revaluationAt": "2025-02-28T06:40:11.203241Z",
+        "leases": [
+            {
+                "id": "BMZ3",
+                "orderId": "5X2V",
+                "status": "returned",
+                "assetNo": "APITEST47",
+                "assetCategoryId": "Y2XM",
+                "currency": "USD",
+                "basePriceFee": 1.0,
+                "basePriceTime": 60,
+                "planCode": "PT2H",
+                "planDuration": 120,
+                "planDiscount": 1.5,
+                "isAllowedCrossSiteReturn": true,
+                "isConfirmRequired": true,
+                "isLocationCheckRequired": true,
+                "isLockCheckRequired": true,
+                "startSiteId": "OJXJ",
+                "returnSiteId": "OJXJ",
+                "startTime": "2025-02-28T06:39:32.745063Z",
+                "endTime": "2025-02-28T08:39:32.745063Z",
+                "totalTime": "PT2H",
+                "returnSubmittedAt": "2025-02-28T06:40:09.453738Z",
+                "returnedAt": "2025-02-28T06:40:11.285093Z"
+            }
+        ],
+        "customer": {
+            "id": "PONJ",
+            "username": "+12025000001",
+            "name": "bin bin",
+            "nameFirst": "bin",
+            "nameLast": "bin",
+            "email": "1231233456@1.cn",
+            "phoneNo": "+12025000001",
+            "note": null
+        }
+    }
+}
+2025-02-28 14:40:24,973 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:24,976 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:24,995 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/renting/customers/PONJ/deposits/$refundByPartnerAssetCategory
+2025-02-28 14:40:24,996 - rest_client_new.py -log - INFO - 接口请求方式: POST
+2025-02-28 14:40:24,996 - rest_client_new.py -log - INFO - 接口请求的json参数:  
+{
+    "partnerId": "YVQM",
+    "assetCategoryId": "Y2XM",
+    "reason": "1"
+}
+2025-02-28 14:40:24,996 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer 50BDB2E0D9ED41D5ACE75CEB56D8E125"
+}
+2025-02-28 14:40:33,417 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "message": null,
+    "data": [
+        {
+            "id": "982M",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:20:40.249465Z",
+            "updatedAt": "2025-02-28T06:40:28.447999304Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "GKVR",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:20:43.650286Z",
+            "updatedAt": "2025-02-28T06:40:29.747511249Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "JV6J",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:28:54.402528Z",
+            "updatedAt": "2025-02-28T06:40:30.88715969Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "Q8KP",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:28:57.803543Z",
+            "updatedAt": "2025-02-28T06:40:32.132399068Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "WLGR",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:39:22.036667Z",
+            "updatedAt": "2025-02-28T06:40:33.33857Z",
+            "leaseUsage": null
+        },
+        {
+            "id": "ZZG8",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "status": "unusable",
+            "tradeStatus": "refunded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:39:25.833245Z",
+            "updatedAt": "2025-02-28T06:40:34.40132146Z",
+            "leaseUsage": null
+        }
+    ]
+}
+2025-02-28 14:40:33,420 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:33,426 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:33,433 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/orders/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+2025-02-28 14:40:33,433 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-02-28 14:40:33,433 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:35,100 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 15,
+    "data": [
+        {
+            "id": "XDOPJXL",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "5X2V",
+            "tradeId": "9X68G",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-28T06:40:25.766535Z"
+        },
+        {
+            "id": "4K6ZR37",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "6O98",
+            "tradeId": "G623QR",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-28T06:39:45.102319Z"
+        },
+        {
+            "id": "L6N4O2G",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "5X2V",
+            "tradeId": "9VW43M",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-28T06:39:36.041964Z"
+        },
+        {
+            "id": "562LBV7",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "MD3J",
+            "tradeId": "28XRN",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-27T09:05:47.458503Z"
+        },
+        {
+            "id": "3B527QX",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "NDKD",
+            "tradeId": "QZ775W",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T09:05:24.13052Z"
+        },
+        {
+            "id": "NPKONLZ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "MD3J",
+            "tradeId": "JKPPBZ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T09:05:13.511767Z"
+        },
+        {
+            "id": "MX3ZML8",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "VZJM",
+            "tradeId": "6Z32V",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-27T08:56:44.958481Z"
+        },
+        {
+            "id": "XDOPJ4P",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "X7OQ",
+            "tradeId": "PNZZKV",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:56:22.31138Z"
+        },
+        {
+            "id": "V5J6VGP",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "VZJM",
+            "tradeId": "G622ZK",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:56:13.582382Z"
+        },
+        {
+            "id": "4K6ZRNP",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "B5RJ",
+            "tradeId": "5ZN55",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": null,
+            "createdAt": "2025-02-27T08:52:26.505Z"
+        },
+        {
+            "id": "BBRJD27",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "LDN6",
+            "tradeId": "2L99ZJ",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:51:59.832402Z"
+        },
+        {
+            "id": "RK9Z653",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "orderId": "B5RJ",
+            "tradeId": "6BJJ5W",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 1.5,
+            "invoice": {
+                "enabled": true
+            },
+            "createdAt": "2025-02-27T08:51:51.150243Z"
+        }
+    ]
+}
+2025-02-28 14:40:35,103 - conftest.py -log - INFO - 测试结束
+2025-02-28 14:40:35,108 - conftest.py -log - INFO - 开始执行测试
+2025-02-28 14:40:35,115 - rest_client_new.py -log - INFO - 接口请求的地址: https://api-rental-stg.moovmobility.co/customer/me/rental/deposits/$all/transactions?tradeStatusIn=succeeded&tradeTypeIn=charge,refund&amountGte=0.001&pageSize=12&sort=createdAt:desc
+2025-02-28 14:40:35,115 - rest_client_new.py -log - INFO - 接口请求方式: GET
+2025-02-28 14:40:35,116 - rest_client_new.py -log - INFO - 接口请求的请求头:
+{
+    "Content-Type": "application/json",
+    "rental-client-id": "com.rental.user.app.rybit.stg",
+    "Authorization": "Bearer A57F855B6E9D4B11ACD3F925DB8A99C0"
+}
+2025-02-28 14:40:36,500 - rest_client_new.py -log - INFO - 接口的返回内容:>>>
+{
+    "code": 1000,
+    "type": "ok",
+    "message": null,
+    "page": {
+        "size": 12,
+        "no": 1
+    },
+    "count": 51,
+    "data": [
+        {
+            "id": "DM8G",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "ZZG8",
+            "tradeId": "Z5JV",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:34.401321Z"
+        },
+        {
+            "id": "PVPJ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "WLGR",
+            "tradeId": "WNPO",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:33.33857Z"
+        },
+        {
+            "id": "GMJW",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "Q8KP",
+            "tradeId": "8VRX",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:32.132399Z"
+        },
+        {
+            "id": "9BPG",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "JV6J",
+            "tradeId": "QZD2",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:30.88716Z"
+        },
+        {
+            "id": "2BJN",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "GKVR",
+            "tradeId": "JK4L",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:29.747511Z"
+        },
+        {
+            "id": "6V6V",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "982M",
+            "tradeId": "D4M5",
+            "tradeType": "refund",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:40:28.447999Z"
+        },
+        {
+            "id": "5GL5",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "725Q",
+            "tradeId": "725Q",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-28T06:39:29.2134Z"
+        },
+        {
+            "id": "K89P",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "ZZG8",
+            "tradeId": "ZZG8",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:39:25.833245Z"
+        },
+        {
+            "id": "3322",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "WLGR",
+            "tradeId": "WLGR",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-28T06:39:22.036667Z"
+        },
+        {
+            "id": "N477",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y63Q",
+            "depositId": "846W",
+            "tradeId": "846W",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 10.0,
+            "createdAt": "2025-02-27T09:29:01.075713Z"
+        },
+        {
+            "id": "M8WQ",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "Q8KP",
+            "tradeId": "Q8KP",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:28:57.803543Z"
+        },
+        {
+            "id": "O8B3",
+            "partnerId": "YVQM",
+            "customerId": "PONJ",
+            "assetCategoryId": "Y2XM",
+            "depositId": "JV6J",
+            "tradeId": "JV6J",
+            "tradeType": "charge",
+            "tradeStatus": "succeeded",
+            "currency": "USD",
+            "amount": 20.0,
+            "createdAt": "2025-02-27T09:28:54.402528Z"
+        }
+    ]
+}
+2025-02-28 14:40:36,502 - conftest.py -log - INFO - 测试结束
