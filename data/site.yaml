@@ -53,7 +53,7 @@ update_site :
           country: "USA"
           email: null
           fenceRadius: 50
-          name: "ApiTest Site A"
+          name: "ApiTest Site 1"
           note: "NoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNoteNo"
           openingHoursNote: "10:00-17:00"
           phone: "+12022222222"

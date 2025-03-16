@@ -22,7 +22,7 @@ user_login :
         validate: #验证信息
           - equal: [ $.code, 1000 ]
         extract: #提取信息
-          user_token: '$.data.accessToken'
+          user_token_1: '$.data.accessToken'
 
 create_parther :
   #接口的基本信息
@@ -44,7 +44,7 @@ create_parther :
               - url: "https://ops-web-rental-stg.moovmobility.co/"
                 name: "rental"
           "addressCountry": "USA"
-          "addressCity": "Service center"
+          "addressCity": "San Francisco"
           "addressZip": "201616"
           "addressLine1": "Address Line 11111"
           "addressLine2": "Address Line 22222"
@@ -55,12 +55,12 @@ create_parther :
         validate: #验证信息
           - equal: [ $.type, "PartnerNameAlreadyExists" ]
         extract: #提取信息
-          parther_id: '$.data.id'
+          test_parther_id: '$.data.id'
 
 update_parther :
   #接口的基本信息
   - request_info:
-      url: /account/partners/${get_extract_value(parther_id)}
+      url: /account/partners/${get_extract_value(test_parther_id)}
       method: PUT #请求方法
       headers:  #请求头
         Content-Type: application/json
@@ -417,51 +417,45 @@ get_payment_method_setup :
 create_PaymentMethod :
   #接口的基本信息
   - request_info:
-      url: https://api.stripe.com/v1/setup_intents/${get_extract_value(stripeSetupId)}/confirm
+      url: https://api.stripe.com/v1/setup_intents/${get_extract_value(user_stripeSetupId)}/confirm
       method: POST #请求方法
       headers:  #请求头
         Content-Type: application/x-www-form-urlencoded
-        Authorization: Bearer ${get_extract_value(provider_Publikey)}
     case_info: #测试信息
       - case_title: 建立stripe支付方式
         data:
-          payment_method_data:
-            billing_details:
-              name: bin
-              email: TEST2.16@1.cn
-              address:
-                city: test
-                country: CN
-                line1: 123
-                postal_code: 201616
-                state: 澳门  # Decoded from %E6%BE%B3%E9%97%A8 (Macau in Chinese)
-              phone: ""  # Empty string as no value provided
-            type: card
-            card:
-              number: "4242 4242 4242 4242"  # Formatted with spaces for readability
-              cvc: 666
-              exp_year: 66
-              exp_month: 06
-            allow_redisplay: unspecified
-            payment_user_agent: "stripe.js/7b2f7dbc1b; stripe-js-v3/7b2f7dbc1b; payment-element"
-            referrer: "https://ops-web-rental-stg.moovmobility.co"
-            time_on_page: 534993
-            client_attribution_metadata:
-              client_session_id: c48c2e03-678e-46ae-823a-49bada965c2a
-              merchant_integration_source: elements
-              merchant_integration_subtype: payment-element
-              merchant_integration_version: 2021
-              payment_intent_creation_flow: standard
-              payment_method_selection_flow: merchant_specified
-            guid: eb8bc975-198a-4e46-849d-2249b5e116ea
-            muid: 557a7812-bdc9-4bb3-ba96-dd7119e56f56
-            sid: 793743ee-f664-4bb6-94b4-14cd0a12768f
-          expected_payment_method_type: card
-          radar_options:
-            hcaptcha_token: 20000000-aaaa-bbbb-cccc-000000000002
+          payment_method_data[billing_details][name]: "bin"
+          payment_method_data[billing_details][email]: "binbin.lai@rybit.io"
+          payment_method_data[billing_details][address][city]: "dfghdf"
+          payment_method_data[billing_details][address][country]: "CN"
+          payment_method_data[billing_details][address][line1]: "lgl"
+          payment_method_data[billing_details][address][line2]: "J"
+          payment_method_data[billing_details][address][postal_code]: "201616"
+          payment_method_data[billing_details][address][state]: "澳门"
+          payment_method_data[billing_details][phone]: ""
+          payment_method_data[type]: "card"
+          payment_method_data[card][number]: "4242424242424242"
+          payment_method_data[card][cvc]: "666"
+          payment_method_data[card][exp_month]: "06"
+          payment_method_data[card][exp_year]: "66"
+          payment_method_data[allow_redisplay]: "unspecified"
+          payment_method_data[payment_user_agent]: "stripe.js/56a6ae254e; stripe-js-v3/56a6ae254e; payment-element"
+          payment_method_data[referrer]: "https://ops-web-rental-stg.moovmobility.co"
+          payment_method_data[time_on_page]: "23344"
+          payment_method_data[client_attribution_metadata][client_session_id]: "8d0d2f37-cffd-469f-9a57-4cff44fc9eef"
+          payment_method_data[client_attribution_metadata][merchant_integration_source]: "elements"
+          payment_method_data[client_attribution_metadata][merchant_integration_subtype]: "payment-element"
+          payment_method_data[client_attribution_metadata][merchant_integration_version]: "2021"
+          payment_method_data[client_attribution_metadata][payment_intent_creation_flow]: "standard"
+          payment_method_data[client_attribution_metadata][payment_method_selection_flow]: "merchant_specified"
+          payment_method_data[guid]: "23eb2dce-aeaf-4a7e-8ca7-d9b5355b9273"
+          payment_method_data[muid]: "e688dd96-d981-4c99-aada-95a37fd798c4"
+          payment_method_data[sid]: "c49e31b1-3551-4962-968a-0b37ce7cf8f0"
+          expected_payment_method_type: "card"
+          radar_options[hcaptcha_token]: "20000000-aaaa-bbbb-cccc-000000000002"
           use_stripe_sdk: true
-          key: pk_test_51JLYaZGvq4E0WjAYOiJX33Ci7KnnITbQHEnXVJVbztuYOoAt2MzCWNRAW0xEl2yKZVnSJ4I2ju6N8McnFHS84vI900EwTKQly8
-          client_secret: seti_1Qx0QYGvq4E0WjAYwM9dFdJk_secret_RqhqLRAzZKjzdanVTNsT2JCaJrYt6vN
+          key: ${get_extract_value(user_provider_Publikey)}
+          client_secret: ${get_extract_value(user_stripeSetupSecret)}
         validate: #验证信息
           - equal: [ $.status, succeeded ]
 
@@ -483,4 +477,20 @@ bind_PaymentMethod :
         validate: #验证信息
           - equal: [ $.code, 1000 ]
         extract: #提取信息
-          paymentMethodId: '$.data.id'
+          user_paymentMethodId: '$.data.id'
+
+delete_PaymentMethod :
+  #接口的基本信息
+  - request_info:
+      url: /payment/partners/${get_extract_value(parther_id)}/methods/${get_extract_value(user_paymentMethodId)}
+      method: DELETE #请求方法
+      headers:  #请求头
+        Content-Type: application/json
+        rental-client-id: com.rental.user.app.rybit.stg
+        Authorization: Bearer ${get_extract_value(user_token)}
+    case_info: #测试信息
+      - case_title: 删除信用卡
+        json:
+
+        validate: #验证信息
+          - equal: [ $.code, 1000 ]

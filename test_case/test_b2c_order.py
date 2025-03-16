@@ -82,19 +82,20 @@ class TestCustomer:
         ApiService().handle_case(data)
 
     # 申请退还押金
-    # @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'apply_deposit_refund'))
-    # def test_apply_deposit_refund(self, data):
-    #     ApiService().handle_case(data)
+    @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'apply_deposit_refund'))
+    def test_apply_deposit_refund(self, data):
+        ApiService().handle_case(data)
 
     # 获取退还押金申请id
-    # @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'deposit_application_id'))
-    # def test_deposit_application_id(self, data):
-    #     ApiService().handle_case(data)
+    @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'deposit_application_id'))
+    def test_deposit_application_id(self, data):
+        ApiService().handle_case(data)
+
     #
     # # 通过退还押金申请
-    # @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'approve_deposit_refund'))
-    # def test_approve_deposit_refund(self, data):
-    #     ApiService().handle_case(data)
+    @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'approve_deposit_refund'))
+    def test_approve_deposit_refund(self, data):
+        ApiService().handle_case(data)
 
     # 查看订单交易记录
     @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'transactions_orders'))
@@ -105,7 +106,3 @@ class TestCustomer:
     @pytest.mark.parametrize("data", YamlUtil().extract_case('B2C_order.yaml', 'transactions_deposits'))
     def test_transactions_deposits(self, data):
         ApiService().handle_case(data)
-
-
-
-

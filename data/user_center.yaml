@@ -163,6 +163,8 @@ update_customer_info :
           "whatsapp": "+12022222222"
         validate: #验证信息
           - equal: [ $.code, 1000 ]
+        extract: #提取信息
+          customer_email: '$.data.email'
 
 identity_verification :
   #接口的基本信息
@@ -202,7 +204,7 @@ identity_verification :
 images_front_side :
   #接口的基本信息
   - request_info:
-      url: /account/documents/help-center/$uploadImage
+      url: /customer/me/identity/verification/images/front-side
       method: PUT #请求方法
       headers:  #请求头
         rental-client-id: com.rental.user.app.rybit.stg

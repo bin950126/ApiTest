@@ -89,23 +89,21 @@ class TestParther:
     def test_delete_help_center(self, data):
         ApiService().handle_case(data)
 
-    @pytest.mark.parametrize("data", YamlUtil().extract_case('parther.yaml', 'get_providers'))
-    def test_get_providers(self, data):
+    # 绑定信用卡
+    @pytest.mark.parametrize("data_set", zip(
+        YamlUtil().extract_case('parther.yaml', 'get_providers'),
+        YamlUtil().extract_case('parther.yaml', 'get_payment_method_setup'),
+        YamlUtil().extract_case('parther.yaml', 'create_PaymentMethod'),
+        YamlUtil().extract_case('parther.yaml', 'bind_PaymentMethod')
+    ))
+    def test_bind_PaymentMethod(self, data_set):
+        get_providers, get_payment_method_setup, create_PaymentMethod, bind_PaymentMethod = data_set  # 解包数据集
+        ApiService().handle_case(get_providers)
+        ApiService().handle_case(get_payment_method_setup)
+        ApiService().handle_case(create_PaymentMethod)
+        ApiService().handle_case(bind_PaymentMethod)
+
+    # 删除信用卡
+    @pytest.mark.parametrize("data", YamlUtil().extract_case('parther.yaml', 'delete_PaymentMethod'))
+    def test_delete_PaymentMethod(self, data):
         ApiService().handle_case(data)
-
-    @pytest.mark.parametrize("data", YamlUtil().extract_case('parther.yaml', 'get_payment_method_setup'))
-    def test_get_payment_method_setup(self, data):
-        ApiService().handle_case(data)
-
-    @pytest.mark.parametrize("data", YamlUtil().extract_case('parther.yaml', 'create_PaymentMethod'))
-    def test_create_PaymentMethod(self, data):
-        ApiService().handle_case(data)
-
-    @pytest.mark.parametrize("data", YamlUtil().extract_case('parther.yaml', 'bind_PaymentMethod'))
-    def test_bind_PaymentMethod(self, data):
-        ApiService().handle_case(data)
-
-
-
-
-
